@@ -1,0 +1,276 @@
+[] - 2012-10-15 20:02:29,002 -  - HHH000393: The 1.2.131 version of H2 implements temporary table creation such that it commits current transaction; multi-table, bulk hql/jpaql will not work properly
+[] - 2012-10-15 20:02:29,962 -  - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+[] - 2012-10-15 20:02:30,109 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Frais]; using defaults.
+[] - 2012-10-15 20:02:30,318 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage]; using defaults.
+[] - 2012-10-15 20:02:30,345 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suivicontact]; using defaults.
+[] - 2012-10-15 20:02:30,351 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Role]; using defaults.
+[] - 2012-10-15 20:02:30,356 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item]; using defaults.
+[] - 2012-10-15 20:02:30,362 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot]; using defaults.
+[] - 2012-10-15 20:02:30,371 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suividulieudedepot]; using defaults.
+[] - 2012-10-15 20:02:30,376 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Vente]; using defaults.
+[] - 2012-10-15 20:02:30,388 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur]; using defaults.
+[] - 2012-10-15 20:02:30,400 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf]; using defaults.
+[] - 2012-10-15 20:02:30,432 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Itemlieudestockage]; using defaults.
+[] - 2012-10-15 20:02:30,438 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact]; using defaults.
+[] - 2012-10-15 20:02:30,447 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Rolemembre]; using defaults.
+[] - 2012-10-15 20:02:30,451 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item.itemlieudestockages]; using defaults.
+[] - 2012-10-15 20:02:30,461 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.utilisateurs]; using defaults.
+[] - 2012-10-15 20:02:30,461 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.fraiss]; using defaults.
+[] - 2012-10-15 20:02:30,462 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.suividulieudedepots]; using defaults.
+[] - 2012-10-15 20:02:30,462 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item.ventes]; using defaults.
+[] - 2012-10-15 20:02:30,463 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur.roles]; using defaults.
+[] - 2012-10-15 20:02:30,465 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.ventes]; using defaults.
+[] - 2012-10-15 20:02:30,465 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact.suivicontacts]; using defaults.
+[] - 2012-10-15 20:02:30,466 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot.suividulieudedepots]; using defaults.
+[] - 2012-10-15 20:02:30,466 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot.ventes]; using defaults.
+[] - 2012-10-15 20:02:30,467 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact.ventes]; using defaults.
+[] - 2012-10-15 20:02:30,467 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage.itemlieudestockages]; using defaults.
+[] - 2012-10-15 20:02:30,468 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.suivicontacts]; using defaults.
+[] - 2012-10-15 20:02:30,546 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+[] - 2012-10-15 20:02:30,551 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+[] - 2012-10-15 20:02:34,334 -  - Initializing filter 'fixResourcesExpirationFilter'
+[] - 2012-10-15 20:02:34,334 -  - Filter 'fixResourcesExpirationFilter' configured successfully
+[] - 2012-10-15 20:02:49,903 - anonymousUser - flow only duration:  1276 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 20:02:49,992 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/theme.css
+[] - 2012-10-15 20:02:49,992 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/css/main.css;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:49,999 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.css;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,032 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.css;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,058 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.js;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,064 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,063 - anonymousUser - flow only duration:    39 ms - /PPAFAdministration/app/javax.faces.resource/css/main.css;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,040 - anonymousUser - flow only duration:     7 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.css;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,071 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.js;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,083 - anonymousUser - flow only duration:    10 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.js;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,084 - anonymousUser - flow only duration:    25 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.js;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,085 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/js/main.js;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,099 - anonymousUser - flow only duration:    13 ms - /PPAFAdministration/app/javax.faces.resource/js/main.js;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,116 - anonymousUser - flow only duration:    51 ms - /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,142 - anonymousUser - flow only duration:   149 ms - /PPAFAdministration/app/javax.faces.resource/theme.css
+[] - 2012-10-15 20:02:50,153 - anonymousUser - flow only duration:   152 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.css;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,555 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,557 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/login.png
+[] - 2012-10-15 20:02:50,557 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/us.gif
+[] - 2012-10-15 20:02:50,558 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/home.png
+[] - 2012-10-15 20:02:50,557 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/images/ui-icons_333333_256x240.png
+[] - 2012-10-15 20:02:50,563 - anonymousUser - flow only duration:     5 ms - /PPAFAdministration/app/javax.faces.resource/icons/login.png
+[] - 2012-10-15 20:02:50,570 - anonymousUser - flow only duration:    14 ms - /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:50,571 - anonymousUser - flow only duration:    12 ms - /PPAFAdministration/app/javax.faces.resource/icons/home.png
+[] - 2012-10-15 20:02:50,574 - anonymousUser - flow only duration:    14 ms - /PPAFAdministration/app/javax.faces.resource/images/ui-icons_333333_256x240.png
+[] - 2012-10-15 20:02:50,575 - anonymousUser - flow only duration:    16 ms - /PPAFAdministration/app/javax.faces.resource/icons/us.gif
+[] - 2012-10-15 20:02:52,352 - anonymousUser - flow only duration:    49 ms - /PPAFAdministration/app/login;jsessionid=i3ciwqwb9v7wp04ktkjhpje6
+[] - 2012-10-15 20:02:52,408 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/css/main.css
+[] - 2012-10-15 20:02:52,410 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js
+[] - 2012-10-15 20:02:52,411 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.css
+[] - 2012-10-15 20:02:52,411 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.js
+[] - 2012-10-15 20:02:52,423 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.css
+[] - 2012-10-15 20:02:52,435 - anonymousUser - flow only duration:    24 ms - /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js
+[] - 2012-10-15 20:02:52,442 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.js
+[] - 2012-10-15 20:02:52,450 - anonymousUser - flow only duration:    32 ms - /PPAFAdministration/app/javax.faces.resource/css/main.css
+[] - 2012-10-15 20:02:52,453 - anonymousUser - flow only duration:    41 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.js
+[] - 2012-10-15 20:02:52,464 - anonymousUser - flow only duration:    50 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.css
+[] - 2012-10-15 20:02:52,480 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/js/main.js
+[] - 2012-10-15 20:02:52,483 - anonymousUser - flow only duration:    12 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.css
+[] - 2012-10-15 20:02:52,485 - anonymousUser - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/js/main.js
+[] - 2012-10-15 20:02:52,496 - anonymousUser - flow only duration:    23 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.js
+[] - 2012-10-15 20:02:52,640 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png
+[] - 2012-10-15 20:02:52,646 - anonymousUser - flow only duration:     5 ms - /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png
+[] - 2012-10-15 20:02:54,482 -  - Security verification for user 'admin'
+[] - 2012-10-15 20:02:54,611 - admin - flow only duration:    83 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 20:03:01,807 - admin - flow only duration:   262 ms - /PPAFAdministration/app/contact
+[] - 2012-10-15 20:03:02,944 - admin - 
+    /* select
+        count(*) 
+    from
+        Contact as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            CONTACT contact0_ limit ?
+[] - 2012-10-15 20:03:03,047 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Contact as generatedAlias0 */ select
+            contact0_.ID as ID11_,
+            contact0_.ACTIF as ACTIF11_,
+            contact0_.codePostal as codePostal11_,
+            contact0_.email as email11_,
+            contact0_.infoSuppl as infoSuppl11_,
+            contact0_.nom as nom11_,
+            contact0_.NOTE as NOTE11_,
+            contact0_.numeroTelephone1 as numeroTe8_11_,
+            contact0_.numeroTelephone2 as numeroTe9_11_,
+            contact0_.prenom as prenom11_,
+            contact0_.RUE as RUE11_,
+            contact0_.VILLE as VILLE11_ 
+        from
+            CONTACT contact0_ limit ?
+[] - 2012-10-15 20:03:03,074 - admin - flow only duration:  1265 ms - /PPAFAdministration/app/contact
+	Active flow: contact (/PPAFAdministration/app/contact?execution=e1s1)
+	Current State: contactSelect
+	Current Transition: N/A
+[] - 2012-10-15 20:03:03,217 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/find.png
+[] - 2012-10-15 20:03:03,218 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/ajaxloading.gif
+[] - 2012-10-15 20:03:03,221 - admin - flow only duration:     3 ms - /PPAFAdministration/app/javax.faces.resource/icons/ajaxloading.gif
+[] - 2012-10-15 20:03:03,223 - admin - flow only duration:     5 ms - /PPAFAdministration/app/javax.faces.resource/icons/find.png
+[] - 2012-10-15 20:03:21,316 - admin - flow only duration:   245 ms - /PPAFAdministration/app/contact
+	eventSignaled: quit
+	transitionExecuting: on=quit to=quit
+[] - 2012-10-15 20:03:23,828 - admin - flow only duration:    47 ms - /PPAFAdministration/app/utilisateur
+[] - 2012-10-15 20:03:24,107 - admin - 
+    /* select
+        count(*) 
+    from
+        Utilisateur as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            UTILISATEUR utilisateu0_ limit ?
+[] - 2012-10-15 20:03:24,113 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Utilisateur as generatedAlias0 */ select
+            utilisateu0_.ID as ID0_,
+            utilisateu0_.codePostal as codePostal0_,
+            utilisateu0_.email as email0_,
+            utilisateu0_.enabled as enabled0_,
+            utilisateu0_.infoSuppl as infoSuppl0_,
+            utilisateu0_.membrePPAF_id as membrePPAF6_0_,
+            utilisateu0_."PASSWORD" as PASSWORD7_0_,
+            utilisateu0_.RUE as RUE0_,
+            utilisateu0_.login as login0_,
+            utilisateu0_.VILLE as VILLE0_ 
+        from
+            UTILISATEUR utilisateu0_ limit ?
+[] - 2012-10-15 20:03:24,167 - admin - flow only duration:   335 ms - /PPAFAdministration/app/utilisateur
+	Active flow: utilisateur (/PPAFAdministration/app/utilisateur?execution=e2s1)
+	Current State: utilisateurSelect
+	Current Transition: N/A
+[] - 2012-10-15 20:03:24,301 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/tick.png
+[] - 2012-10-15 20:03:24,304 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/pencil.png
+[] - 2012-10-15 20:03:24,305 - admin - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/icons/tick.png
+[] - 2012-10-15 20:03:24,305 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/cross.png
+[] - 2012-10-15 20:03:24,310 - admin - flow only duration:     5 ms - /PPAFAdministration/app/javax.faces.resource/icons/pencil.png
+[] - 2012-10-15 20:03:24,310 - admin - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/icons/cross.png
+[] - 2012-10-15 20:03:29,078 - admin - flow only duration:   207 ms - /PPAFAdministration/app/utilisateur
+	eventSignaled: select
+	transitionExecuting: on=select to=checkIfAlreadyOpenFlow
+[] - 2012-10-15 20:03:29,467 - admin - 
+    /* load collection com.eldoraludo.ppafadministration.domain.Utilisateur.roles */ select
+        roles0_.UTILISATEUR_ID as UTILISAT1_0_1_,
+        roles0_.role_id as role2_1_,
+        role1_.ID as ID8_0_,
+        role1_.role_name as role2_8_0_ 
+    from
+        UTILISATEUR_ROLE roles0_ 
+    inner join
+        "ROLE" role1_ 
+            on roles0_.role_id=role1_.ID 
+    where
+        roles0_.UTILISATEUR_ID=?
+[] - 2012-10-15 20:03:29,501 - admin - flow only duration:   420 ms - /PPAFAdministration/app/utilisateur
+	Active flow: utilisateur/edit (/PPAFAdministration/app/utilisateur?execution=e2s2)
+	Current State: utilisateurEdit
+	Current Transition: N/A
+[] - 2012-10-15 20:03:29,674 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/eye.png
+[] - 2012-10-15 20:03:29,675 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/add.png
+[] - 2012-10-15 20:03:29,680 - admin - flow only duration:     5 ms - /PPAFAdministration/app/javax.faces.resource/icons/add.png
+[] - 2012-10-15 20:03:29,687 - admin - flow only duration:    12 ms - /PPAFAdministration/app/javax.faces.resource/icons/eye.png
+[] - 2012-10-15 20:03:33,938 - admin - flow only duration:   199 ms - /PPAFAdministration/app/utilisateur
+	eventSignaled: viewMembreppaf
+	transitionExecuting: on=viewMembreppaf to=editMembreppaf
+[] - 2012-10-15 20:03:34,313 - admin - flow only duration:   371 ms - /PPAFAdministration/app/utilisateur
+	Active flow: membreppaf/edit (/PPAFAdministration/app/utilisateur?execution=e2s3)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-15 20:03:42,433 - admin - flow only duration:   192 ms - /PPAFAdministration/app/utilisateur
+	eventSignaled: viewRolemembre
+	transitionExecuting: on=viewRolemembre to=editRolemembre
+[] - 2012-10-15 20:03:42,515 - admin - flow only duration:    79 ms - /PPAFAdministration/app/utilisateur
+	Active flow: rolemembre/edit (/PPAFAdministration/app/utilisateur?execution=e2s4)
+	Current State: rolemembreSubEdit
+	Current Transition: N/A
+[] - 2012-10-15 20:03:44,778 - admin - flow only duration:    35 ms - /PPAFAdministration/app/utilisateur
+	eventSignaled: cancel
+	transitionExecuting: on=cancel to=cancelEdit
+	eventSignaled: cancelEdit
+	transitionExecuting: on=cancelEdit to=startChoice
+[] - 2012-10-15 20:03:45,082 - admin - flow only duration:   301 ms - /PPAFAdministration/app/utilisateur
+	Active flow: membreppaf/edit (/PPAFAdministration/app/utilisateur?execution=e2s5)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-15 20:03:45,879 - admin - flow only duration:   121 ms - /PPAFAdministration/app/utilisateur
+	eventSignaled: cancel
+	transitionExecuting: on=cancel to=cancelEdit
+	eventSignaled: cancelEdit
+	transitionExecuting: on=cancelEdit to=startChoice
+[] - 2012-10-15 20:03:46,034 - admin - flow only duration:   152 ms - /PPAFAdministration/app/utilisateur
+	Active flow: utilisateur/edit (/PPAFAdministration/app/utilisateur?execution=e2s6)
+	Current State: utilisateurEdit
+	Current Transition: N/A
+[] - 2012-10-15 20:03:47,744 - admin - flow only duration:   151 ms - /PPAFAdministration/app/utilisateur
+	eventSignaled: close
+	transitionExecuting: on=close to=null
+	Active flow: utilisateur/edit (/PPAFAdministration/app/utilisateur?execution=e2s6)
+	Current State: utilisateurEdit
+	Current Transition: close
+[] - 2012-10-15 20:03:49,939 - admin - flow only duration:   122 ms - /PPAFAdministration/app/utilisateur
+	eventSignaled: forceClose
+	transitionExecuting: on=forceClose to=endEdit
+	eventSignaled: endEdit
+	transitionExecuting: on=endEdit to=quitChoice
+[] - 2012-10-15 20:03:50,192 - admin - flow only duration:   249 ms - /PPAFAdministration/app/utilisateur
+	Active flow: utilisateur (/PPAFAdministration/app/utilisateur?execution=e2s7)
+	Current State: utilisateurSelect
+	Current Transition: N/A
+[] - 2012-10-15 20:03:53,639 - admin - flow only duration:   167 ms - /PPAFAdministration/app/utilisateur
+	Active flow: utilisateur (/PPAFAdministration/app/utilisateur?execution=e2s7)
+	Current State: utilisateurSelect
+	Current Transition: N/A
+[] - 2012-10-15 20:03:56,443 - admin - flow only duration:     4 ms - /PPAFAdministration/app/contact
+[] - 2012-10-15 20:03:56,651 - admin - flow only duration:   201 ms - /PPAFAdministration/app/contact
+	Active flow: contact (/PPAFAdministration/app/contact?execution=e3s1)
+	Current State: contactSelect
+	Current Transition: N/A
+[] - 2012-10-15 20:03:59,555 - admin - flow only duration:   130 ms - /PPAFAdministration/app/contact
+	eventSignaled: quit
+	transitionExecuting: on=quit to=quit
+[] - 2012-10-15 21:41:42,560 - anonymousUser - flow only duration:    57 ms - /PPAFAdministration/app/login
+[] - 2012-10-15 21:41:42,593 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/theme.css
+[] - 2012-10-15 21:41:42,599 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/css/main.css
+[] - 2012-10-15 21:41:42,610 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.css
+[] - 2012-10-15 21:41:42,616 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.css
+[] - 2012-10-15 21:41:42,630 - anonymousUser - flow only duration:    19 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.css
+[] - 2012-10-15 21:41:42,635 - anonymousUser - flow only duration:    41 ms - /PPAFAdministration/app/javax.faces.resource/theme.css
+[] - 2012-10-15 21:41:42,636 - anonymousUser - flow only duration:    19 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.css
+[] - 2012-10-15 21:41:42,642 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/js/main.js
+[] - 2012-10-15 21:41:42,648 - anonymousUser - flow only duration:    48 ms - /PPAFAdministration/app/javax.faces.resource/css/main.css
+[] - 2012-10-15 21:41:42,650 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.js
+[] - 2012-10-15 21:41:42,652 - anonymousUser - flow only duration:    10 ms - /PPAFAdministration/app/javax.faces.resource/js/main.js
+[] - 2012-10-15 21:41:42,657 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js
+[] - 2012-10-15 21:41:42,657 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.js
+[] - 2012-10-15 21:41:42,662 - anonymousUser - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.js
+[] - 2012-10-15 21:41:42,664 - anonymousUser - flow only duration:     6 ms - /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js
+[] - 2012-10-15 21:41:42,671 - anonymousUser - flow only duration:    10 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.js
+[] - 2012-10-15 21:41:42,919 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png
+[] - 2012-10-15 21:41:42,961 - anonymousUser - flow only duration:    41 ms - /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png
+[] - 2012-10-15 21:41:44,369 -  - Security verification for user 'admin'
+[] - 2012-10-15 21:41:44,376 - admin - flow only duration:     2 ms - /PPAFAdministration/app/contact
+[] - 2012-10-15 21:41:44,383 - admin - flow only duration:     4 ms - /PPAFAdministration/app/contact
+[] - 2012-10-15 21:41:44,608 - admin - flow only duration:   222 ms - /PPAFAdministration/app/contact
+	Active flow: contact (/PPAFAdministration/app/contact?execution=e1s1)
+	Current State: contactSelect
+	Current Transition: N/A
+[] - 2012-10-15 21:41:51,025 - admin - flow only duration:   131 ms - /PPAFAdministration/app/contact
+	Active flow: contact (/PPAFAdministration/app/contact?execution=e1s1)
+	Current State: contactSelect
+	Current Transition: N/A
+[] - 2012-10-15 21:41:53,665 - admin - flow only duration:   154 ms - /PPAFAdministration/app/contact
+	eventSignaled: quit
+	transitionExecuting: on=quit to=quit
+[] - 2012-10-15 21:42:12,695 - admin - flow only duration:     1 ms - /PPAFAdministration/app/contact
+[] - 2012-10-15 21:42:12,703 - admin - flow only duration:     3 ms - /PPAFAdministration/app/contact
+[] - 2012-10-15 21:42:12,864 - admin - flow only duration:   158 ms - /PPAFAdministration/app/contact
+	Active flow: contact (/PPAFAdministration/app/contact?execution=e2s1)
+	Current State: contactSelect
+	Current Transition: N/A
+[] - 2012-10-15 21:42:15,637 - admin - flow only duration:    63 ms - /PPAFAdministration/app/home
