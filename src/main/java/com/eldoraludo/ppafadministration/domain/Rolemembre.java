@@ -69,7 +69,7 @@ public class Rolemembre implements Identifiable<Integer>, Serializable {
 
     @Size(max = 255)
     @NotEmpty
-    @Column(name = "`role`", nullable = false)
+    @Column(name = "role", nullable = false)
     public String getRole() {
         return role;
     }

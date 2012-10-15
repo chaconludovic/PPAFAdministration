@@ -6,87 +6,367 @@
  ! Follow us on twitter: @springfuse
  ! Template pack-jsf2-primefaces:bootstrap/generic/maven-celerio-plugin.boot.vm.xml
 -->
-<celerio xmlns="http://www.jaxio.com/schema/celerio" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.jaxio.com/schema/celerio ./celerio.xsd">
-	<configuration rootPackage="com.eldoraludo.ppafadministration" applicationName="PPAFAdministration">
-		<!-- Which tables are used for generation -->
-		<tables>
-			<!-- <table include="false" pattern="*_AUDIT"/> -->
-			<table include="true" pattern="*" />
-		</tables>
+<celerio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.jaxio.com/schema/celerio"
+    xsi:schemaLocation="http://www.jaxio.com/schema/celerio ./celerio.xsd" >
 
-		<!-- global number mapping (optional) -->
-		<numberMappings>
-			<numberMapping mappedType="M_BOOLEAN" columnSizeMin="1" columnSizeMax="2" columnDecimalDigitsMin="0" columnDecimalDigitsMax="0" />
-			<!-- <numberMapping mappedType="M_BIGDECIMAL" columnSizeMin="10" columnDecimalDigitsMin="4"/> -->
-		</numberMappings>
+    <configuration
+        applicationName="PPAFAdministration"
+        rootPackage="com.eldoraludo.ppafadministration" >
 
-		<!-- global date mapping (optional) -->
-		<dateMappings>
-			<!-- <dateMapping columnNameRegExp="VERSION" mappedType="M_UTILDATE"/> -->
-			<!-- <dateMapping columnJdbcType="TIMESTAMP" mappedType="M_JODA_LOCALDATETIME"/> -->
-			<!-- <dateMapping columnJdbcType="DATE" mappedType="M_JODA_LOCALDATE"/> -->
-		</dateMappings>
+        <!-- Which tables are used for generation -->
 
-		<conventions identifiableProperty="id" />
-	</configuration>
+        <tables>
 
-	<entityConfigs>
-		<!-- Account demonstrates misc column configurations -->
-		<entityConfig tableName="ACCOUNT">
-			<columnConfigs>
-				<columnConfig columnName="login" min="4" fieldName="username" searchResult="true" />
-				<columnConfig columnName="email" searchResult="true" />
-				<columnConfig columnName="is_enabled" searchResult="true" />
-				<columnConfig columnName="civility" sharedEnumName="Civility" />
-				<columnConfig columnName="address_id" searchResult="true">
-					<manyToOneConfig var="homeAddress" />
-				</columnConfig>
-			</columnConfigs>
-		</entityConfig>
+            <!-- <table include="false" pattern="*_AUDIT"/> -->
 
-		<!-- Book demonstrates one-to-many relation -->
-		<entityConfig tableName="BOOK">
-			<columnConfigs>
-				<columnConfig columnName="account_id" associationDirection="BIDIRECTIONAL" />
-			</columnConfigs>
-		</entityConfig>
+            <table
+                include="true"
+                pattern="*" />
+        </tables>
 
-		<!-- Document demonstrates one-to-many relation and upload/download -->
-		<entityConfig tableName="DOCUMENT">
-			<columnConfigs>
-				<columnConfig columnName="account_id" associationDirection="BIDIRECTIONAL" />
-			</columnConfigs>
-		</entityConfig>
+        <!-- global number mapping (optional) -->
 
-		<!-- Role demonstrates many-to-many relation and spring-security integration -->
-		<entityConfig tableName="ROLE">
-			<columnConfigs>
-				<columnConfig columnName="role_name" messageKey="true" />
-			</columnConfigs>
-		</entityConfig>
+        <numberMappings>
 
-		<entityConfig tableName="ACCOUNT_ROLE" associationDirection="UNIDIRECTIONAL">
-			<columnConfigs>
-				<columnConfig columnName="role_id" inverse="true" />
-			</columnConfigs>
-		</entityConfig>
+            <numberMapping
+                columnDecimalDigitsMax="0"
+                columnDecimalDigitsMin="0"
+                columnSizeMax="2"
+                columnSizeMin="1"
+                mappedType="M_BOOLEAN" />
+            <!-- <numberMapping mappedType="M_BIGDECIMAL" columnSizeMin="10" columnDecimalDigitsMin="4"/> -->
+        </numberMappings>
 
-		<!-- MoreTypesDemo demonstrates sub-packages and various types support such as joda time, BigDecimal etc. -->
-		<entityConfig tableName="MORE_TYPES_DEMO" subPackage="more">
-			<columnConfigs>
-				<columnConfig columnName="date_joda" mappedType="M_JODA_LOCALDATE" />
-				<columnConfig columnName="date_time_joda" mappedType="M_JODA_LOCALDATETIME" />
-			</columnConfigs>
-		</entityConfig>
-	</entityConfigs>
+        <!-- global date mapping (optional) -->
 
-	<!-- Generate enums used by the entities above -->
-	<sharedEnumConfigs>
-		<sharedEnumConfig name="Civility" type="STRING">
-			<enumValues>
-				<enumValue value="MR" label="Mister" />
-				<enumValue value="MS" label="Miss" />
-			</enumValues>
-		</sharedEnumConfig>
-	</sharedEnumConfigs>
+        <dateMappings>
+
+            <!-- <dateMapping columnNameRegExp="VERSION" mappedType="M_UTILDATE"/> -->
+            <!-- <dateMapping columnJdbcType="TIMESTAMP" mappedType="M_JODA_LOCALDATETIME"/> -->
+            <!-- <dateMapping columnJdbcType="DATE" mappedType="M_JODA_LOCALDATE"/> -->
+        </dateMappings>
+
+        <conventions identifiableProperty="id" />
+    </configuration>
+
+    <entityConfigs>
+
+        <entityConfig
+            label="Utilisateur PPAFGestion"
+            tableName="utilisateur" >
+
+            <columnConfigs>
+
+                <columnConfig
+                    businessKey="true"
+                    columnName="login"
+                    fieldName="username"
+                    min="4"
+                    searchResult="true" />
+
+                <columnConfig
+                    columnName="codePostal"
+                    label="code postal"
+                    searchResult="true" />
+
+                <columnConfig
+                    columnName="infoSuppl"
+                    label="information supplémentaire"
+                    searchResult="true" />
+
+                <columnConfig
+                    columnName="email"
+                    searchResult="true" />
+
+                <columnConfig
+                    columnName="enabled"
+                    label="actif"
+                    searchResult="true" />
+
+                <columnConfig
+                    associationDirection="BIDIRECTIONAL"
+                    columnName="membrePPAF_id" />
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig
+            label="Role"
+            tableName="role" >
+
+            <columnConfigs>
+
+                <columnConfig
+                    businessKey="true"
+                    columnName="role_name"
+                    label="Nom du rôle"
+                    messageKey="true" />
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig
+            label="Role membre PPAF"
+            tableName="roleMembre" >
+
+            <columnConfigs>
+
+                <columnConfig
+                    businessKey="true"
+                    columnName="role"
+                    messageKey="true" />
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig
+            label="Membre PPAF"
+            tableName="membrePPAF" >
+        </entityConfig>
+
+        <entityConfig
+            associationDirection="UNIDIRECTIONAL"
+            label="Associer un utilisateur à un rôle"
+            tableName="utilisateur_role" >
+
+            <columnConfigs>
+
+                <columnConfig
+                    associationDirection="BIDIRECTIONAL"
+                    columnName="role_id"
+                    inverse="true" />
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig
+            label="Item"
+            tableName="item" >
+
+            <columnConfigs>
+
+                <columnConfig
+                    businessKey="true"
+                    columnName="nom" />
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig
+            label="Contact"
+            tableName="contact" >
+
+            <columnConfigs>
+
+                <columnConfig
+                    businessKey="true"
+                    columnName="nom" />
+
+                <columnConfig
+                    businessKey="true"
+                    columnName="prenom" />
+
+                <columnConfig
+                    businessKey="true"
+                    columnName="email" />
+
+                <columnConfig
+                    columnName="numeroTelephone1"
+                    label="numéro de téléphone 1" />
+
+                <columnConfig
+                    columnName="numeroTelephone2"
+                    label="numéro de téléphone 2" />
+
+                <columnConfig
+                    columnName="codePostal"
+                    label="code postal"
+                    searchResult="true" />
+
+                <columnConfig
+                    columnName="infoSuppl"
+                    label="information supplémentaire"
+                    searchResult="true" />
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig
+            label="Suivi d&apos;un contact"
+            tableName="suiviContact" >
+
+            <columnConfigs>
+
+                <columnConfig
+                    columnName="dateProchainAppel"
+                    label="date de prochain appel"
+                    searchResult="true" />
+
+                <columnConfig
+                    associationDirection="BIDIRECTIONAL"
+                    columnName="contact_id" />
+
+                <columnConfig
+                    associationDirection="BIDIRECTIONAL"
+                    columnName="membrePPAF_id" />
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig
+            label="Lieu de depot"
+            tableName="lieuDeDepot" >
+
+            <columnConfigs>
+
+                <columnConfig
+                    businessKey="true"
+                    columnName="nom" />
+
+                <columnConfig
+                    columnName="numeroTelephone1"
+                    label="numéro de téléphone 1" />
+
+                <columnConfig
+                    columnName="numeroTelephone2"
+                    label="numéro de téléphone 2" />
+
+                <columnConfig
+                    columnName="codePostal"
+                    label="code postal"
+                    searchResult="true" />
+
+                <columnConfig
+                    columnName="infoSuppl"
+                    label="information supplémentaire"
+                    searchResult="true" />
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig
+            label="Suivi du lieu de dépôt"
+            tableName="suiviDuLieuDeDepot" >
+
+            <columnConfigs>
+
+                <columnConfig
+                    associationDirection="BIDIRECTIONAL"
+                    columnName="membrePPAF_id" />
+
+                <columnConfig
+                    associationDirection="BIDIRECTIONAL"
+                    columnName="lieuDeDepot_id" />
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig
+            label="Lieu de stockage"
+            tableName="lieuDeStockage" >
+
+            <columnConfigs>
+
+                <columnConfig
+                    businessKey="true"
+                    columnName="nom" />
+
+                <columnConfig
+                    columnName="codePostal"
+                    label="code postal"
+                    searchResult="true" />
+
+                <columnConfig
+                    columnName="infoSuppl"
+                    label="information supplémentaire"
+                    searchResult="true" />
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig
+            label="Association item à un lieu de stockage"
+            tableName="itemLieuDeStockage" >
+
+            <columnConfigs>
+
+                <columnConfig
+                    columnName="quantiteEntre"
+                    label="quantité en entrée" />
+
+                <columnConfig
+                    columnName="quantiteSortie"
+                    label="quantité en sortie" />
+
+                <columnConfig
+                    associationDirection="BIDIRECTIONAL"
+                    columnName="lieuDeStockage_id"
+                    label="Lier à un lieu de stockage" />
+
+                <columnConfig
+                    associationDirection="BIDIRECTIONAL"
+                    columnName="item_id" />
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig
+            label="Vente d&apos;un item"
+            tableName="vente" >
+
+            <columnConfigs>
+
+                <columnConfig
+                    columnName="dateDEncaissement"
+                    label="date d&apos;encaissement" />
+
+                <columnConfig
+                    columnName="prixTotal"
+                    label="prix total" />
+
+                <columnConfig
+                    columnName="fraisDePort"
+                    label="frais de port" />
+
+                <columnConfig
+                    columnName="numeroDeFacture"
+                    label="numéro de facture" />
+
+                <columnConfig
+                    columnName="modeDeReglement"
+                    label="mode de réglement" />
+
+                <columnConfig
+                    columnName="informationReglement"
+                    label="information sur le réglement" />
+
+                <columnConfig
+                    associationDirection="BIDIRECTIONAL"
+                    columnName="item_id" />
+
+                <columnConfig
+                    associationDirection="BIDIRECTIONAL"
+                    columnName="contact_id" />
+
+                <columnConfig
+                    associationDirection="BIDIRECTIONAL"
+                    columnName="lieuDeDepot_id" />
+
+                <columnConfig
+                    associationDirection="BIDIRECTIONAL"
+                    columnName="membrePPAF_id" />
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig
+            label="Frais PPAF"
+            tableName="frais" >
+
+            <columnConfigs>
+
+                <columnConfig
+                    columnName="modeDeReglement"
+                    label="mode de réglement" />
+
+                <columnConfig
+                    columnName="informationReglement"
+                    label="information sur le réglement" />
+
+                <columnConfig
+                    associationDirection="BIDIRECTIONAL"
+                    columnName="membrePPAF_id" />
+            </columnConfigs>
+        </entityConfig>
+    </entityConfigs>
+
 </celerio>
