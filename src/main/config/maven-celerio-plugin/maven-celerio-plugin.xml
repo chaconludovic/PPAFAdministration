@@ -87,6 +87,7 @@
                 <columnConfig
                     associationDirection="UNIDIRECTIONAL"
                     columnName="membrePPAF_id" />
+                
             </columnConfigs>
         </entityConfig>
 

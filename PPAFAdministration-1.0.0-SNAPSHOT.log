@@ -274,3 +274,2581 @@
 	Current State: contactSelect
 	Current Transition: N/A
 [] - 2012-10-15 21:42:15,637 - admin - flow only duration:    63 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 21:46:45,976 - admin - flow only duration:    23 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 21:52:36,936 - admin - flow only duration:    41 ms - /PPAFAdministration/app/suividulieudedepot
+[] - 2012-10-15 21:52:37,094 - admin - 
+    /* select
+        count(*) 
+    from
+        Suividulieudedepot as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            SUIVIDULIEUDEDEPOT suividulie0_ limit ?
+[] - 2012-10-15 21:52:37,100 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Suividulieudedepot as generatedAlias0 */ select
+            suividulie0_.ID as ID2_,
+            suividulie0_."DATE" as DATE2_2_,
+            suividulie0_.lieuDeDepot_id as lieuDeDe3_2_,
+            suividulie0_.membrePPAF_id as membrePPAF4_2_,
+            suividulie0_.NOTE as NOTE2_ 
+        from
+            SUIVIDULIEUDEDEPOT suividulie0_ limit ?
+[] - 2012-10-15 21:52:37,111 - admin - flow only duration:   172 ms - /PPAFAdministration/app/suividulieudedepot
+	Active flow: suividulieudedepot (/PPAFAdministration/app/suividulieudedepot?execution=e3s1)
+	Current State: suividulieudedepotSelect
+	Current Transition: N/A
+[] - 2012-10-15 21:53:07,665 - admin - flow only duration:    23 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 21:59:06,111 - admin - flow only duration:    64 ms - /PPAFAdministration/app/role
+[] - 2012-10-15 21:59:06,186 - admin - 
+    /* select
+        count(*) 
+    from
+        Role as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            "ROLE" role0_ limit ?
+[] - 2012-10-15 21:59:06,192 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Role as generatedAlias0 */ select
+            role0_.ID as ID8_,
+            role0_.role_name as role2_8_ 
+        from
+            "ROLE" role0_ limit ?
+[] - 2012-10-15 21:59:06,209 - admin - flow only duration:    94 ms - /PPAFAdministration/app/role
+	Active flow: role (/PPAFAdministration/app/role?execution=e4s1)
+	Current State: roleSelect
+	Current Transition: N/A
+[] - 2012-10-15 21:59:22,719 -  - HHH000393: The 1.2.131 version of H2 implements temporary table creation such that it commits current transaction; multi-table, bulk hql/jpaql will not work properly
+[] - 2012-10-15 21:59:23,260 -  - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+[] - 2012-10-15 21:59:23,342 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Frais]; using defaults.
+[] - 2012-10-15 21:59:23,451 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage]; using defaults.
+[] - 2012-10-15 21:59:23,462 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suivicontact]; using defaults.
+[] - 2012-10-15 21:59:23,468 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Role]; using defaults.
+[] - 2012-10-15 21:59:23,475 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item]; using defaults.
+[] - 2012-10-15 21:59:23,483 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot]; using defaults.
+[] - 2012-10-15 21:59:23,494 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suividulieudedepot]; using defaults.
+[] - 2012-10-15 21:59:23,500 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Vente]; using defaults.
+[] - 2012-10-15 21:59:23,512 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf]; using defaults.
+[] - 2012-10-15 21:59:23,526 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur]; using defaults.
+[] - 2012-10-15 21:59:23,536 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Itemlieudestockage]; using defaults.
+[] - 2012-10-15 21:59:23,542 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact]; using defaults.
+[] - 2012-10-15 21:59:23,555 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Rolemembre]; using defaults.
+[] - 2012-10-15 21:59:23,561 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item.itemlieudestockages]; using defaults.
+[] - 2012-10-15 21:59:23,571 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.utilisateurs]; using defaults.
+[] - 2012-10-15 21:59:23,572 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.fraiss]; using defaults.
+[] - 2012-10-15 21:59:23,573 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.suividulieudedepots]; using defaults.
+[] - 2012-10-15 21:59:23,573 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item.ventes]; using defaults.
+[] - 2012-10-15 21:59:23,574 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur.roles]; using defaults.
+[] - 2012-10-15 21:59:23,576 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.ventes]; using defaults.
+[] - 2012-10-15 21:59:23,576 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact.suivicontacts]; using defaults.
+[] - 2012-10-15 21:59:23,577 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot.suividulieudedepots]; using defaults.
+[] - 2012-10-15 21:59:23,577 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot.ventes]; using defaults.
+[] - 2012-10-15 21:59:23,578 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact.ventes]; using defaults.
+[] - 2012-10-15 21:59:23,579 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage.itemlieudestockages]; using defaults.
+[] - 2012-10-15 21:59:23,579 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.suivicontacts]; using defaults.
+[] - 2012-10-15 21:59:23,670 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+[] - 2012-10-15 21:59:23,674 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+[] - 2012-10-15 21:59:26,621 -  - Initializing filter 'fixResourcesExpirationFilter'
+[] - 2012-10-15 21:59:26,621 -  - Filter 'fixResourcesExpirationFilter' configured successfully
+[] - 2012-10-15 21:59:34,482 - anonymousUser - flow only duration:  1015 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 21:59:34,529 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/theme.css
+[] - 2012-10-15 21:59:34,535 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/css/main.css
+[] - 2012-10-15 21:59:34,551 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.css
+[] - 2012-10-15 21:59:34,584 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.css
+[] - 2012-10-15 21:59:34,584 - anonymousUser - flow only duration:    53 ms - /PPAFAdministration/app/javax.faces.resource/theme.css
+[] - 2012-10-15 21:59:34,589 - anonymousUser - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.css
+[] - 2012-10-15 21:59:34,577 - anonymousUser - flow only duration:     7 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.css
+[] - 2012-10-15 21:59:34,603 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.js
+[] - 2012-10-15 21:59:34,610 - anonymousUser - flow only duration:     5 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.js
+[] - 2012-10-15 21:59:34,624 - anonymousUser - flow only duration:    80 ms - /PPAFAdministration/app/javax.faces.resource/css/main.css
+[] - 2012-10-15 21:59:34,629 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.js
+[] - 2012-10-15 21:59:34,631 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js
+[] - 2012-10-15 21:59:34,634 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/js/main.js
+[] - 2012-10-15 21:59:34,635 - anonymousUser - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.js
+[] - 2012-10-15 21:59:34,645 - anonymousUser - flow only duration:    10 ms - /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js
+[] - 2012-10-15 21:59:34,658 - anonymousUser - flow only duration:    24 ms - /PPAFAdministration/app/javax.faces.resource/js/main.js
+[] - 2012-10-15 21:59:34,992 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png
+[] - 2012-10-15 21:59:35,004 - anonymousUser - flow only duration:    12 ms - /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png
+[] - 2012-10-15 21:59:46,357 - anonymousUser - flow only duration:    61 ms - /PPAFAdministration/app/login
+[] - 2012-10-15 21:59:47,820 -  - Security verification for user 'admin'
+[] - 2012-10-15 21:59:47,935 - admin - flow only duration:    71 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 22:05:19,182 - admin - flow only duration:   289 ms - /PPAFAdministration/app/membreppaf
+[] - 2012-10-15 22:05:20,081 - admin - 
+    /* select
+        count(*) 
+    from
+        Membreppaf as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            MEMBREPPAF membreppaf0_ limit ?
+[] - 2012-10-15 22:05:20,133 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Membreppaf as generatedAlias0 */ select
+            membreppaf0_.ID as ID8_,
+            membreppaf0_.ACTIF as ACTIF8_,
+            membreppaf0_.CODEPOSTAL as CODEPOSTAL8_,
+            membreppaf0_.EMAIL as EMAIL8_,
+            membreppaf0_.INFOSUPPL as INFOSUPPL8_,
+            membreppaf0_.NOM as NOM8_,
+            membreppaf0_.NOTE as NOTE8_,
+            membreppaf0_.NUMEROTELEPHONE1 as NUMEROTE8_8_,
+            membreppaf0_.NUMEROTELEPHONE2 as NUMEROTE9_8_,
+            membreppaf0_.PRENOM as PRENOM8_,
+            membreppaf0_.ROLEMEMBRE_ID as ROLEMEMBRE11_8_,
+            membreppaf0_.RUE as RUE8_,
+            membreppaf0_.VILLE as VILLE8_ 
+        from
+            MEMBREPPAF membreppaf0_ limit ?
+[] - 2012-10-15 22:05:20,157 - admin - flow only duration:   972 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf (/PPAFAdministration/app/membreppaf?execution=e1s1)
+	Current State: membreppafSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:05:23,446 - admin - flow only duration:   302 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf (/PPAFAdministration/app/membreppaf?execution=e1s1)
+	Current State: membreppafSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:05:30,967 - admin - flow only duration:   229 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-15 22:05:31,366 - admin - flow only duration:   395 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf/edit (/PPAFAdministration/app/membreppaf?execution=e1s2)
+	Current State: membreppafEdit
+	Current Transition: N/A
+[] - 2012-10-15 22:05:44,009 - admin - flow only duration:   199 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: selectRolemembre
+	transitionExecuting: on=selectRolemembre to=selectRolemembre
+[] - 2012-10-15 22:05:44,135 - admin - 
+    /* select
+        count(*) 
+    from
+        Rolemembre as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            ROLEMEMBRE rolemembre0_ limit ?
+[] - 2012-10-15 22:05:44,154 - admin - SQL Error: 0, SQLState: null
+[] - 2012-10-15 22:05:44,154 - admin - Borrow prepareStatement from pool failed
+[] - 2012-10-15 22:05:44,270 - admin - flow only duration:   258 ms - /PPAFAdministration/app/membreppaf
+	Active flow: rolemembre (/PPAFAdministration/app/membreppaf?execution=e1s3)
+	Current State: rolemembreSubSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:05:48,338 - admin - EXCEPTION unique id: 1318697959
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.webflow.execution.repository.FlowExecutionRestorationFailureException: A problem occurred restoring the flow execution with key 'e1s2'
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:894)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:778)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1221)
+	at com.eldoraludo.ppafadministration.web.filter.FlowTimerFilter.doFilter(FlowTimerFilter.java:67)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilter(BasicAuthenticationFilter.java:150)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at com.eldoraludo.ppafadministration.web.filter.ExceptionFilter.doFilter(ExceptionFilter.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.primefaces.webapp.filter.FileUploadFilter.doFilter(FileUploadFilter.java:79)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.springframework.web.filter.ShallowEtagHeaderFilter.doFilterInternal(ShallowEtagHeaderFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at net.sf.ehcache.constructs.web.filter.GzipFilter.doFilter(GzipFilter.java:95)
+	at net.sf.ehcache.constructs.web.filter.Filter.doFilter(Filter.java:86)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: org.springframework.webflow.execution.repository.FlowExecutionRestorationFailureException: A problem occurred restoring the flow execution with key 'e1s2'
+	at org.springframework.webflow.execution.repository.impl.DefaultFlowExecutionRepository.getFlowExecution(DefaultFlowExecutionRepository.java:113)
+	at org.springframework.webflow.executor.FlowExecutorImpl.resumeExecution(FlowExecutorImpl.java:168)
+	at org.springframework.webflow.mvc.servlet.FlowHandlerAdapter.handle(FlowHandlerAdapter.java:183)
+	at org.springframework.faces.webflow.JsfFlowHandlerAdapter.handle(JsfFlowHandlerAdapter.java:48)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:923)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:852)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:882)
+	... 58 more
+Caused by: org.springframework.webflow.execution.repository.snapshot.SnapshotNotFoundException: No flow execution snapshot could be found with id '2'; perhaps the snapshot has been removed? 
+	at org.springframework.webflow.execution.repository.impl.SimpleFlowExecutionSnapshotGroup.getSnapshot(SimpleFlowExecutionSnapshotGroup.java:74)
+	at org.springframework.webflow.execution.repository.impl.DefaultFlowExecutionRepository.getFlowExecution(DefaultFlowExecutionRepository.java:111)
+	... 64 more
+[] - 2012-10-15 22:07:22,536 - admin - flow only duration:     5 ms - /PPAFAdministration/app/rolemembre
+[] - 2012-10-15 22:07:22,623 - admin - SQL Error: 0, SQLState: null
+[] - 2012-10-15 22:07:22,623 - admin - Borrow prepareStatement from pool failed
+[] - 2012-10-15 22:07:22,663 - admin - flow only duration:   125 ms - /PPAFAdministration/app/rolemembre
+	Active flow: rolemembre (/PPAFAdministration/app/rolemembre?execution=e2s1)
+	Current State: rolemembreSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:12:54,069 -  - HHH000342: Could not obtain connection to query metadata : Cannot create PoolableConnectionFactory (Database may be already in use: "Locked by another process". Possible solutions: close all other connection(s); use the server mode; SQL statement:
+null/13a660c4cf8c399fcb9b9ce75ed6abee30ae630ac62 [90020-131])
+[] - 2012-10-15 22:12:54,083 -  - HHH000393: The 1.2.131 version of H2 implements temporary table creation such that it commits current transaction; multi-table, bulk hql/jpaql will not work properly
+[] - 2012-10-15 22:12:54,782 -  - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+[] - 2012-10-15 22:12:54,887 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Frais]; using defaults.
+[] - 2012-10-15 22:12:55,024 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage]; using defaults.
+[] - 2012-10-15 22:12:55,038 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suivicontact]; using defaults.
+[] - 2012-10-15 22:12:55,051 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Role]; using defaults.
+[] - 2012-10-15 22:12:55,060 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item]; using defaults.
+[] - 2012-10-15 22:12:55,070 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suividulieudedepot]; using defaults.
+[] - 2012-10-15 22:12:55,076 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot]; using defaults.
+[] - 2012-10-15 22:12:55,087 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Vente]; using defaults.
+[] - 2012-10-15 22:12:55,106 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf]; using defaults.
+[] - 2012-10-15 22:12:55,126 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur]; using defaults.
+[] - 2012-10-15 22:12:55,140 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Itemlieudestockage]; using defaults.
+[] - 2012-10-15 22:12:55,149 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact]; using defaults.
+[] - 2012-10-15 22:12:55,161 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Rolemembre]; using defaults.
+[] - 2012-10-15 22:12:55,167 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item.itemlieudestockages]; using defaults.
+[] - 2012-10-15 22:12:55,180 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.utilisateurs]; using defaults.
+[] - 2012-10-15 22:12:55,181 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.fraiss]; using defaults.
+[] - 2012-10-15 22:12:55,182 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.suividulieudedepots]; using defaults.
+[] - 2012-10-15 22:12:55,183 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item.ventes]; using defaults.
+[] - 2012-10-15 22:12:55,184 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur.roles]; using defaults.
+[] - 2012-10-15 22:12:55,186 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.ventes]; using defaults.
+[] - 2012-10-15 22:12:55,187 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact.suivicontacts]; using defaults.
+[] - 2012-10-15 22:12:55,188 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot.suividulieudedepots]; using defaults.
+[] - 2012-10-15 22:12:55,189 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact.ventes]; using defaults.
+[] - 2012-10-15 22:12:55,189 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot.ventes]; using defaults.
+[] - 2012-10-15 22:12:55,190 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage.itemlieudestockages]; using defaults.
+[] - 2012-10-15 22:12:55,191 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.suivicontacts]; using defaults.
+[] - 2012-10-15 22:12:55,271 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+[] - 2012-10-15 22:12:55,274 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+[] - 2012-10-15 22:12:58,338 -  - Initializing filter 'fixResourcesExpirationFilter'
+[] - 2012-10-15 22:12:58,338 -  - Filter 'fixResourcesExpirationFilter' configured successfully
+[] - 2012-10-15 22:13:03,973 - anonymousUser - flow only duration:   985 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 22:13:04,030 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/theme.css
+[] - 2012-10-15 22:13:04,052 - anonymousUser - flow only duration:    21 ms - /PPAFAdministration/app/javax.faces.resource/theme.css
+[] - 2012-10-15 22:13:04,059 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/css/main.css
+[] - 2012-10-15 22:13:04,072 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.css
+[] - 2012-10-15 22:13:04,077 - anonymousUser - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.css
+[] - 2012-10-15 22:13:04,085 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.css
+[] - 2012-10-15 22:13:04,092 - anonymousUser - flow only duration:     6 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.css
+[] - 2012-10-15 22:13:04,097 - anonymousUser - flow only duration:    37 ms - /PPAFAdministration/app/javax.faces.resource/css/main.css
+[] - 2012-10-15 22:13:04,097 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js
+[] - 2012-10-15 22:13:04,104 - anonymousUser - flow only duration:     5 ms - /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js
+[] - 2012-10-15 22:13:04,104 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.js
+[] - 2012-10-15 22:13:04,109 - anonymousUser - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.js
+[] - 2012-10-15 22:13:04,149 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.js
+[] - 2012-10-15 22:13:04,158 - anonymousUser - flow only duration:     6 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.js
+[] - 2012-10-15 22:13:04,163 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/js/main.js
+[] - 2012-10-15 22:13:04,174 - anonymousUser - flow only duration:     9 ms - /PPAFAdministration/app/javax.faces.resource/js/main.js
+[] - 2012-10-15 22:13:04,337 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png
+[] - 2012-10-15 22:13:04,374 - anonymousUser - flow only duration:    36 ms - /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png
+[] - 2012-10-15 22:13:06,962 - anonymousUser - flow only duration:    52 ms - /PPAFAdministration/app/login
+[] - 2012-10-15 22:13:10,956 -  - SQL Error: 0, SQLState: null
+[] - 2012-10-15 22:13:10,956 -  - Cannot create PoolableConnectionFactory (Database may be already in use: "Locked by another process". Possible solutions: close all other connection(s); use the server mode; SQL statement:
+null/13a660c4cf8c399fcb9b9ce75ed6abee30ae630ac62 [90020-131])
+[] - 2012-10-15 22:13:11,000 - anonymousUser - flow only duration:    28 ms - /PPAFAdministration/app/login
+[] - 2012-10-15 22:13:16,164 -  - SQL Error: 0, SQLState: null
+[] - 2012-10-15 22:13:16,164 -  - Cannot create PoolableConnectionFactory (Database may be already in use: "Locked by another process". Possible solutions: close all other connection(s); use the server mode; SQL statement:
+null/13a660c4cf8c399fcb9b9ce75ed6abee30ae630ac62 [90020-131])
+[] - 2012-10-15 22:13:16,197 - anonymousUser - flow only duration:    29 ms - /PPAFAdministration/app/login
+[] - 2012-10-15 22:13:33,596 -  - Security verification for user 'admin'
+[] - 2012-10-15 22:13:33,812 - admin - flow only duration:   202 ms - /PPAFAdministration/app/role
+[] - 2012-10-15 22:13:34,547 - admin - 
+    /* select
+        count(*) 
+    from
+        Role as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            "ROLE" role0_ limit ?
+[] - 2012-10-15 22:13:34,620 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Role as generatedAlias0 */ select
+            role0_.ID as ID11_,
+            role0_.role_name as role2_11_ 
+        from
+            "ROLE" role0_ limit ?
+[] - 2012-10-15 22:13:34,674 - admin - flow only duration:   859 ms - /PPAFAdministration/app/role
+	Active flow: role (/PPAFAdministration/app/role?execution=e1s1)
+	Current State: roleSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:13:40,782 - admin - flow only duration:   260 ms - /PPAFAdministration/app/role
+	eventSignaled: quit
+	transitionExecuting: on=quit to=quit
+[] - 2012-10-15 22:13:44,239 - admin - flow only duration:    37 ms - /PPAFAdministration/app/rolemembre
+[] - 2012-10-15 22:13:44,358 - admin - 
+    /* select
+        count(*) 
+    from
+        Rolemembre as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            ROLEMEMBRE rolemembre0_ limit ?
+[] - 2012-10-15 22:13:44,369 - admin - SQL Error: 0, SQLState: null
+[] - 2012-10-15 22:13:44,369 - admin - Borrow prepareStatement from pool failed
+[] - 2012-10-15 22:13:44,473 - admin - flow only duration:   231 ms - /PPAFAdministration/app/rolemembre
+	Active flow: rolemembre (/PPAFAdministration/app/rolemembre?execution=e2s1)
+	Current State: rolemembreSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:15:50,487 - admin - flow only duration:     2 ms - /PPAFAdministration/app/role
+[] - 2012-10-15 22:15:50,496 - admin - flow only duration:     4 ms - /PPAFAdministration/app/role
+[] - 2012-10-15 22:15:50,595 - admin - flow only duration:    97 ms - /PPAFAdministration/app/role
+	Active flow: role (/PPAFAdministration/app/role?execution=e3s1)
+	Current State: roleSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:15:54,645 - admin - flow only duration:     5 ms - /PPAFAdministration/app/rolemembre
+[] - 2012-10-15 22:15:54,731 - admin - SQL Error: 0, SQLState: null
+[] - 2012-10-15 22:15:54,731 - admin - Borrow prepareStatement from pool failed
+[] - 2012-10-15 22:15:54,776 - admin - flow only duration:   128 ms - /PPAFAdministration/app/rolemembre
+	Active flow: rolemembre (/PPAFAdministration/app/rolemembre?execution=e4s1)
+	Current State: rolemembreSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:15:57,849 - admin - flow only duration:    98 ms - /PPAFAdministration/app/role
+	Active flow: role (/PPAFAdministration/app/role?execution=e3s1)
+	Current State: roleSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:16:00,545 - admin - flow only duration:     6 ms - /PPAFAdministration/app/role
+[] - 2012-10-15 22:16:00,664 - admin - flow only duration:   110 ms - /PPAFAdministration/app/role
+	Active flow: role (/PPAFAdministration/app/role?execution=e5s1)
+	Current State: roleSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:16:02,640 - admin - flow only duration:    85 ms - /PPAFAdministration/app/role
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-15 22:16:02,744 - admin - flow only duration:   102 ms - /PPAFAdministration/app/role
+	Active flow: role/edit (/PPAFAdministration/app/role?execution=e5s2)
+	Current State: roleEdit
+	Current Transition: N/A
+[] - 2012-10-15 22:19:20,680 -  - HHH000393: The 1.2.131 version of H2 implements temporary table creation such that it commits current transaction; multi-table, bulk hql/jpaql will not work properly
+[] - 2012-10-15 22:19:21,336 -  - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+[] - 2012-10-15 22:19:21,451 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Frais]; using defaults.
+[] - 2012-10-15 22:19:21,569 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage]; using defaults.
+[] - 2012-10-15 22:19:21,580 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suivicontact]; using defaults.
+[] - 2012-10-15 22:19:21,588 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Role]; using defaults.
+[] - 2012-10-15 22:19:21,595 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item]; using defaults.
+[] - 2012-10-15 22:19:21,603 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suividulieudedepot]; using defaults.
+[] - 2012-10-15 22:19:21,611 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot]; using defaults.
+[] - 2012-10-15 22:19:21,624 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Vente]; using defaults.
+[] - 2012-10-15 22:19:21,639 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur]; using defaults.
+[] - 2012-10-15 22:19:21,653 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf]; using defaults.
+[] - 2012-10-15 22:19:21,670 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Itemlieudestockage]; using defaults.
+[] - 2012-10-15 22:19:21,676 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact]; using defaults.
+[] - 2012-10-15 22:19:21,691 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Rolemembre]; using defaults.
+[] - 2012-10-15 22:19:21,696 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item.itemlieudestockages]; using defaults.
+[] - 2012-10-15 22:19:21,706 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.utilisateurs]; using defaults.
+[] - 2012-10-15 22:19:21,707 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.fraiss]; using defaults.
+[] - 2012-10-15 22:19:21,707 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.suividulieudedepots]; using defaults.
+[] - 2012-10-15 22:19:21,708 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item.ventes]; using defaults.
+[] - 2012-10-15 22:19:21,708 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur.roles]; using defaults.
+[] - 2012-10-15 22:19:21,710 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.ventes]; using defaults.
+[] - 2012-10-15 22:19:21,711 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact.suivicontacts]; using defaults.
+[] - 2012-10-15 22:19:21,712 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot.suividulieudedepots]; using defaults.
+[] - 2012-10-15 22:19:21,712 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact.ventes]; using defaults.
+[] - 2012-10-15 22:19:21,713 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot.ventes]; using defaults.
+[] - 2012-10-15 22:19:21,714 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage.itemlieudestockages]; using defaults.
+[] - 2012-10-15 22:19:21,714 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.suivicontacts]; using defaults.
+[] - 2012-10-15 22:19:21,796 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+[] - 2012-10-15 22:19:21,799 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+[] - 2012-10-15 22:19:24,711 -  - Initializing filter 'fixResourcesExpirationFilter'
+[] - 2012-10-15 22:19:24,711 -  - Filter 'fixResourcesExpirationFilter' configured successfully
+[] - 2012-10-15 22:19:54,372 - anonymousUser - flow only duration:   881 ms - /PPAFAdministration/app/login
+[] - 2012-10-15 22:19:54,458 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/css/main.css
+[] - 2012-10-15 22:19:54,478 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/theme.css
+[] - 2012-10-15 22:19:54,539 - anonymousUser - flow only duration:    50 ms - /PPAFAdministration/app/javax.faces.resource/theme.css
+[] - 2012-10-15 22:19:54,562 - anonymousUser - flow only duration:   103 ms - /PPAFAdministration/app/javax.faces.resource/css/main.css
+[] - 2012-10-15 22:19:54,701 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.css
+[] - 2012-10-15 22:19:54,707 - anonymousUser - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.css
+[] - 2012-10-15 22:19:54,709 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.css
+[] - 2012-10-15 22:19:54,716 - anonymousUser - flow only duration:     5 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.css
+[] - 2012-10-15 22:19:54,719 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js
+[] - 2012-10-15 22:19:54,724 - anonymousUser - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js
+[] - 2012-10-15 22:19:54,725 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.js
+[] - 2012-10-15 22:19:54,732 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.js
+[] - 2012-10-15 22:19:54,739 - anonymousUser - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.js
+[] - 2012-10-15 22:19:54,767 - anonymousUser - flow only duration:    41 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.js
+[] - 2012-10-15 22:19:54,792 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/js/main.js
+[] - 2012-10-15 22:19:54,802 - anonymousUser - flow only duration:     8 ms - /PPAFAdministration/app/javax.faces.resource/js/main.js
+[] - 2012-10-15 22:19:54,892 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png
+[] - 2012-10-15 22:19:54,928 - anonymousUser - flow only duration:    35 ms - /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png
+[] - 2012-10-15 22:19:56,453 -  - Security verification for user 'admin'
+[] - 2012-10-15 22:19:56,505 - admin - flow only duration:    24 ms - /PPAFAdministration/app/role
+[] - 2012-10-15 22:19:56,777 - admin - flow only duration:   268 ms - /PPAFAdministration/app/role
+[] - 2012-10-15 22:19:57,418 - admin - 
+    /* select
+        count(*) 
+    from
+        Role as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            "ROLE" role0_ limit ?
+[] - 2012-10-15 22:19:57,468 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Role as generatedAlias0 */ select
+            role0_.ID as ID9_,
+            role0_.role_name as role2_9_ 
+        from
+            "ROLE" role0_ limit ?
+[] - 2012-10-15 22:19:57,534 - admin - flow only duration:   755 ms - /PPAFAdministration/app/role
+	Active flow: role (/PPAFAdministration/app/role?execution=e1s1)
+	Current State: roleSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:20:01,455 - admin - flow only duration:    44 ms - /PPAFAdministration/app/rolemembre
+[] - 2012-10-15 22:20:01,596 - admin - 
+    /* select
+        count(*) 
+    from
+        Rolemembre as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            ROLEMEMBRE rolemembre0_ limit ?
+[] - 2012-10-15 22:20:01,612 - admin - SQL Error: 0, SQLState: null
+[] - 2012-10-15 22:20:01,612 - admin - Borrow prepareStatement from pool failed
+[] - 2012-10-15 22:20:01,703 - admin - flow only duration:   242 ms - /PPAFAdministration/app/rolemembre
+	Active flow: rolemembre (/PPAFAdministration/app/rolemembre?execution=e2s1)
+	Current State: rolemembreSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:25:37,005 -  - HHH000393: The 1.2.131 version of H2 implements temporary table creation such that it commits current transaction; multi-table, bulk hql/jpaql will not work properly
+[] - 2012-10-15 22:25:37,559 -  - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+[] - 2012-10-15 22:25:37,680 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Frais]; using defaults.
+[] - 2012-10-15 22:25:37,812 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage]; using defaults.
+[] - 2012-10-15 22:25:37,823 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suivicontact]; using defaults.
+[] - 2012-10-15 22:25:37,832 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Role]; using defaults.
+[] - 2012-10-15 22:25:37,839 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item]; using defaults.
+[] - 2012-10-15 22:25:37,847 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suividulieudedepot]; using defaults.
+[] - 2012-10-15 22:25:37,853 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot]; using defaults.
+[] - 2012-10-15 22:25:37,866 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Vente]; using defaults.
+[] - 2012-10-15 22:25:37,879 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur]; using defaults.
+[] - 2012-10-15 22:25:37,889 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf]; using defaults.
+[] - 2012-10-15 22:25:37,911 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Itemlieudestockage]; using defaults.
+[] - 2012-10-15 22:25:37,920 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact]; using defaults.
+[] - 2012-10-15 22:25:37,934 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Rolemembre]; using defaults.
+[] - 2012-10-15 22:25:37,940 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item.itemlieudestockages]; using defaults.
+[] - 2012-10-15 22:25:37,951 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.utilisateurs]; using defaults.
+[] - 2012-10-15 22:25:37,951 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.fraiss]; using defaults.
+[] - 2012-10-15 22:25:37,952 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.suividulieudedepots]; using defaults.
+[] - 2012-10-15 22:25:37,953 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item.ventes]; using defaults.
+[] - 2012-10-15 22:25:37,953 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur.roles]; using defaults.
+[] - 2012-10-15 22:25:37,955 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.ventes]; using defaults.
+[] - 2012-10-15 22:25:37,956 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact.suivicontacts]; using defaults.
+[] - 2012-10-15 22:25:37,957 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot.suividulieudedepots]; using defaults.
+[] - 2012-10-15 22:25:37,957 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot.ventes]; using defaults.
+[] - 2012-10-15 22:25:37,958 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact.ventes]; using defaults.
+[] - 2012-10-15 22:25:37,958 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage.itemlieudestockages]; using defaults.
+[] - 2012-10-15 22:25:37,959 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.suivicontacts]; using defaults.
+[] - 2012-10-15 22:25:38,034 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+[] - 2012-10-15 22:25:38,037 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+[] - 2012-10-15 22:25:40,993 -  - Initializing filter 'fixResourcesExpirationFilter'
+[] - 2012-10-15 22:25:40,993 -  - Filter 'fixResourcesExpirationFilter' configured successfully
+[] - 2012-10-15 22:25:49,605 - anonymousUser - flow only duration:   664 ms - /PPAFAdministration/app/login
+[] - 2012-10-15 22:25:49,640 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/theme.css
+[] - 2012-10-15 22:25:49,651 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/css/main.css
+[] - 2012-10-15 22:25:49,654 - anonymousUser - flow only duration:    13 ms - /PPAFAdministration/app/javax.faces.resource/theme.css
+[] - 2012-10-15 22:25:49,662 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.css
+[] - 2012-10-15 22:25:49,675 - anonymousUser - flow only duration:    12 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.css
+[] - 2012-10-15 22:25:49,698 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.css
+[] - 2012-10-15 22:25:49,703 - anonymousUser - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.css
+[] - 2012-10-15 22:25:49,716 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js
+[] - 2012-10-15 22:25:49,721 - anonymousUser - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js
+[] - 2012-10-15 22:25:49,744 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.js
+[] - 2012-10-15 22:25:49,748 - anonymousUser - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.js
+[] - 2012-10-15 22:25:49,753 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.js
+[] - 2012-10-15 22:25:49,763 - anonymousUser - flow only duration:     7 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.js
+[] - 2012-10-15 22:25:49,770 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/js/main.js
+[] - 2012-10-15 22:25:49,783 - anonymousUser - flow only duration:   129 ms - /PPAFAdministration/app/javax.faces.resource/css/main.css
+[] - 2012-10-15 22:25:49,789 - anonymousUser - flow only duration:    18 ms - /PPAFAdministration/app/javax.faces.resource/js/main.js
+[] - 2012-10-15 22:25:50,108 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png
+[] - 2012-10-15 22:25:50,148 - anonymousUser - flow only duration:    38 ms - /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png
+[] - 2012-10-15 22:25:52,648 -  - Security verification for user 'admin'
+[] - 2012-10-15 22:25:52,693 - admin - flow only duration:    21 ms - /PPAFAdministration/app/rolemembre
+[] - 2012-10-15 22:25:52,931 - admin - flow only duration:   234 ms - /PPAFAdministration/app/rolemembre
+[] - 2012-10-15 22:25:53,567 - admin - 
+    /* select
+        count(*) 
+    from
+        Rolemembre as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            ROLEMEMBRE rolemembre0_ limit ?
+[] - 2012-10-15 22:25:53,618 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Rolemembre as generatedAlias0 */ select
+            rolemembre0_.ID as ID10_,
+            rolemembre0_.role as role10_ 
+        from
+            ROLEMEMBRE rolemembre0_ limit ?
+[] - 2012-10-15 22:25:53,650 - admin - flow only duration:   716 ms - /PPAFAdministration/app/rolemembre
+	Active flow: rolemembre (/PPAFAdministration/app/rolemembre?execution=e1s1)
+	Current State: rolemembreSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:25:57,086 - admin - flow only duration:     5 ms - /PPAFAdministration/app/rolemembre
+[] - 2012-10-15 22:25:57,228 - admin - flow only duration:   134 ms - /PPAFAdministration/app/rolemembre
+	Active flow: rolemembre (/PPAFAdministration/app/rolemembre?execution=e2s1)
+	Current State: rolemembreSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:29:34,518 - admin - flow only duration:    39 ms - /PPAFAdministration/app/item
+[] - 2012-10-15 22:29:34,699 - admin - 
+    /* select
+        count(*) 
+    from
+        Item as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            ITEM item0_ limit ?
+[] - 2012-10-15 22:29:34,709 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Item as generatedAlias0 */ select
+            item0_.ID as ID3_,
+            item0_.nom as nom3_,
+            item0_.NOTE as NOTE3_,
+            item0_.REFERENCE as REFERENCE3_ 
+        from
+            ITEM item0_ limit ?
+[] - 2012-10-15 22:29:34,737 - admin - flow only duration:   216 ms - /PPAFAdministration/app/item
+	Active flow: item (/PPAFAdministration/app/item?execution=e3s1)
+	Current State: itemSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:29:36,778 - admin - flow only duration:   166 ms - /PPAFAdministration/app/item
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-15 22:29:37,076 - admin - flow only duration:   293 ms - /PPAFAdministration/app/item
+	Active flow: item/edit (/PPAFAdministration/app/item?execution=e3s2)
+	Current State: itemEdit
+	Current Transition: N/A
+[] - 2012-10-15 22:29:39,263 - admin - flow only duration:     4 ms - /PPAFAdministration/app/rolemembre
+[] - 2012-10-15 22:29:39,412 - admin - flow only duration:   145 ms - /PPAFAdministration/app/rolemembre
+	Active flow: rolemembre (/PPAFAdministration/app/rolemembre?execution=e4s1)
+	Current State: rolemembreSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:29:40,294 - admin - flow only duration:    62 ms - /PPAFAdministration/app/rolemembre
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-15 22:29:40,407 - admin - flow only duration:   111 ms - /PPAFAdministration/app/rolemembre
+	Active flow: rolemembre/edit (/PPAFAdministration/app/rolemembre?execution=e4s2)
+	Current State: rolemembreEdit
+	Current Transition: N/A
+[] - 2012-10-15 22:30:12,762 - admin - 
+    /* insert com.eldoraludo.ppafadministration.domain.Rolemembre
+        */ insert 
+        into
+            ROLEMEMBRE
+            (ID, role) 
+        values
+            (null, ?)
+[] - 2012-10-15 22:30:12,801 - admin - flow only duration:   142 ms - /PPAFAdministration/app/rolemembre
+	eventSignaled: saveAndClose
+	transitionExecuting: on=saveAndClose to=null
+	Active flow: rolemembre/edit (/PPAFAdministration/app/rolemembre?execution=e4s2)
+	Current State: rolemembreEdit
+	Current Transition: saveAndClose
+[] - 2012-10-15 22:30:12,864 - admin - flow only duration:    48 ms - /PPAFAdministration/app/rolemembre
+	eventSignaled: forceClose
+	transitionExecuting: on=forceClose to=endEdit
+	eventSignaled: endEdit
+	transitionExecuting: on=endEdit to=quitChoice
+[] - 2012-10-15 22:30:13,004 - admin - 
+    /* select
+        count(*) 
+    from
+        Rolemembre as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            ROLEMEMBRE rolemembre0_ limit ?
+[] - 2012-10-15 22:30:13,006 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Rolemembre as generatedAlias0 */ select
+            rolemembre0_.ID as ID10_,
+            rolemembre0_.role as role10_ 
+        from
+            ROLEMEMBRE rolemembre0_ limit ?
+[] - 2012-10-15 22:30:13,026 - admin - flow only duration:   159 ms - /PPAFAdministration/app/rolemembre
+	Active flow: rolemembre (/PPAFAdministration/app/rolemembre?execution=e4s3)
+	Current State: rolemembreSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:30:13,323 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/messages/messages.png
+[] - 2012-10-15 22:30:13,332 - admin - flow only duration:     8 ms - /PPAFAdministration/app/javax.faces.resource/messages/messages.png
+[] - 2012-10-15 22:30:26,626 - admin - flow only duration:    48 ms - /PPAFAdministration/app/rolemembre
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-15 22:30:26,688 - admin - flow only duration:    59 ms - /PPAFAdministration/app/rolemembre
+	Active flow: rolemembre/edit (/PPAFAdministration/app/rolemembre?execution=e4s4)
+	Current State: rolemembreEdit
+	Current Transition: N/A
+[] - 2012-10-15 22:30:37,933 - admin - 
+    /* insert com.eldoraludo.ppafadministration.domain.Rolemembre
+        */ insert 
+        into
+            ROLEMEMBRE
+            (ID, role) 
+        values
+            (null, ?)
+[] - 2012-10-15 22:30:37,959 - admin - flow only duration:    67 ms - /PPAFAdministration/app/rolemembre
+	eventSignaled: saveAndClose
+	transitionExecuting: on=saveAndClose to=null
+	Active flow: rolemembre/edit (/PPAFAdministration/app/rolemembre?execution=e4s4)
+	Current State: rolemembreEdit
+	Current Transition: saveAndClose
+[] - 2012-10-15 22:30:38,082 - admin - flow only duration:    85 ms - /PPAFAdministration/app/rolemembre
+	eventSignaled: forceClose
+	transitionExecuting: on=forceClose to=endEdit
+	eventSignaled: endEdit
+	transitionExecuting: on=endEdit to=quitChoice
+[] - 2012-10-15 22:30:38,169 - admin - 
+    /* select
+        count(*) 
+    from
+        Rolemembre as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            ROLEMEMBRE rolemembre0_ limit ?
+[] - 2012-10-15 22:30:38,171 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Rolemembre as generatedAlias0 */ select
+            rolemembre0_.ID as ID10_,
+            rolemembre0_.role as role10_ 
+        from
+            ROLEMEMBRE rolemembre0_ limit ?
+[] - 2012-10-15 22:30:38,189 - admin - flow only duration:   104 ms - /PPAFAdministration/app/rolemembre
+	Active flow: rolemembre (/PPAFAdministration/app/rolemembre?execution=e4s5)
+	Current State: rolemembreSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:30:42,820 - admin - flow only duration:    50 ms - /PPAFAdministration/app/membreppaf
+[] - 2012-10-15 22:30:43,150 - admin - 
+    /* select
+        count(*) 
+    from
+        Membreppaf as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            MEMBREPPAF membreppaf0_ limit ?
+[] - 2012-10-15 22:30:43,156 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Membreppaf as generatedAlias0 */ select
+            membreppaf0_.ID as ID6_,
+            membreppaf0_.ACTIF as ACTIF6_,
+            membreppaf0_.CODEPOSTAL as CODEPOSTAL6_,
+            membreppaf0_.EMAIL as EMAIL6_,
+            membreppaf0_.INFOSUPPL as INFOSUPPL6_,
+            membreppaf0_.NOM as NOM6_,
+            membreppaf0_.NOTE as NOTE6_,
+            membreppaf0_.NUMEROTELEPHONE1 as NUMEROTE8_6_,
+            membreppaf0_.NUMEROTELEPHONE2 as NUMEROTE9_6_,
+            membreppaf0_.PRENOM as PRENOM6_,
+            membreppaf0_.ROLEMEMBRE_ID as ROLEMEMBRE11_6_,
+            membreppaf0_.RUE as RUE6_,
+            membreppaf0_.VILLE as VILLE6_ 
+        from
+            MEMBREPPAF membreppaf0_ limit ?
+[] - 2012-10-15 22:30:43,169 - admin - flow only duration:   347 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf (/PPAFAdministration/app/membreppaf?execution=e5s1)
+	Current State: membreppafSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:30:44,196 - admin - flow only duration:   206 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-15 22:30:44,566 - admin - flow only duration:   332 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf/edit (/PPAFAdministration/app/membreppaf?execution=e5s2)
+	Current State: membreppafEdit
+	Current Transition: N/A
+[] - 2012-10-15 22:31:08,551 - admin - flow only duration:   140 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: selectRolemembre
+	transitionExecuting: on=selectRolemembre to=selectRolemembre
+[] - 2012-10-15 22:31:08,652 - admin - flow only duration:    96 ms - /PPAFAdministration/app/membreppaf
+	Active flow: rolemembre (/PPAFAdministration/app/membreppaf?execution=e5s3)
+	Current State: rolemembreSubSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:31:08,784 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/accept.png
+[] - 2012-10-15 22:31:08,790 - admin - flow only duration:     5 ms - /PPAFAdministration/app/javax.faces.resource/icons/accept.png
+[] - 2012-10-15 22:31:13,864 - admin - flow only duration:    41 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: select
+	transitionExecuting: on=select to=rolemembreSelected
+	eventSignaled: rolemembreSelected
+	transitionExecuting: on=rolemembreSelected to=startChoice
+[] - 2012-10-15 22:31:14,103 - admin - flow only duration:   235 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf/edit (/PPAFAdministration/app/membreppaf?execution=e5s4)
+	Current State: membreppafEdit
+	Current Transition: N/A
+[] - 2012-10-15 22:32:52,365 - admin - DEVELOPER: hashCode has changed!.If you encounter this message you should take the time to carefuly review the equals/hashCode methods for: com.eldoraludo.ppafadministration.domain.Membreppaf
+[] - 2012-10-15 22:32:52,367 - admin - 
+    /* insert com.eldoraludo.ppafadministration.domain.Membreppaf
+        */ insert 
+        into
+            MEMBREPPAF
+            (ID, ACTIF, CODEPOSTAL, EMAIL, INFOSUPPL, NOM, NOTE, NUMEROTELEPHONE1, NUMEROTELEPHONE2, PRENOM, ROLEMEMBRE_ID, RUE, VILLE) 
+        values
+            (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[] - 2012-10-15 22:32:52,455 - admin - flow only duration:   258 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: saveAndClose
+	transitionExecuting: on=saveAndClose to=null
+	Active flow: membreppaf/edit (/PPAFAdministration/app/membreppaf?execution=e5s4)
+	Current State: membreppafEdit
+	Current Transition: saveAndClose
+[] - 2012-10-15 22:32:52,605 - admin - flow only duration:   132 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: forceClose
+	transitionExecuting: on=forceClose to=endEdit
+	eventSignaled: endEdit
+	transitionExecuting: on=endEdit to=quitChoice
+[] - 2012-10-15 22:32:52,834 - admin - 
+    /* select
+        count(*) 
+    from
+        Membreppaf as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            MEMBREPPAF membreppaf0_ limit ?
+[] - 2012-10-15 22:32:52,835 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Membreppaf as generatedAlias0 */ select
+            membreppaf0_.ID as ID6_,
+            membreppaf0_.ACTIF as ACTIF6_,
+            membreppaf0_.CODEPOSTAL as CODEPOSTAL6_,
+            membreppaf0_.EMAIL as EMAIL6_,
+            membreppaf0_.INFOSUPPL as INFOSUPPL6_,
+            membreppaf0_.NOM as NOM6_,
+            membreppaf0_.NOTE as NOTE6_,
+            membreppaf0_.NUMEROTELEPHONE1 as NUMEROTE8_6_,
+            membreppaf0_.NUMEROTELEPHONE2 as NUMEROTE9_6_,
+            membreppaf0_.PRENOM as PRENOM6_,
+            membreppaf0_.ROLEMEMBRE_ID as ROLEMEMBRE11_6_,
+            membreppaf0_.RUE as RUE6_,
+            membreppaf0_.VILLE as VILLE6_ 
+        from
+            MEMBREPPAF membreppaf0_ limit ?
+[] - 2012-10-15 22:32:52,854 - admin - flow only duration:   245 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf (/PPAFAdministration/app/membreppaf?execution=e5s5)
+	Current State: membreppafSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:33:17,049 - admin - flow only duration:   101 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 22:33:20,801 - admin - flow only duration:    78 ms - /PPAFAdministration/app/frais
+[] - 2012-10-15 22:33:20,943 - admin - 
+    /* select
+        count(*) 
+    from
+        Frais as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            FRAIS frais0_ limit ?
+[] - 2012-10-15 22:33:20,950 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Frais as generatedAlias0 */ select
+            frais0_.ID as ID1_,
+            frais0_."DATE" as DATE2_1_,
+            frais0_.informationReglement as informat3_1_,
+            frais0_.membrePPAF_id as membrePPAF4_1_,
+            frais0_.modeDeReglement as modeDeRe5_1_,
+            frais0_.MONTANT as MONTANT1_ 
+        from
+            FRAIS frais0_ limit ?
+[] - 2012-10-15 22:33:20,962 - admin - flow only duration:   159 ms - /PPAFAdministration/app/frais
+	Active flow: frais (/PPAFAdministration/app/frais?execution=e6s1)
+	Current State: fraisSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:33:22,693 - admin - flow only duration:    98 ms - /PPAFAdministration/app/frais
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-15 22:33:22,830 - admin - flow only duration:   127 ms - /PPAFAdministration/app/frais
+	Active flow: frais/edit (/PPAFAdministration/app/frais?execution=e6s2)
+	Current State: fraisEdit
+	Current Transition: N/A
+[] - 2012-10-15 22:33:31,378 - admin - flow only duration:    57 ms - /PPAFAdministration/app/frais
+	eventSignaled: viewMembreppaf
+	transitionExecuting: on=viewMembreppaf to=editMembreppaf
+[] - 2012-10-15 22:33:31,651 - admin - flow only duration:   227 ms - /PPAFAdministration/app/frais
+	Active flow: membreppaf/edit (/PPAFAdministration/app/frais?execution=e6s3)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-15 22:33:38,197 - admin - flow only duration:   110 ms - /PPAFAdministration/app/frais
+	eventSignaled: cancel
+	transitionExecuting: on=cancel to=cancelEdit
+	eventSignaled: cancelEdit
+	transitionExecuting: on=cancelEdit to=startChoice
+[] - 2012-10-15 22:33:38,282 - admin - flow only duration:    83 ms - /PPAFAdministration/app/frais
+	Active flow: frais/edit (/PPAFAdministration/app/frais?execution=e6s4)
+	Current State: fraisEdit
+	Current Transition: N/A
+[] - 2012-10-15 22:33:49,854 - admin - flow only duration:    56 ms - /PPAFAdministration/app/frais
+	eventSignaled: viewMembreppaf
+	transitionExecuting: on=viewMembreppaf to=editMembreppaf
+[] - 2012-10-15 22:33:50,047 - admin - flow only duration:   188 ms - /PPAFAdministration/app/frais
+	Active flow: membreppaf/edit (/PPAFAdministration/app/frais?execution=e6s5)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-15 22:39:41,179 - admin - flow only duration:    20 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 22:39:45,502 - admin - flow only duration:    33 ms - /PPAFAdministration/app/utilisateur
+[] - 2012-10-15 22:39:45,650 - admin - 
+    /* select
+        count(*) 
+    from
+        Utilisateur as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            UTILISATEUR utilisateu0_ limit ?
+[] - 2012-10-15 22:39:45,657 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Utilisateur as generatedAlias0 */ select
+            utilisateu0_.ID as ID5_,
+            utilisateu0_.codePostal as codePostal5_,
+            utilisateu0_.email as email5_,
+            utilisateu0_.enabled as enabled5_,
+            utilisateu0_.infoSuppl as infoSuppl5_,
+            utilisateu0_.membrePPAF_id as membrePPAF6_5_,
+            utilisateu0_."PASSWORD" as PASSWORD7_5_,
+            utilisateu0_.RUE as RUE5_,
+            utilisateu0_.login as login5_,
+            utilisateu0_.VILLE as VILLE5_ 
+        from
+            UTILISATEUR utilisateu0_ limit ?
+[] - 2012-10-15 22:39:45,671 - admin - flow only duration:   167 ms - /PPAFAdministration/app/utilisateur
+	Active flow: utilisateur (/PPAFAdministration/app/utilisateur?execution=e7s1)
+	Current State: utilisateurSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:39:53,906 - admin - flow only duration:    21 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 22:39:57,554 - admin - flow only duration:    39 ms - /PPAFAdministration/app/contact
+[] - 2012-10-15 22:39:57,723 - admin - 
+    /* select
+        count(*) 
+    from
+        Contact as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            CONTACT contact0_ limit ?
+[] - 2012-10-15 22:39:57,728 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Contact as generatedAlias0 */ select
+            contact0_.ID as ID12_,
+            contact0_.ACTIF as ACTIF12_,
+            contact0_.codePostal as codePostal12_,
+            contact0_.email as email12_,
+            contact0_.infoSuppl as infoSuppl12_,
+            contact0_.nom as nom12_,
+            contact0_.NOTE as NOTE12_,
+            contact0_.numeroTelephone1 as numeroTe8_12_,
+            contact0_.numeroTelephone2 as numeroTe9_12_,
+            contact0_.prenom as prenom12_,
+            contact0_.RUE as RUE12_,
+            contact0_.VILLE as VILLE12_ 
+        from
+            CONTACT contact0_ limit ?
+[] - 2012-10-15 22:39:57,737 - admin - flow only duration:   180 ms - /PPAFAdministration/app/contact
+	Active flow: contact (/PPAFAdministration/app/contact?execution=e8s1)
+	Current State: contactSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:40:01,516 - admin - flow only duration:    20 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 22:40:06,939 - admin - flow only duration:     3 ms - /PPAFAdministration/app/rolemembre
+[] - 2012-10-15 22:40:06,992 - admin - flow only duration:    49 ms - /PPAFAdministration/app/rolemembre
+	Active flow: rolemembre (/PPAFAdministration/app/rolemembre?execution=e9s1)
+	Current State: rolemembreSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:40:12,139 - admin - flow only duration:     4 ms - /PPAFAdministration/app/utilisateur
+[] - 2012-10-15 22:40:12,268 - admin - flow only duration:   125 ms - /PPAFAdministration/app/utilisateur
+	Active flow: utilisateur (/PPAFAdministration/app/utilisateur?execution=e10s1)
+	Current State: utilisateurSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:40:19,724 - admin - flow only duration:     4 ms - /PPAFAdministration/app/membreppaf
+[] - 2012-10-15 22:40:19,889 - admin - flow only duration:   162 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf (/PPAFAdministration/app/membreppaf?execution=e11s1)
+	Current State: membreppafSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:40:37,402 - admin - flow only duration:     5 ms - /PPAFAdministration/app/contact
+[] - 2012-10-15 22:40:37,639 - admin - flow only duration:   193 ms - /PPAFAdministration/app/contact
+	Active flow: contact (/PPAFAdministration/app/contact?execution=e12s1)
+	Current State: contactSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:40:39,263 - admin - flow only duration:   116 ms - /PPAFAdministration/app/contact
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-15 22:40:39,436 - admin - flow only duration:   171 ms - /PPAFAdministration/app/contact
+	Active flow: contact/edit (/PPAFAdministration/app/contact?execution=e12s2)
+	Current State: contactEdit
+	Current Transition: N/A
+[] - 2012-10-15 22:40:45,422 - anonymousUser - flow only duration:    18 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 22:40:46,327 - anonymousUser - flow only duration:     8 ms - /PPAFAdministration/app/login
+[] - 2012-10-15 22:40:47,731 -  - Security verification for user 'admin'
+[] - 2012-10-15 22:40:47,751 - admin - flow only duration:    16 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 22:40:51,874 - admin - flow only duration:    66 ms - /PPAFAdministration/app/vente
+[] - 2012-10-15 22:40:52,080 - admin - 
+    /* select
+        count(*) 
+    from
+        Vente as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            VENTE vente0_ limit ?
+[] - 2012-10-15 22:40:52,088 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Vente as generatedAlias0 */ select
+            vente0_.ID as ID7_,
+            vente0_.contact_id as contact2_7_,
+            vente0_."DATE" as DATE3_7_,
+            vente0_.dateDEncaissement as dateDEnc4_7_,
+            vente0_.fraisDePort as fraisDeP5_7_,
+            vente0_.informationReglement as informat6_7_,
+            vente0_.item_id as item7_7_,
+            vente0_.lieuDeDepot_id as lieuDeDe8_7_,
+            vente0_.membrePPAF_id as membrePPAF9_7_,
+            vente0_.modeDeReglement as modeDeR10_7_,
+            vente0_.NOTE as NOTE7_,
+            vente0_.numeroDeFacture as numeroD12_7_,
+            vente0_.prixTotal as prixTotal7_,
+            vente0_.QUANTITE as QUANTITE7_ 
+        from
+            VENTE vente0_ limit ?
+[] - 2012-10-15 22:40:52,099 - admin - flow only duration:   221 ms - /PPAFAdministration/app/vente
+	Active flow: vente (/PPAFAdministration/app/vente?execution=e1s1)
+	Current State: venteSelect
+	Current Transition: N/A
+[] - 2012-10-15 22:41:02,414 - admin - flow only duration:    29 ms - /PPAFAdministration/app/home
+[] - 2012-10-15 22:41:02,507 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/fr.gif
+[] - 2012-10-15 22:41:02,511 - admin - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/icons/fr.gif
+[] - 2012-10-15 22:41:05,507 - admin - flow only duration:    19 ms - /PPAFAdministration/app/home
+[] - 2012-10-17 21:28:36,038 -  - HHH000393: The 1.2.131 version of H2 implements temporary table creation such that it commits current transaction; multi-table, bulk hql/jpaql will not work properly
+[] - 2012-10-17 21:28:36,985 -  - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+[] - 2012-10-17 21:28:37,136 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Frais]; using defaults.
+[] - 2012-10-17 21:28:37,336 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage]; using defaults.
+[] - 2012-10-17 21:28:37,349 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suivicontact]; using defaults.
+[] - 2012-10-17 21:28:37,355 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Role]; using defaults.
+[] - 2012-10-17 21:28:37,361 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item]; using defaults.
+[] - 2012-10-17 21:28:37,367 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot]; using defaults.
+[] - 2012-10-17 21:28:37,378 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suividulieudedepot]; using defaults.
+[] - 2012-10-17 21:28:37,385 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Vente]; using defaults.
+[] - 2012-10-17 21:28:37,410 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf]; using defaults.
+[] - 2012-10-17 21:28:37,423 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur]; using defaults.
+[] - 2012-10-17 21:28:37,430 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Itemlieudestockage]; using defaults.
+[] - 2012-10-17 21:28:37,436 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact]; using defaults.
+[] - 2012-10-17 21:28:37,448 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Rolemembre]; using defaults.
+[] - 2012-10-17 21:28:37,452 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item.itemlieudestockages]; using defaults.
+[] - 2012-10-17 21:28:37,463 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.utilisateurs]; using defaults.
+[] - 2012-10-17 21:28:37,464 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.fraiss]; using defaults.
+[] - 2012-10-17 21:28:37,464 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.suividulieudedepots]; using defaults.
+[] - 2012-10-17 21:28:37,465 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item.ventes]; using defaults.
+[] - 2012-10-17 21:28:37,465 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur.roles]; using defaults.
+[] - 2012-10-17 21:28:37,467 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.ventes]; using defaults.
+[] - 2012-10-17 21:28:37,468 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact.suivicontacts]; using defaults.
+[] - 2012-10-17 21:28:37,468 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot.suividulieudedepots]; using defaults.
+[] - 2012-10-17 21:28:37,468 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact.ventes]; using defaults.
+[] - 2012-10-17 21:28:37,469 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot.ventes]; using defaults.
+[] - 2012-10-17 21:28:37,470 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage.itemlieudestockages]; using defaults.
+[] - 2012-10-17 21:28:37,470 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.suivicontacts]; using defaults.
+[] - 2012-10-17 21:28:37,557 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+[] - 2012-10-17 21:28:37,561 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+[] - 2012-10-17 21:28:42,739 -  - Initializing filter 'fixResourcesExpirationFilter'
+[] - 2012-10-17 21:28:42,740 -  - Filter 'fixResourcesExpirationFilter' configured successfully
+[] - 2012-10-17 21:28:57,994 - anonymousUser - flow only duration:  1257 ms - /PPAFAdministration/app/home
+[] - 2012-10-17 21:28:58,052 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/css/main.css;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,056 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.css;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,087 - anonymousUser - flow only duration:    31 ms - /PPAFAdministration/app/javax.faces.resource/css/main.css;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,095 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.css;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,103 - anonymousUser - flow only duration:     8 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.css;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,113 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,130 - anonymousUser - flow only duration:    16 ms - /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,141 - anonymousUser - flow only duration:    84 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.css;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,151 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.js;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,161 - anonymousUser - flow only duration:     8 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.js;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,200 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.js;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,205 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/js/main.js;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,207 - anonymousUser - flow only duration:     7 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.js;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,212 - anonymousUser - flow only duration:     6 ms - /PPAFAdministration/app/javax.faces.resource/js/main.js;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,340 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:28:58,365 - anonymousUser - flow only duration:    24 ms - /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png;jsessionid=1uolmj49s770q2t0aoh1r4qc8
+[] - 2012-10-17 21:29:32,401 - anonymousUser - flow only duration:    70 ms - /PPAFAdministration/app/login
+[] - 2012-10-17 21:29:34,482 -  - Security verification for user 'admin'
+[] - 2012-10-17 21:29:34,970 - admin - flow only duration:   428 ms - /PPAFAdministration/app/frais
+[] - 2012-10-17 21:29:35,816 - admin - 
+    /* select
+        count(*) 
+    from
+        Frais as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            FRAIS frais0_ limit ?
+[] - 2012-10-17 21:29:35,904 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Frais as generatedAlias0 */ select
+            frais0_.ID as ID12_,
+            frais0_."DATE" as DATE2_12_,
+            frais0_.informationReglement as informat3_12_,
+            frais0_.membrePPAF_id as membrePPAF4_12_,
+            frais0_.modeDeReglement as modeDeRe5_12_,
+            frais0_.MONTANT as MONTANT12_ 
+        from
+            FRAIS frais0_ limit ?
+[] - 2012-10-17 21:29:35,943 - admin - flow only duration:   970 ms - /PPAFAdministration/app/frais
+	Active flow: frais (/PPAFAdministration/app/frais?execution=e1s1)
+	Current State: fraisSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:29:38,155 - admin - flow only duration:   370 ms - /PPAFAdministration/app/frais
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-17 21:29:38,384 - admin - flow only duration:   225 ms - /PPAFAdministration/app/frais
+	Active flow: frais/edit (/PPAFAdministration/app/frais?execution=e1s2)
+	Current State: fraisEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:30:06,486 - admin - flow only duration:    49 ms - /PPAFAdministration/app/membreppaf
+[] - 2012-10-17 21:30:06,891 - admin - 
+    /* select
+        count(*) 
+    from
+        Membreppaf as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            MEMBREPPAF membreppaf0_ limit ?
+[] - 2012-10-17 21:30:06,898 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Membreppaf as generatedAlias0 */ select
+            membreppaf0_.ID as ID6_,
+            membreppaf0_.ACTIF as ACTIF6_,
+            membreppaf0_.CODEPOSTAL as CODEPOSTAL6_,
+            membreppaf0_.EMAIL as EMAIL6_,
+            membreppaf0_.INFOSUPPL as INFOSUPPL6_,
+            membreppaf0_.NOM as NOM6_,
+            membreppaf0_.NOTE as NOTE6_,
+            membreppaf0_.NUMEROTELEPHONE1 as NUMEROTE8_6_,
+            membreppaf0_.NUMEROTELEPHONE2 as NUMEROTE9_6_,
+            membreppaf0_.PRENOM as PRENOM6_,
+            membreppaf0_.ROLEMEMBRE_ID as ROLEMEMBRE11_6_,
+            membreppaf0_.RUE as RUE6_,
+            membreppaf0_.VILLE as VILLE6_ 
+        from
+            MEMBREPPAF membreppaf0_ limit ?
+[] - 2012-10-17 21:30:07,083 - admin - flow only duration:   594 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf (/PPAFAdministration/app/membreppaf?execution=e2s1)
+	Current State: membreppafSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:30:14,695 - admin - flow only duration:    85 ms - /PPAFAdministration/app/home
+[] - 2012-10-17 21:30:18,137 - admin - flow only duration:     4 ms - /PPAFAdministration/app/frais
+[] - 2012-10-17 21:30:18,285 - admin - flow only duration:   143 ms - /PPAFAdministration/app/frais
+	Active flow: frais (/PPAFAdministration/app/frais?execution=e3s1)
+	Current State: fraisSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:30:20,668 - admin - flow only duration:    68 ms - /PPAFAdministration/app/frais
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-17 21:30:20,835 - admin - flow only duration:   160 ms - /PPAFAdministration/app/frais
+	Active flow: frais/edit (/PPAFAdministration/app/frais?execution=e3s2)
+	Current State: fraisEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:30:23,029 - admin - flow only duration:   133 ms - /PPAFAdministration/app/frais
+	eventSignaled: viewMembreppaf
+	transitionExecuting: on=viewMembreppaf to=editMembreppaf
+[] - 2012-10-17 21:30:23,400 - admin - flow only duration:   368 ms - /PPAFAdministration/app/frais
+	Active flow: membreppaf/edit (/PPAFAdministration/app/frais?execution=e3s3)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:30:28,437 - admin - EXCEPTION unique id: 2012752888
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.webflow.execution.repository.FlowExecutionRestorationFailureException: A problem occurred restoring the flow execution with key 'e3s2'
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:894)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:778)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1221)
+	at com.eldoraludo.ppafadministration.web.filter.FlowTimerFilter.doFilter(FlowTimerFilter.java:67)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilter(BasicAuthenticationFilter.java:150)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at com.eldoraludo.ppafadministration.web.filter.ExceptionFilter.doFilter(ExceptionFilter.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.primefaces.webapp.filter.FileUploadFilter.doFilter(FileUploadFilter.java:79)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.springframework.web.filter.ShallowEtagHeaderFilter.doFilterInternal(ShallowEtagHeaderFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at net.sf.ehcache.constructs.web.filter.GzipFilter.doFilter(GzipFilter.java:95)
+	at net.sf.ehcache.constructs.web.filter.Filter.doFilter(Filter.java:86)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: org.springframework.webflow.execution.repository.FlowExecutionRestorationFailureException: A problem occurred restoring the flow execution with key 'e3s2'
+	at org.springframework.webflow.execution.repository.impl.DefaultFlowExecutionRepository.getFlowExecution(DefaultFlowExecutionRepository.java:113)
+	at org.springframework.webflow.executor.FlowExecutorImpl.resumeExecution(FlowExecutorImpl.java:168)
+	at org.springframework.webflow.mvc.servlet.FlowHandlerAdapter.handle(FlowHandlerAdapter.java:183)
+	at org.springframework.faces.webflow.JsfFlowHandlerAdapter.handle(JsfFlowHandlerAdapter.java:48)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:923)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:852)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:882)
+	... 58 more
+Caused by: org.springframework.webflow.execution.repository.snapshot.SnapshotNotFoundException: No flow execution snapshot could be found with id '2'; perhaps the snapshot has been removed? 
+	at org.springframework.webflow.execution.repository.impl.SimpleFlowExecutionSnapshotGroup.getSnapshot(SimpleFlowExecutionSnapshotGroup.java:74)
+	at org.springframework.webflow.execution.repository.impl.DefaultFlowExecutionRepository.getFlowExecution(DefaultFlowExecutionRepository.java:111)
+	... 64 more
+[] - 2012-10-17 21:30:30,718 - admin - flow only duration:     3 ms - /PPAFAdministration/app/frais
+[] - 2012-10-17 21:30:30,839 - admin - flow only duration:   118 ms - /PPAFAdministration/app/frais
+	Active flow: frais (/PPAFAdministration/app/frais?execution=e4s1)
+	Current State: fraisSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:30:33,308 - admin - flow only duration:    49 ms - /PPAFAdministration/app/frais
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-17 21:30:33,424 - admin - flow only duration:   102 ms - /PPAFAdministration/app/frais
+	Active flow: frais/edit (/PPAFAdministration/app/frais?execution=e4s2)
+	Current State: fraisEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:32:23,108 - admin - flow only duration:   206 ms - /PPAFAdministration/app/frais
+	Active flow: frais/edit (/PPAFAdministration/app/frais?execution=e4s2)
+	Current State: fraisEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:35:09,582 - admin - flow only duration:   145 ms - /PPAFAdministration/app/frais
+	eventSignaled: viewMembreppaf
+	transitionExecuting: on=viewMembreppaf to=editMembreppaf
+[] - 2012-10-17 21:35:09,809 - admin - flow only duration:   224 ms - /PPAFAdministration/app/frais
+	Active flow: membreppaf/edit (/PPAFAdministration/app/frais?execution=e4s3)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:35:12,381 - admin - EXCEPTION unique id: 155724491
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.webflow.execution.repository.FlowExecutionRestorationFailureException: A problem occurred restoring the flow execution with key 'e4s2'
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:894)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:778)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1221)
+	at com.eldoraludo.ppafadministration.web.filter.FlowTimerFilter.doFilter(FlowTimerFilter.java:67)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilter(BasicAuthenticationFilter.java:150)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at com.eldoraludo.ppafadministration.web.filter.ExceptionFilter.doFilter(ExceptionFilter.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.primefaces.webapp.filter.FileUploadFilter.doFilter(FileUploadFilter.java:79)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.springframework.web.filter.ShallowEtagHeaderFilter.doFilterInternal(ShallowEtagHeaderFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at net.sf.ehcache.constructs.web.filter.GzipFilter.doFilter(GzipFilter.java:95)
+	at net.sf.ehcache.constructs.web.filter.Filter.doFilter(Filter.java:86)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: org.springframework.webflow.execution.repository.FlowExecutionRestorationFailureException: A problem occurred restoring the flow execution with key 'e4s2'
+	at org.springframework.webflow.execution.repository.impl.DefaultFlowExecutionRepository.getFlowExecution(DefaultFlowExecutionRepository.java:113)
+	at org.springframework.webflow.executor.FlowExecutorImpl.resumeExecution(FlowExecutorImpl.java:168)
+	at org.springframework.webflow.mvc.servlet.FlowHandlerAdapter.handle(FlowHandlerAdapter.java:183)
+	at org.springframework.faces.webflow.JsfFlowHandlerAdapter.handle(JsfFlowHandlerAdapter.java:48)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:923)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:852)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:882)
+	... 58 more
+Caused by: org.springframework.webflow.execution.repository.snapshot.SnapshotNotFoundException: No flow execution snapshot could be found with id '2'; perhaps the snapshot has been removed? 
+	at org.springframework.webflow.execution.repository.impl.SimpleFlowExecutionSnapshotGroup.getSnapshot(SimpleFlowExecutionSnapshotGroup.java:74)
+	at org.springframework.webflow.execution.repository.impl.DefaultFlowExecutionRepository.getFlowExecution(DefaultFlowExecutionRepository.java:111)
+	... 64 more
+[] - 2012-10-17 21:35:25,259 - admin - flow only duration:    95 ms - /PPAFAdministration/app/vente
+[] - 2012-10-17 21:35:25,511 - admin - 
+    /* select
+        count(*) 
+    from
+        Vente as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            VENTE vente0_ limit ?
+[] - 2012-10-17 21:35:25,517 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Vente as generatedAlias0 */ select
+            vente0_.ID as ID0_,
+            vente0_.contact_id as contact2_0_,
+            vente0_."DATE" as DATE3_0_,
+            vente0_.dateDEncaissement as dateDEnc4_0_,
+            vente0_.fraisDePort as fraisDeP5_0_,
+            vente0_.informationReglement as informat6_0_,
+            vente0_.item_id as item7_0_,
+            vente0_.lieuDeDepot_id as lieuDeDe8_0_,
+            vente0_.membrePPAF_id as membrePPAF9_0_,
+            vente0_.modeDeReglement as modeDeR10_0_,
+            vente0_.NOTE as NOTE0_,
+            vente0_.numeroDeFacture as numeroD12_0_,
+            vente0_.prixTotal as prixTotal0_,
+            vente0_.QUANTITE as QUANTITE0_ 
+        from
+            VENTE vente0_ limit ?
+[] - 2012-10-17 21:35:25,530 - admin - flow only duration:   268 ms - /PPAFAdministration/app/vente
+	Active flow: vente (/PPAFAdministration/app/vente?execution=e5s1)
+	Current State: venteSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:35:28,230 - admin - flow only duration:   168 ms - /PPAFAdministration/app/vente
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-17 21:35:28,568 - admin - flow only duration:   335 ms - /PPAFAdministration/app/vente
+	Active flow: vente/edit (/PPAFAdministration/app/vente?execution=e5s2)
+	Current State: venteEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:35:31,200 - admin - flow only duration:   142 ms - /PPAFAdministration/app/vente
+	eventSignaled: viewItem
+	transitionExecuting: on=viewItem to=editItem
+[] - 2012-10-17 21:35:31,352 - admin - flow only duration:   150 ms - /PPAFAdministration/app/vente
+	Active flow: item/edit (/PPAFAdministration/app/vente?execution=e5s3)
+	Current State: itemSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:35:33,894 - admin - flow only duration:    38 ms - /PPAFAdministration/app/vente
+	eventSignaled: cancel
+	transitionExecuting: on=cancel to=cancelEdit
+	eventSignaled: cancelEdit
+	transitionExecuting: on=cancelEdit to=startChoice
+[] - 2012-10-17 21:35:34,101 - admin - flow only duration:   204 ms - /PPAFAdministration/app/vente
+	Active flow: vente/edit (/PPAFAdministration/app/vente?execution=e5s4)
+	Current State: venteEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:35:36,343 - admin - flow only duration:    83 ms - /PPAFAdministration/app/vente
+	eventSignaled: viewMembreppaf
+	transitionExecuting: on=viewMembreppaf to=editMembreppaf
+[] - 2012-10-17 21:35:36,556 - admin - flow only duration:   211 ms - /PPAFAdministration/app/vente
+	Active flow: membreppaf/edit (/PPAFAdministration/app/vente?execution=e5s5)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:35:49,053 - admin - flow only duration:   169 ms - /PPAFAdministration/app/vente
+	Active flow: membreppaf/edit (/PPAFAdministration/app/vente?execution=e5s5)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:35:49,737 - admin - flow only duration:   122 ms - /PPAFAdministration/app/vente
+	Active flow: membreppaf/edit (/PPAFAdministration/app/vente?execution=e5s5)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:35:50,390 - admin - flow only duration:   134 ms - /PPAFAdministration/app/vente
+	Active flow: membreppaf/edit (/PPAFAdministration/app/vente?execution=e5s5)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:35:51,056 - admin - flow only duration:   128 ms - /PPAFAdministration/app/vente
+	Active flow: membreppaf/edit (/PPAFAdministration/app/vente?execution=e5s5)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:35:51,744 - admin - flow only duration:   129 ms - /PPAFAdministration/app/vente
+	Active flow: membreppaf/edit (/PPAFAdministration/app/vente?execution=e5s5)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:35:52,478 - admin - flow only duration:    90 ms - /PPAFAdministration/app/vente
+	eventSignaled: cancel
+	transitionExecuting: on=cancel to=cancelEdit
+	eventSignaled: cancelEdit
+	transitionExecuting: on=cancelEdit to=startChoice
+[] - 2012-10-17 21:35:52,700 - admin - flow only duration:   208 ms - /PPAFAdministration/app/vente
+	Active flow: vente/edit (/PPAFAdministration/app/vente?execution=e5s6)
+	Current State: venteEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:35:56,907 - admin - flow only duration:   148 ms - /PPAFAdministration/app/vente
+	eventSignaled: viewLieudedepot
+	transitionExecuting: on=viewLieudedepot to=editLieudedepot
+[] - 2012-10-17 21:35:57,026 - admin - flow only duration:   117 ms - /PPAFAdministration/app/vente
+	Active flow: lieudedepot/edit (/PPAFAdministration/app/vente?execution=e5s7)
+	Current State: lieudedepotSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:35:58,820 - admin - flow only duration:    68 ms - /PPAFAdministration/app/vente
+	Active flow: lieudedepot/edit (/PPAFAdministration/app/vente?execution=e5s7)
+	Current State: lieudedepotSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:35:59,539 - admin - flow only duration:    68 ms - /PPAFAdministration/app/vente
+	Active flow: lieudedepot/edit (/PPAFAdministration/app/vente?execution=e5s7)
+	Current State: lieudedepotSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:36:04,512 - admin - flow only duration:    73 ms - /PPAFAdministration/app/vente
+	Active flow: lieudedepot/edit (/PPAFAdministration/app/vente?execution=e5s7)
+	Current State: lieudedepotSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:36:12,976 - admin - flow only duration:    89 ms - /PPAFAdministration/app/vente
+	Active flow: lieudedepot/edit (/PPAFAdministration/app/vente?execution=e5s7)
+	Current State: lieudedepotSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:36:20,238 - admin - flow only duration:    55 ms - /PPAFAdministration/app/vente
+	eventSignaled: cancel
+	transitionExecuting: on=cancel to=cancelEdit
+	eventSignaled: cancelEdit
+	transitionExecuting: on=cancelEdit to=startChoice
+[] - 2012-10-17 21:36:20,379 - admin - flow only duration:   138 ms - /PPAFAdministration/app/vente
+	Active flow: vente/edit (/PPAFAdministration/app/vente?execution=e5s8)
+	Current State: venteEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:36:23,275 - admin - flow only duration:    85 ms - /PPAFAdministration/app/vente
+	eventSignaled: viewMembreppaf
+	transitionExecuting: on=viewMembreppaf to=editMembreppaf
+[] - 2012-10-17 21:36:23,457 - admin - flow only duration:   179 ms - /PPAFAdministration/app/vente
+	Active flow: membreppaf/edit (/PPAFAdministration/app/vente?execution=e5s9)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:36:33,728 - admin - flow only duration:   140 ms - /PPAFAdministration/app/vente
+	eventSignaled: viewRolemembre
+	transitionExecuting: on=viewRolemembre to=editRolemembre
+[] - 2012-10-17 21:36:33,802 - admin - flow only duration:    71 ms - /PPAFAdministration/app/vente
+	Active flow: rolemembre/edit (/PPAFAdministration/app/vente?execution=e5s10)
+	Current State: rolemembreSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:36:38,417 - admin - flow only duration:    25 ms - /PPAFAdministration/app/vente
+	eventSignaled: cancel
+	transitionExecuting: on=cancel to=cancelEdit
+	eventSignaled: cancelEdit
+	transitionExecuting: on=cancelEdit to=startChoice
+[] - 2012-10-17 21:36:38,581 - admin - flow only duration:   162 ms - /PPAFAdministration/app/vente
+	Active flow: membreppaf/edit (/PPAFAdministration/app/vente?execution=e5s11)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:36:45,559 - admin - flow only duration:   117 ms - /PPAFAdministration/app/vente
+	Active flow: membreppaf/edit (/PPAFAdministration/app/vente?execution=e5s11)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:36:46,363 - admin - flow only duration:   109 ms - /PPAFAdministration/app/vente
+	Active flow: membreppaf/edit (/PPAFAdministration/app/vente?execution=e5s11)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:36:47,060 - admin - flow only duration:   134 ms - /PPAFAdministration/app/vente
+	Active flow: membreppaf/edit (/PPAFAdministration/app/vente?execution=e5s11)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:36:48,124 - admin - flow only duration:   110 ms - /PPAFAdministration/app/vente
+	Active flow: membreppaf/edit (/PPAFAdministration/app/vente?execution=e5s11)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:36:52,180 - admin - flow only duration:   101 ms - /PPAFAdministration/app/vente
+	eventSignaled: viewRolemembre
+	transitionExecuting: on=viewRolemembre to=editRolemembre
+[] - 2012-10-17 21:36:52,241 - admin - flow only duration:    48 ms - /PPAFAdministration/app/vente
+	Active flow: rolemembre/edit (/PPAFAdministration/app/vente?execution=e5s12)
+	Current State: rolemembreSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:37:21,203 - admin - flow only duration:    26 ms - /PPAFAdministration/app/vente
+	eventSignaled: cancel
+	transitionExecuting: on=cancel to=cancelEdit
+	eventSignaled: cancelEdit
+	transitionExecuting: on=cancelEdit to=startChoice
+[] - 2012-10-17 21:37:21,358 - admin - flow only duration:   152 ms - /PPAFAdministration/app/vente
+	Active flow: membreppaf/edit (/PPAFAdministration/app/vente?execution=e5s13)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:37:23,619 - admin - flow only duration:    84 ms - /PPAFAdministration/app/vente
+	eventSignaled: cancel
+	transitionExecuting: on=cancel to=cancelEdit
+	eventSignaled: cancelEdit
+	transitionExecuting: on=cancelEdit to=startChoice
+[] - 2012-10-17 21:37:23,745 - admin - flow only duration:   123 ms - /PPAFAdministration/app/vente
+	Active flow: vente/edit (/PPAFAdministration/app/vente?execution=e5s14)
+	Current State: venteEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:37:25,020 - admin - flow only duration:   127 ms - /PPAFAdministration/app/vente
+	eventSignaled: close
+	transitionExecuting: on=close to=null
+	Active flow: vente/edit (/PPAFAdministration/app/vente?execution=e5s14)
+	Current State: venteEdit
+	Current Transition: close
+[] - 2012-10-17 21:37:27,976 - admin - flow only duration:   104 ms - /PPAFAdministration/app/vente
+	eventSignaled: forceClose
+	transitionExecuting: on=forceClose to=endEdit
+	eventSignaled: endEdit
+	transitionExecuting: on=endEdit to=quitChoice
+[] - 2012-10-17 21:37:28,102 - admin - flow only duration:   121 ms - /PPAFAdministration/app/vente
+	Active flow: vente (/PPAFAdministration/app/vente?execution=e5s15)
+	Current State: venteSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:37:31,397 - admin - flow only duration:    31 ms - /PPAFAdministration/app/home
+[] - 2012-10-17 21:38:01,829 - admin - flow only duration:     4 ms - /PPAFAdministration/app/membreppaf
+[] - 2012-10-17 21:38:02,058 - admin - flow only duration:   226 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf (/PPAFAdministration/app/membreppaf?execution=e6s1)
+	Current State: membreppafSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:38:03,990 - admin - flow only duration:    72 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-17 21:38:04,206 - admin - flow only duration:   214 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf/edit (/PPAFAdministration/app/membreppaf?execution=e6s2)
+	Current State: membreppafEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:38:34,675 - admin - flow only duration:   132 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: selectRolemembre
+	transitionExecuting: on=selectRolemembre to=selectRolemembre
+[] - 2012-10-17 21:38:34,774 - admin - 
+    /* select
+        count(*) 
+    from
+        Rolemembre as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            ROLEMEMBRE rolemembre0_ limit ?
+[] - 2012-10-17 21:38:34,780 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Rolemembre as generatedAlias0 */ select
+            rolemembre0_.ID as ID7_,
+            rolemembre0_.role as role7_ 
+        from
+            ROLEMEMBRE rolemembre0_ limit ?
+[] - 2012-10-17 21:38:34,796 - admin - flow only duration:   119 ms - /PPAFAdministration/app/membreppaf
+	Active flow: rolemembre (/PPAFAdministration/app/membreppaf?execution=e6s3)
+	Current State: rolemembreSubSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:38:38,583 - admin - flow only duration:    33 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: select
+	transitionExecuting: on=select to=rolemembreSelected
+	eventSignaled: rolemembreSelected
+	transitionExecuting: on=rolemembreSelected to=startChoice
+[] - 2012-10-17 21:38:38,765 - admin - flow only duration:   179 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf/edit (/PPAFAdministration/app/membreppaf?execution=e6s4)
+	Current State: membreppafEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:38:41,387 - admin - DEVELOPER: hashCode has changed!.If you encounter this message you should take the time to carefuly review the equals/hashCode methods for: com.eldoraludo.ppafadministration.domain.Membreppaf
+[] - 2012-10-17 21:38:41,407 - admin - 
+    /* insert com.eldoraludo.ppafadministration.domain.Membreppaf
+        */ insert 
+        into
+            MEMBREPPAF
+            (ID, ACTIF, CODEPOSTAL, EMAIL, INFOSUPPL, NOM, NOTE, NUMEROTELEPHONE1, NUMEROTELEPHONE2, PRENOM, ROLEMEMBRE_ID, RUE, VILLE) 
+        values
+            (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[] - 2012-10-17 21:38:41,505 - admin - flow only duration:   294 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: saveAndClose
+	transitionExecuting: on=saveAndClose to=null
+	Active flow: membreppaf/edit (/PPAFAdministration/app/membreppaf?execution=e6s4)
+	Current State: membreppafEdit
+	Current Transition: saveAndClose
+[] - 2012-10-17 21:38:41,653 - admin - flow only duration:   112 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: forceClose
+	transitionExecuting: on=forceClose to=endEdit
+	eventSignaled: endEdit
+	transitionExecuting: on=endEdit to=quitChoice
+[] - 2012-10-17 21:38:41,809 - admin - 
+    /* select
+        count(*) 
+    from
+        Membreppaf as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            MEMBREPPAF membreppaf0_ limit ?
+[] - 2012-10-17 21:38:41,812 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Membreppaf as generatedAlias0 */ select
+            membreppaf0_.ID as ID6_,
+            membreppaf0_.ACTIF as ACTIF6_,
+            membreppaf0_.CODEPOSTAL as CODEPOSTAL6_,
+            membreppaf0_.EMAIL as EMAIL6_,
+            membreppaf0_.INFOSUPPL as INFOSUPPL6_,
+            membreppaf0_.NOM as NOM6_,
+            membreppaf0_.NOTE as NOTE6_,
+            membreppaf0_.NUMEROTELEPHONE1 as NUMEROTE8_6_,
+            membreppaf0_.NUMEROTELEPHONE2 as NUMEROTE9_6_,
+            membreppaf0_.PRENOM as PRENOM6_,
+            membreppaf0_.ROLEMEMBRE_ID as ROLEMEMBRE11_6_,
+            membreppaf0_.RUE as RUE6_,
+            membreppaf0_.VILLE as VILLE6_ 
+        from
+            MEMBREPPAF membreppaf0_ limit ?
+[] - 2012-10-17 21:38:41,836 - admin - flow only duration:   176 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf (/PPAFAdministration/app/membreppaf?execution=e6s5)
+	Current State: membreppafSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:38:46,600 - admin - flow only duration:   121 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: select
+	transitionExecuting: on=select to=checkIfAlreadyOpenFlow
+[] - 2012-10-17 21:38:46,763 - admin - 
+    /* load one-to-many com.eldoraludo.ppafadministration.domain.Membreppaf.utilisateurs */ select
+        utilisateu0_.membrePPAF_id as membrePPAF6_6_1_,
+        utilisateu0_.ID as ID1_,
+        utilisateu0_.ID as ID11_0_,
+        utilisateu0_.codePostal as codePostal11_0_,
+        utilisateu0_.email as email11_0_,
+        utilisateu0_.enabled as enabled11_0_,
+        utilisateu0_.infoSuppl as infoSuppl11_0_,
+        utilisateu0_.membrePPAF_id as membrePPAF6_11_0_,
+        utilisateu0_."PASSWORD" as PASSWORD7_11_0_,
+        utilisateu0_.RUE as RUE11_0_,
+        utilisateu0_.login as login11_0_,
+        utilisateu0_.VILLE as VILLE11_0_ 
+    from
+        UTILISATEUR utilisateu0_ 
+    where
+        utilisateu0_.membrePPAF_id=?
+[] - 2012-10-17 21:38:46,775 - admin - 
+    /* load one-to-many com.eldoraludo.ppafadministration.domain.Membreppaf.suivicontacts */ select
+        suiviconta0_.membrePPAF_id as membrePPAF5_6_1_,
+        suiviconta0_.ID as ID1_,
+        suiviconta0_.ID as ID4_0_,
+        suiviconta0_.contact_id as contact2_4_0_,
+        suiviconta0_."DATE" as DATE3_4_0_,
+        suiviconta0_.dateProchainAppel as dateProc4_4_0_,
+        suiviconta0_.membrePPAF_id as membrePPAF5_4_0_,
+        suiviconta0_.NOTE as NOTE4_0_ 
+    from
+        SUIVICONTACT suiviconta0_ 
+    where
+        suiviconta0_.membrePPAF_id=?
+[] - 2012-10-17 21:38:46,777 - admin - 
+    /* load one-to-many com.eldoraludo.ppafadministration.domain.Membreppaf.suividulieudedepots */ select
+        suividulie0_.membrePPAF_id as membrePPAF4_6_1_,
+        suividulie0_.ID as ID1_,
+        suividulie0_.ID as ID9_0_,
+        suividulie0_."DATE" as DATE2_9_0_,
+        suividulie0_.lieuDeDepot_id as lieuDeDe3_9_0_,
+        suividulie0_.membrePPAF_id as membrePPAF4_9_0_,
+        suividulie0_.NOTE as NOTE9_0_ 
+    from
+        SUIVIDULIEUDEDEPOT suividulie0_ 
+    where
+        suividulie0_.membrePPAF_id=?
+[] - 2012-10-17 21:38:46,780 - admin - 
+    /* load one-to-many com.eldoraludo.ppafadministration.domain.Membreppaf.ventes */ select
+        ventes0_.membrePPAF_id as membrePPAF9_6_1_,
+        ventes0_.ID as ID1_,
+        ventes0_.ID as ID0_0_,
+        ventes0_.contact_id as contact2_0_0_,
+        ventes0_."DATE" as DATE3_0_0_,
+        ventes0_.dateDEncaissement as dateDEnc4_0_0_,
+        ventes0_.fraisDePort as fraisDeP5_0_0_,
+        ventes0_.informationReglement as informat6_0_0_,
+        ventes0_.item_id as item7_0_0_,
+        ventes0_.lieuDeDepot_id as lieuDeDe8_0_0_,
+        ventes0_.membrePPAF_id as membrePPAF9_0_0_,
+        ventes0_.modeDeReglement as modeDeR10_0_0_,
+        ventes0_.NOTE as NOTE0_0_,
+        ventes0_.numeroDeFacture as numeroD12_0_0_,
+        ventes0_.prixTotal as prixTotal0_0_,
+        ventes0_.QUANTITE as QUANTITE0_0_ 
+    from
+        VENTE ventes0_ 
+    where
+        ventes0_.membrePPAF_id=?
+[] - 2012-10-17 21:38:46,783 - admin - 
+    /* load one-to-many com.eldoraludo.ppafadministration.domain.Membreppaf.fraiss */ select
+        fraiss0_.membrePPAF_id as membrePPAF4_6_1_,
+        fraiss0_.ID as ID1_,
+        fraiss0_.ID as ID12_0_,
+        fraiss0_."DATE" as DATE2_12_0_,
+        fraiss0_.informationReglement as informat3_12_0_,
+        fraiss0_.membrePPAF_id as membrePPAF4_12_0_,
+        fraiss0_.modeDeReglement as modeDeRe5_12_0_,
+        fraiss0_.MONTANT as MONTANT12_0_ 
+    from
+        FRAIS fraiss0_ 
+    where
+        fraiss0_.membrePPAF_id=?
+[] - 2012-10-17 21:38:46,810 - admin - flow only duration:   207 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf/edit (/PPAFAdministration/app/membreppaf?execution=e6s6)
+	Current State: membreppafEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:38:51,879 - admin - 
+    /* update
+        com.eldoraludo.ppafadministration.domain.Membreppaf */ update
+            MEMBREPPAF 
+        set
+            ACTIF=?,
+            CODEPOSTAL=?,
+            EMAIL=?,
+            INFOSUPPL=?,
+            NOM=?,
+            NOTE=?,
+            NUMEROTELEPHONE1=?,
+            NUMEROTELEPHONE2=?,
+            PRENOM=?,
+            ROLEMEMBRE_ID=?,
+            RUE=?,
+            VILLE=? 
+        where
+            ID=?
+[] - 2012-10-17 21:38:51,929 - admin - flow only duration:   154 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: saveAndClose
+	transitionExecuting: on=saveAndClose to=null
+	Active flow: membreppaf/edit (/PPAFAdministration/app/membreppaf?execution=e6s6)
+	Current State: membreppafEdit
+	Current Transition: saveAndClose
+[] - 2012-10-17 21:38:52,065 - admin - flow only duration:   122 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: forceClose
+	transitionExecuting: on=forceClose to=endEdit
+	eventSignaled: endEdit
+	transitionExecuting: on=endEdit to=quitChoice
+[] - 2012-10-17 21:38:52,240 - admin - 
+    /* select
+        count(*) 
+    from
+        Membreppaf as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            MEMBREPPAF membreppaf0_ limit ?
+[] - 2012-10-17 21:38:52,243 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Membreppaf as generatedAlias0 */ select
+            membreppaf0_.ID as ID6_,
+            membreppaf0_.ACTIF as ACTIF6_,
+            membreppaf0_.CODEPOSTAL as CODEPOSTAL6_,
+            membreppaf0_.EMAIL as EMAIL6_,
+            membreppaf0_.INFOSUPPL as INFOSUPPL6_,
+            membreppaf0_.NOM as NOM6_,
+            membreppaf0_.NOTE as NOTE6_,
+            membreppaf0_.NUMEROTELEPHONE1 as NUMEROTE8_6_,
+            membreppaf0_.NUMEROTELEPHONE2 as NUMEROTE9_6_,
+            membreppaf0_.PRENOM as PRENOM6_,
+            membreppaf0_.ROLEMEMBRE_ID as ROLEMEMBRE11_6_,
+            membreppaf0_.RUE as RUE6_,
+            membreppaf0_.VILLE as VILLE6_ 
+        from
+            MEMBREPPAF membreppaf0_ limit ?
+[] - 2012-10-17 21:38:52,254 - admin - flow only duration:   175 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf (/PPAFAdministration/app/membreppaf?execution=e6s7)
+	Current State: membreppafSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:38:56,737 - admin - flow only duration:   107 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: quit
+	transitionExecuting: on=quit to=quit
+[] - 2012-10-17 21:38:59,897 - admin - flow only duration:     4 ms - /PPAFAdministration/app/vente
+[] - 2012-10-17 21:39:00,015 - admin - 
+    /* select
+        count(*) 
+    from
+        Vente as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            VENTE vente0_ limit ?
+[] - 2012-10-17 21:39:00,017 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Vente as generatedAlias0 */ select
+            vente0_.ID as ID0_,
+            vente0_.contact_id as contact2_0_,
+            vente0_."DATE" as DATE3_0_,
+            vente0_.dateDEncaissement as dateDEnc4_0_,
+            vente0_.fraisDePort as fraisDeP5_0_,
+            vente0_.informationReglement as informat6_0_,
+            vente0_.item_id as item7_0_,
+            vente0_.lieuDeDepot_id as lieuDeDe8_0_,
+            vente0_.membrePPAF_id as membrePPAF9_0_,
+            vente0_.modeDeReglement as modeDeR10_0_,
+            vente0_.NOTE as NOTE0_,
+            vente0_.numeroDeFacture as numeroD12_0_,
+            vente0_.prixTotal as prixTotal0_,
+            vente0_.QUANTITE as QUANTITE0_ 
+        from
+            VENTE vente0_ limit ?
+[] - 2012-10-17 21:39:00,021 - admin - flow only duration:   121 ms - /PPAFAdministration/app/vente
+	Active flow: vente (/PPAFAdministration/app/vente?execution=e7s1)
+	Current State: venteSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:39:01,868 - admin - flow only duration:    60 ms - /PPAFAdministration/app/vente
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-17 21:39:01,994 - admin - flow only duration:   123 ms - /PPAFAdministration/app/vente
+	Active flow: vente/edit (/PPAFAdministration/app/vente?execution=e7s2)
+	Current State: venteEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:39:04,450 - admin - flow only duration:    78 ms - /PPAFAdministration/app/vente
+	eventSignaled: viewMembreppaf
+	transitionExecuting: on=viewMembreppaf to=editMembreppaf
+[] - 2012-10-17 21:39:04,623 - admin - flow only duration:   160 ms - /PPAFAdministration/app/vente
+	Active flow: membreppaf/edit (/PPAFAdministration/app/vente?execution=e7s3)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:39:16,102 - admin - flow only duration:    78 ms - /PPAFAdministration/app/vente
+	eventSignaled: cancel
+	transitionExecuting: on=cancel to=cancelEdit
+	eventSignaled: cancelEdit
+	transitionExecuting: on=cancelEdit to=startChoice
+[] - 2012-10-17 21:39:16,227 - admin - flow only duration:   122 ms - /PPAFAdministration/app/vente
+	Active flow: vente/edit (/PPAFAdministration/app/vente?execution=e7s4)
+	Current State: venteEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:41:13,305 - admin - flow only duration:    16 ms - /PPAFAdministration/app/home
+[] - 2012-10-17 21:41:19,304 - admin - flow only duration:     4 ms - /PPAFAdministration/app/frais
+[] - 2012-10-17 21:41:19,370 - admin - 
+    /* select
+        count(*) 
+    from
+        Frais as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            FRAIS frais0_ limit ?
+[] - 2012-10-17 21:41:19,372 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Frais as generatedAlias0 */ select
+            frais0_.ID as ID12_,
+            frais0_."DATE" as DATE2_12_,
+            frais0_.informationReglement as informat3_12_,
+            frais0_.membrePPAF_id as membrePPAF4_12_,
+            frais0_.modeDeReglement as modeDeRe5_12_,
+            frais0_.MONTANT as MONTANT12_ 
+        from
+            FRAIS frais0_ limit ?
+[] - 2012-10-17 21:41:19,376 - admin - flow only duration:    67 ms - /PPAFAdministration/app/frais
+	Active flow: frais (/PPAFAdministration/app/frais?execution=e8s1)
+	Current State: fraisSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:41:20,746 - admin - flow only duration:    35 ms - /PPAFAdministration/app/frais
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-17 21:41:20,812 - admin - flow only duration:    64 ms - /PPAFAdministration/app/frais
+	Active flow: frais/edit (/PPAFAdministration/app/frais?execution=e8s2)
+	Current State: fraisEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:41:23,575 - admin - EXCEPTION unique id: 1474067333
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.webflow.execution.repository.FlowExecutionRestorationFailureException: A problem occurred restoring the flow execution with key 'e8s1'
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:894)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:778)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1221)
+	at com.eldoraludo.ppafadministration.web.filter.FlowTimerFilter.doFilter(FlowTimerFilter.java:67)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilter(BasicAuthenticationFilter.java:150)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at com.eldoraludo.ppafadministration.web.filter.ExceptionFilter.doFilter(ExceptionFilter.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.primefaces.webapp.filter.FileUploadFilter.doFilter(FileUploadFilter.java:79)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.springframework.web.filter.ShallowEtagHeaderFilter.doFilterInternal(ShallowEtagHeaderFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at net.sf.ehcache.constructs.web.filter.GzipFilter.doFilter(GzipFilter.java:95)
+	at net.sf.ehcache.constructs.web.filter.Filter.doFilter(Filter.java:86)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: org.springframework.webflow.execution.repository.FlowExecutionRestorationFailureException: A problem occurred restoring the flow execution with key 'e8s1'
+	at org.springframework.webflow.execution.repository.impl.DefaultFlowExecutionRepository.getFlowExecution(DefaultFlowExecutionRepository.java:113)
+	at org.springframework.webflow.executor.FlowExecutorImpl.resumeExecution(FlowExecutorImpl.java:168)
+	at org.springframework.webflow.mvc.servlet.FlowHandlerAdapter.handle(FlowHandlerAdapter.java:183)
+	at org.springframework.faces.webflow.JsfFlowHandlerAdapter.handle(JsfFlowHandlerAdapter.java:48)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:923)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:852)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:882)
+	... 58 more
+Caused by: org.springframework.webflow.execution.repository.snapshot.SnapshotNotFoundException: No flow execution snapshot could be found with id '1'; perhaps the snapshot has been removed? 
+	at org.springframework.webflow.execution.repository.impl.SimpleFlowExecutionSnapshotGroup.getSnapshot(SimpleFlowExecutionSnapshotGroup.java:74)
+	at org.springframework.webflow.execution.repository.impl.DefaultFlowExecutionRepository.getFlowExecution(DefaultFlowExecutionRepository.java:111)
+	... 64 more
+[] - 2012-10-17 21:41:25,658 - admin - flow only duration:    54 ms - /PPAFAdministration/app/itemlieudestockage
+[] - 2012-10-17 21:41:25,877 - admin - 
+    /* select
+        count(*) 
+    from
+        Itemlieudestockage as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            ITEMLIEUDESTOCKAGE itemlieude0_ limit ?
+[] - 2012-10-17 21:41:25,885 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Itemlieudestockage as generatedAlias0 */ select
+            itemlieude0_.ID as ID10_,
+            itemlieude0_."DATE" as DATE2_10_,
+            itemlieude0_.item_id as item3_10_,
+            itemlieude0_.lieuDeStockage_id as lieuDeSt4_10_,
+            itemlieude0_.NOTE as NOTE10_,
+            itemlieude0_.quantiteEntre as quantite6_10_,
+            itemlieude0_.quantiteSortie as quantite7_10_ 
+        from
+            ITEMLIEUDESTOCKAGE itemlieude0_ limit ?
+[] - 2012-10-17 21:41:25,903 - admin - flow only duration:   242 ms - /PPAFAdministration/app/itemlieudestockage
+	Active flow: itemlieudestockage (/PPAFAdministration/app/itemlieudestockage?execution=e9s1)
+	Current State: itemlieudestockageSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:41:27,624 - admin - flow only duration:    95 ms - /PPAFAdministration/app/itemlieudestockage
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-17 21:41:27,803 - admin - flow only duration:   177 ms - /PPAFAdministration/app/itemlieudestockage
+	Active flow: itemlieudestockage/edit (/PPAFAdministration/app/itemlieudestockage?execution=e9s2)
+	Current State: itemlieudestockageEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:41:34,026 - admin - flow only duration:    52 ms - /PPAFAdministration/app/frais
+	Active flow: frais/edit (/PPAFAdministration/app/frais?execution=e8s2)
+	Current State: fraisEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:41:35,696 - admin - flow only duration:    52 ms - /PPAFAdministration/app/itemlieudestockage
+	Active flow: itemlieudestockage/edit (/PPAFAdministration/app/itemlieudestockage?execution=e9s2)
+	Current State: itemlieudestockageEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:41:36,319 - admin - EXCEPTION unique id: 1524718676
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.webflow.execution.repository.FlowExecutionRestorationFailureException: A problem occurred restoring the flow execution with key 'e9s1'
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:894)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:778)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1221)
+	at com.eldoraludo.ppafadministration.web.filter.FlowTimerFilter.doFilter(FlowTimerFilter.java:67)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilter(BasicAuthenticationFilter.java:150)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at com.eldoraludo.ppafadministration.web.filter.ExceptionFilter.doFilter(ExceptionFilter.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.primefaces.webapp.filter.FileUploadFilter.doFilter(FileUploadFilter.java:79)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.springframework.web.filter.ShallowEtagHeaderFilter.doFilterInternal(ShallowEtagHeaderFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at net.sf.ehcache.constructs.web.filter.GzipFilter.doFilter(GzipFilter.java:95)
+	at net.sf.ehcache.constructs.web.filter.Filter.doFilter(Filter.java:86)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: org.springframework.webflow.execution.repository.FlowExecutionRestorationFailureException: A problem occurred restoring the flow execution with key 'e9s1'
+	at org.springframework.webflow.execution.repository.impl.DefaultFlowExecutionRepository.getFlowExecution(DefaultFlowExecutionRepository.java:113)
+	at org.springframework.webflow.executor.FlowExecutorImpl.resumeExecution(FlowExecutorImpl.java:168)
+	at org.springframework.webflow.mvc.servlet.FlowHandlerAdapter.handle(FlowHandlerAdapter.java:183)
+	at org.springframework.faces.webflow.JsfFlowHandlerAdapter.handle(JsfFlowHandlerAdapter.java:48)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:923)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:852)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:882)
+	... 58 more
+Caused by: org.springframework.webflow.execution.repository.snapshot.SnapshotNotFoundException: No flow execution snapshot could be found with id '1'; perhaps the snapshot has been removed? 
+	at org.springframework.webflow.execution.repository.impl.SimpleFlowExecutionSnapshotGroup.getSnapshot(SimpleFlowExecutionSnapshotGroup.java:74)
+	at org.springframework.webflow.execution.repository.impl.DefaultFlowExecutionRepository.getFlowExecution(DefaultFlowExecutionRepository.java:111)
+	... 64 more
+[] - 2012-10-17 21:41:38,812 - admin - flow only duration:    32 ms - /PPAFAdministration/app/suivicontact
+[] - 2012-10-17 21:41:38,930 - admin - 
+    /* select
+        count(*) 
+    from
+        Suivicontact as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            SUIVICONTACT suiviconta0_ limit ?
+[] - 2012-10-17 21:41:38,937 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Suivicontact as generatedAlias0 */ select
+            suiviconta0_.ID as ID4_,
+            suiviconta0_.contact_id as contact2_4_,
+            suiviconta0_."DATE" as DATE3_4_,
+            suiviconta0_.dateProchainAppel as dateProc4_4_,
+            suiviconta0_.membrePPAF_id as membrePPAF5_4_,
+            suiviconta0_.NOTE as NOTE4_ 
+        from
+            SUIVICONTACT suiviconta0_ limit ?
+[] - 2012-10-17 21:41:38,946 - admin - flow only duration:   130 ms - /PPAFAdministration/app/suivicontact
+	Active flow: suivicontact (/PPAFAdministration/app/suivicontact?execution=e10s1)
+	Current State: suivicontactSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:41:41,940 - admin - flow only duration:    59 ms - /PPAFAdministration/app/suivicontact
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-17 21:41:42,046 - admin - flow only duration:   104 ms - /PPAFAdministration/app/suivicontact
+	Active flow: suivicontact/edit (/PPAFAdministration/app/suivicontact?execution=e10s2)
+	Current State: suivicontactEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:41:52,019 - admin - flow only duration:    52 ms - /PPAFAdministration/app/suivicontact
+	Active flow: suivicontact/edit (/PPAFAdministration/app/suivicontact?execution=e10s2)
+	Current State: suivicontactEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:41:52,272 - admin - flow only duration:     4 ms - /PPAFAdministration/app/suivicontact
+[] - 2012-10-17 21:41:52,338 - admin - flow only duration:    64 ms - /PPAFAdministration/app/suivicontact
+	Active flow: suivicontact/edit (/PPAFAdministration/app/suivicontact?execution=e11s1)
+	Current State: suivicontactEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:41:54,482 - admin - flow only duration:    35 ms - /PPAFAdministration/app/suivicontact
+	eventSignaled: viewMembreppaf
+	transitionExecuting: on=viewMembreppaf to=editMembreppaf
+[] - 2012-10-17 21:41:54,640 - admin - flow only duration:   156 ms - /PPAFAdministration/app/suivicontact
+	Active flow: membreppaf/edit (/PPAFAdministration/app/suivicontact?execution=e11s2)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 21:42:37,190 - admin - flow only duration:    69 ms - /PPAFAdministration/app/role
+[] - 2012-10-17 21:42:37,300 - admin - 
+    /* select
+        count(*) 
+    from
+        Role as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            "ROLE" role0_ limit ?
+[] - 2012-10-17 21:42:37,306 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Role as generatedAlias0 */ select
+            role0_.ID as ID2_,
+            role0_.role_name as role2_2_ 
+        from
+            "ROLE" role0_ limit ?
+[] - 2012-10-17 21:42:37,318 - admin - flow only duration:   126 ms - /PPAFAdministration/app/role
+	Active flow: role (/PPAFAdministration/app/role?execution=e12s1)
+	Current State: roleSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:42:40,786 - admin - flow only duration:     4 ms - /PPAFAdministration/app/membreppaf
+[] - 2012-10-17 21:42:41,081 - admin - flow only duration:   292 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf (/PPAFAdministration/app/membreppaf?execution=e13s1)
+	Current State: membreppafSelect
+	Current Transition: N/A
+[] - 2012-10-17 21:42:42,512 - admin - flow only duration:    62 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-17 21:42:42,690 - admin - flow only duration:   169 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf/edit (/PPAFAdministration/app/membreppaf?execution=e13s2)
+	Current State: membreppafEdit
+	Current Transition: N/A
+[] - 2012-10-17 23:05:38,260 -  - HHH000393: The 1.2.131 version of H2 implements temporary table creation such that it commits current transaction; multi-table, bulk hql/jpaql will not work properly
+[] - 2012-10-17 23:05:38,810 -  - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+[] - 2012-10-17 23:05:38,907 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Frais]; using defaults.
+[] - 2012-10-17 23:05:39,025 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage]; using defaults.
+[] - 2012-10-17 23:05:39,035 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suivicontact]; using defaults.
+[] - 2012-10-17 23:05:39,042 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Role]; using defaults.
+[] - 2012-10-17 23:05:39,049 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item]; using defaults.
+[] - 2012-10-17 23:05:39,054 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot]; using defaults.
+[] - 2012-10-17 23:05:39,063 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suividulieudedepot]; using defaults.
+[] - 2012-10-17 23:05:39,071 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Vente]; using defaults.
+[] - 2012-10-17 23:05:39,088 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf]; using defaults.
+[] - 2012-10-17 23:05:39,101 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur]; using defaults.
+[] - 2012-10-17 23:05:39,111 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Itemlieudestockage]; using defaults.
+[] - 2012-10-17 23:05:39,121 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact]; using defaults.
+[] - 2012-10-17 23:05:39,132 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Rolemembre]; using defaults.
+[] - 2012-10-17 23:05:39,139 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.utilisateurs]; using defaults.
+[] - 2012-10-17 23:05:39,150 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur.roles]; using defaults.
+[] - 2012-10-17 23:05:39,231 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+[] - 2012-10-17 23:05:39,234 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+[] - 2012-10-17 23:05:42,731 -  - Initializing filter 'fixResourcesExpirationFilter'
+[] - 2012-10-17 23:05:42,731 -  - Filter 'fixResourcesExpirationFilter' configured successfully
+[] - 2012-10-17 23:05:51,580 - anonymousUser - flow only duration:   495 ms - /PPAFAdministration/app/login
+[] - 2012-10-17 23:05:51,631 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/theme.css
+[] - 2012-10-17 23:05:51,634 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/css/main.css
+[] - 2012-10-17 23:05:51,651 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.css
+[] - 2012-10-17 23:05:51,660 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.css
+[] - 2012-10-17 23:05:51,661 - anonymousUser - flow only duration:    28 ms - /PPAFAdministration/app/javax.faces.resource/theme.css
+[] - 2012-10-17 23:05:51,666 - anonymousUser - flow only duration:    13 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.css
+[] - 2012-10-17 23:05:51,665 - anonymousUser - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.css
+[] - 2012-10-17 23:05:51,683 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js
+[] - 2012-10-17 23:05:51,690 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/primefaces.js
+[] - 2012-10-17 23:05:51,695 - anonymousUser - flow only duration:     4 ms - /PPAFAdministration/app/javax.faces.resource/primefaces.js
+[] - 2012-10-17 23:05:51,700 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/layout/layout.js
+[] - 2012-10-17 23:05:51,700 - anonymousUser - flow only duration:    60 ms - /PPAFAdministration/app/javax.faces.resource/css/main.css
+[] - 2012-10-17 23:05:51,702 - anonymousUser - flow only duration:    19 ms - /PPAFAdministration/app/javax.faces.resource/jquery/jquery.js
+[] - 2012-10-17 23:05:51,703 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/js/main.js
+[] - 2012-10-17 23:05:51,706 - anonymousUser - flow only duration:     5 ms - /PPAFAdministration/app/javax.faces.resource/layout/layout.js
+[] - 2012-10-17 23:05:51,710 - anonymousUser - flow only duration:     6 ms - /PPAFAdministration/app/javax.faces.resource/js/main.js
+[] - 2012-10-17 23:05:51,986 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png
+[] - 2012-10-17 23:05:51,987 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/login.png
+[] - 2012-10-17 23:05:51,993 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/home.png
+[] - 2012-10-17 23:05:51,996 - anonymousUser - flow only duration:     8 ms - /PPAFAdministration/app/javax.faces.resource/icons/login.png
+[] - 2012-10-17 23:05:51,999 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/icons/us.gif
+[] - 2012-10-17 23:05:52,002 - anonymousUser - flow only duration:    14 ms - /PPAFAdministration/app/javax.faces.resource/img/logo-jaxio.png
+[] - 2012-10-17 23:05:52,011 -  - fixing expires header for /PPAFAdministration/app/javax.faces.resource/images/ui-icons_333333_256x240.png
+[] - 2012-10-17 23:05:52,011 - anonymousUser - flow only duration:    11 ms - /PPAFAdministration/app/javax.faces.resource/icons/us.gif
+[] - 2012-10-17 23:05:52,014 - anonymousUser - flow only duration:    20 ms - /PPAFAdministration/app/javax.faces.resource/icons/home.png
+[] - 2012-10-17 23:05:52,018 - anonymousUser - flow only duration:     6 ms - /PPAFAdministration/app/javax.faces.resource/images/ui-icons_333333_256x240.png
+[] - 2012-10-17 23:05:54,143 -  - Security verification for user 'admin'
+[] - 2012-10-17 23:05:54,200 - admin - flow only duration:    22 ms - /PPAFAdministration/app/membreppaf
+[] - 2012-10-17 23:05:54,441 - admin - flow only duration:   238 ms - /PPAFAdministration/app/membreppaf
+[] - 2012-10-17 23:05:55,468 - admin - 
+    /* select
+        count(*) 
+    from
+        Membreppaf as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            MEMBREPPAF membreppaf0_ limit ?
+[] - 2012-10-17 23:05:55,518 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Membreppaf as generatedAlias0 */ select
+            membreppaf0_.ID as ID0_,
+            membreppaf0_.ACTIF as ACTIF0_,
+            membreppaf0_.CODEPOSTAL as CODEPOSTAL0_,
+            membreppaf0_.EMAIL as EMAIL0_,
+            membreppaf0_.INFOSUPPL as INFOSUPPL0_,
+            membreppaf0_.NOM as NOM0_,
+            membreppaf0_.NOTE as NOTE0_,
+            membreppaf0_.NUMEROTELEPHONE1 as NUMEROTE8_0_,
+            membreppaf0_.NUMEROTELEPHONE2 as NUMEROTE9_0_,
+            membreppaf0_.PRENOM as PRENOM0_,
+            membreppaf0_.roleMembre_id as roleMembre11_0_,
+            membreppaf0_.RUE as RUE0_,
+            membreppaf0_.VERSION as VERSION0_,
+            membreppaf0_.VILLE as VILLE0_ 
+        from
+            MEMBREPPAF membreppaf0_ limit ?
+[] - 2012-10-17 23:05:55,587 - admin - flow only duration:  1142 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf (/PPAFAdministration/app/membreppaf?execution=e1s1)
+	Current State: membreppafSelect
+	Current Transition: N/A
+[] - 2012-10-17 23:06:00,002 - admin - flow only duration:   204 ms - /PPAFAdministration/app/home
+[] - 2012-10-17 23:06:00,474 - admin - flow only duration:    66 ms - /PPAFAdministration/app/home
+[] - 2012-10-17 23:06:05,860 - admin - flow only duration:    43 ms - /PPAFAdministration/app/suivicontact
+[] - 2012-10-17 23:06:06,081 - admin - 
+    /* select
+        count(*) 
+    from
+        Suivicontact as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            SUIVICONTACT suiviconta0_ limit ?
+[] - 2012-10-17 23:06:06,087 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Suivicontact as generatedAlias0 */ select
+            suiviconta0_.ID as ID11_,
+            suiviconta0_.contact_id as contact2_11_,
+            suiviconta0_."DATE" as DATE3_11_,
+            suiviconta0_.dateProchainAppel as dateProc4_11_,
+            suiviconta0_.membrePPAF_id as membrePPAF5_11_,
+            suiviconta0_.NOTE as NOTE11_,
+            suiviconta0_.VERSION as VERSION11_ 
+        from
+            SUIVICONTACT suiviconta0_ limit ?
+[] - 2012-10-17 23:06:06,101 - admin - flow only duration:   237 ms - /PPAFAdministration/app/suivicontact
+	Active flow: suivicontact (/PPAFAdministration/app/suivicontact?execution=e2s1)
+	Current State: suivicontactSelect
+	Current Transition: N/A
+[] - 2012-10-17 23:06:11,060 - admin - flow only duration:    35 ms - /PPAFAdministration/app/contact
+[] - 2012-10-17 23:06:11,449 - admin - 
+    /* select
+        count(*) 
+    from
+        Contact as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            CONTACT contact0_ limit ?
+[] - 2012-10-17 23:06:11,458 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Contact as generatedAlias0 */ select
+            contact0_.ID as ID1_,
+            contact0_.ACTIF as ACTIF1_,
+            contact0_.codePostal as codePostal1_,
+            contact0_.email as email1_,
+            contact0_.infoSuppl as infoSuppl1_,
+            contact0_.nom as nom1_,
+            contact0_.NOTE as NOTE1_,
+            contact0_.numeroTelephone1 as numeroTe8_1_,
+            contact0_.numeroTelephone2 as numeroTe9_1_,
+            contact0_.prenom as prenom1_,
+            contact0_.RUE as RUE1_,
+            contact0_.VERSION as VERSION1_,
+            contact0_.VILLE as VILLE1_ 
+        from
+            CONTACT contact0_ limit ?
+[] - 2012-10-17 23:06:11,480 - admin - flow only duration:   417 ms - /PPAFAdministration/app/contact
+	Active flow: contact (/PPAFAdministration/app/contact?execution=e3s1)
+	Current State: contactSelect
+	Current Transition: N/A
+[] - 2012-10-17 23:06:18,509 - admin - flow only duration:     4 ms - /PPAFAdministration/app/membreppaf
+[] - 2012-10-17 23:06:18,755 - admin - flow only duration:   244 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf (/PPAFAdministration/app/membreppaf?execution=e4s1)
+	Current State: membreppafSelect
+	Current Transition: N/A
+[] - 2012-10-17 23:06:21,309 - admin - flow only duration:   173 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-17 23:06:21,621 - admin - flow only duration:   310 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf/edit (/PPAFAdministration/app/membreppaf?execution=e4s2)
+	Current State: membreppafEdit
+	Current Transition: N/A
+[] - 2012-10-17 23:06:32,816 - admin - flow only duration:   188 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: addUtilisateur
+	transitionExecuting: on=addUtilisateur to=addUtilisateur
+[] - 2012-10-17 23:06:33,038 - admin - flow only duration:   220 ms - /PPAFAdministration/app/membreppaf
+	Active flow: utilisateur/edit (/PPAFAdministration/app/membreppaf?execution=e4s3)
+	Current State: utilisateurSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 23:06:36,320 - admin - EXCEPTION unique id: 1573774323
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.webflow.execution.repository.FlowExecutionRestorationFailureException: A problem occurred restoring the flow execution with key 'e4s2'
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:894)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:778)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1221)
+	at com.eldoraludo.ppafadministration.web.filter.FlowTimerFilter.doFilter(FlowTimerFilter.java:67)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilter(BasicAuthenticationFilter.java:150)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at com.eldoraludo.ppafadministration.web.filter.ExceptionFilter.doFilter(ExceptionFilter.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.primefaces.webapp.filter.FileUploadFilter.doFilter(FileUploadFilter.java:79)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.springframework.web.filter.ShallowEtagHeaderFilter.doFilterInternal(ShallowEtagHeaderFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at net.sf.ehcache.constructs.web.filter.GzipFilter.doFilter(GzipFilter.java:95)
+	at net.sf.ehcache.constructs.web.filter.Filter.doFilter(Filter.java:86)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: org.springframework.webflow.execution.repository.FlowExecutionRestorationFailureException: A problem occurred restoring the flow execution with key 'e4s2'
+	at org.springframework.webflow.execution.repository.impl.DefaultFlowExecutionRepository.getFlowExecution(DefaultFlowExecutionRepository.java:113)
+	at org.springframework.webflow.executor.FlowExecutorImpl.resumeExecution(FlowExecutorImpl.java:168)
+	at org.springframework.webflow.mvc.servlet.FlowHandlerAdapter.handle(FlowHandlerAdapter.java:183)
+	at org.springframework.faces.webflow.JsfFlowHandlerAdapter.handle(JsfFlowHandlerAdapter.java:48)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:923)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:852)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:882)
+	... 58 more
+Caused by: org.springframework.webflow.execution.repository.snapshot.SnapshotNotFoundException: No flow execution snapshot could be found with id '2'; perhaps the snapshot has been removed? 
+	at org.springframework.webflow.execution.repository.impl.SimpleFlowExecutionSnapshotGroup.getSnapshot(SimpleFlowExecutionSnapshotGroup.java:74)
+	at org.springframework.webflow.execution.repository.impl.DefaultFlowExecutionRepository.getFlowExecution(DefaultFlowExecutionRepository.java:111)
+	... 64 more
+[] - 2012-10-17 23:06:38,687 - admin - flow only duration:     3 ms - /PPAFAdministration/app/membreppaf
+[] - 2012-10-17 23:06:38,905 - admin - flow only duration:   207 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf (/PPAFAdministration/app/membreppaf?execution=e5s1)
+	Current State: membreppafSelect
+	Current Transition: N/A
+[] - 2012-10-17 23:06:44,317 - admin - flow only duration:   109 ms - /PPAFAdministration/app/membreppaf
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-17 23:06:44,501 - admin - flow only duration:   180 ms - /PPAFAdministration/app/membreppaf
+	Active flow: membreppaf/edit (/PPAFAdministration/app/membreppaf?execution=e5s2)
+	Current State: membreppafEdit
+	Current Transition: N/A
+[] - 2012-10-17 23:07:33,571 - admin - flow only duration:    60 ms - /PPAFAdministration/app/home
+[] - 2012-10-17 23:07:36,203 - admin - flow only duration:    32 ms - /PPAFAdministration/app/utilisateur
+[] - 2012-10-17 23:07:36,411 - admin - 
+    /* select
+        count(*) 
+    from
+        Utilisateur as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            UTILISATEUR utilisateu0_ limit ?
+[] - 2012-10-17 23:07:36,417 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Utilisateur as generatedAlias0 */ select
+            utilisateu0_.ID as ID6_,
+            utilisateu0_.codePostal as codePostal6_,
+            utilisateu0_.email as email6_,
+            utilisateu0_.enabled as enabled6_,
+            utilisateu0_.infoSuppl as infoSuppl6_,
+            utilisateu0_.membrePPAF_id as membrePPAF6_6_,
+            utilisateu0_."PASSWORD" as PASSWORD7_6_,
+            utilisateu0_.RUE as RUE6_,
+            utilisateu0_.login as login6_,
+            utilisateu0_.VERSION as VERSION6_,
+            utilisateu0_.VILLE as VILLE6_ 
+        from
+            UTILISATEUR utilisateu0_ limit ?
+[] - 2012-10-17 23:07:36,441 - admin - flow only duration:   235 ms - /PPAFAdministration/app/utilisateur
+	Active flow: utilisateur (/PPAFAdministration/app/utilisateur?execution=e6s1)
+	Current State: utilisateurSelect
+	Current Transition: N/A
+[] - 2012-10-17 23:07:37,878 - admin - flow only duration:    82 ms - /PPAFAdministration/app/utilisateur
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-17 23:07:38,023 - admin - flow only duration:   136 ms - /PPAFAdministration/app/utilisateur
+	Active flow: utilisateur/edit (/PPAFAdministration/app/utilisateur?execution=e6s2)
+	Current State: utilisateurEdit
+	Current Transition: N/A
+[] - 2012-10-17 23:07:43,343 - admin - flow only duration:    96 ms - /PPAFAdministration/app/utilisateur
+	eventSignaled: viewMembreppaf
+	transitionExecuting: on=viewMembreppaf to=editMembreppaf
+[] - 2012-10-17 23:07:43,537 - admin - flow only duration:   190 ms - /PPAFAdministration/app/utilisateur
+	Active flow: membreppaf/edit (/PPAFAdministration/app/utilisateur?execution=e6s3)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 23:07:47,913 - admin - flow only duration:    92 ms - /PPAFAdministration/app/utilisateur
+	eventSignaled: cancel
+	transitionExecuting: on=cancel to=cancelEdit
+	eventSignaled: cancelEdit
+	transitionExecuting: on=cancelEdit to=startChoice
+[] - 2012-10-17 23:07:48,054 - admin - flow only duration:   136 ms - /PPAFAdministration/app/utilisateur
+	Active flow: utilisateur/edit (/PPAFAdministration/app/utilisateur?execution=e6s4)
+	Current State: utilisateurEdit
+	Current Transition: N/A
+[] - 2012-10-17 23:08:02,922 - admin - flow only duration:    91 ms - /PPAFAdministration/app/utilisateur
+	eventSignaled: viewMembreppaf
+	transitionExecuting: on=viewMembreppaf to=editMembreppaf
+[] - 2012-10-17 23:08:03,096 - admin - flow only duration:   172 ms - /PPAFAdministration/app/utilisateur
+	Active flow: membreppaf/edit (/PPAFAdministration/app/utilisateur?execution=e6s5)
+	Current State: membreppafSubEdit
+	Current Transition: N/A
+[] - 2012-10-17 23:08:06,922 - admin - flow only duration:    78 ms - /PPAFAdministration/app/utilisateur
+	eventSignaled: cancel
+	transitionExecuting: on=cancel to=cancelEdit
+	eventSignaled: cancelEdit
+	transitionExecuting: on=cancelEdit to=startChoice
+[] - 2012-10-17 23:08:07,088 - admin - flow only duration:   164 ms - /PPAFAdministration/app/utilisateur
+	Active flow: utilisateur/edit (/PPAFAdministration/app/utilisateur?execution=e6s6)
+	Current State: utilisateurEdit
+	Current Transition: N/A
+[] - 2012-10-17 23:09:56,628 -  - HHH000393: The 1.2.131 version of H2 implements temporary table creation such that it commits current transaction; multi-table, bulk hql/jpaql will not work properly
+[] - 2012-10-17 23:09:57,240 -  - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+[] - 2012-10-17 23:09:57,372 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Frais]; using defaults.
+[] - 2012-10-17 23:09:57,512 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage]; using defaults.
+[] - 2012-10-17 23:09:57,521 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suivicontact]; using defaults.
+[] - 2012-10-17 23:09:57,529 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Role]; using defaults.
+[] - 2012-10-17 23:09:57,537 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item]; using defaults.
+[] - 2012-10-17 23:09:57,544 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suividulieudedepot]; using defaults.
+[] - 2012-10-17 23:09:57,551 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot]; using defaults.
+[] - 2012-10-17 23:09:57,564 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Vente]; using defaults.
+[] - 2012-10-17 23:09:57,582 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur]; using defaults.
+[] - 2012-10-17 23:09:57,595 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf]; using defaults.
+[] - 2012-10-17 23:09:57,608 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Itemlieudestockage]; using defaults.
+[] - 2012-10-17 23:09:57,618 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact]; using defaults.
+[] - 2012-10-17 23:09:57,631 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Rolemembre]; using defaults.
+[] - 2012-10-17 23:09:57,637 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf.utilisateurs]; using defaults.
+[] - 2012-10-17 23:09:57,648 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur.roles]; using defaults.
+[] - 2012-10-17 23:09:57,726 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+[] - 2012-10-17 23:09:57,730 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+[] - 2012-10-17 23:10:01,411 -  - Initializing filter 'fixResourcesExpirationFilter'
+[] - 2012-10-17 23:10:01,412 -  - Filter 'fixResourcesExpirationFilter' configured successfully
+[] - 2012-10-17 23:11:59,699 -  - HHH000393: The 1.2.131 version of H2 implements temporary table creation such that it commits current transaction; multi-table, bulk hql/jpaql will not work properly
+[] - 2012-10-17 23:12:00,282 -  - HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+[] - 2012-10-17 23:12:00,367 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Frais]; using defaults.
+[] - 2012-10-17 23:12:00,492 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudestockage]; using defaults.
+[] - 2012-10-17 23:12:00,502 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suivicontact]; using defaults.
+[] - 2012-10-17 23:12:00,511 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Role]; using defaults.
+[] - 2012-10-17 23:12:00,520 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Item]; using defaults.
+[] - 2012-10-17 23:12:00,526 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Suividulieudedepot]; using defaults.
+[] - 2012-10-17 23:12:00,533 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Lieudedepot]; using defaults.
+[] - 2012-10-17 23:12:00,543 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Vente]; using defaults.
+[] - 2012-10-17 23:12:00,558 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur]; using defaults.
+[] - 2012-10-17 23:12:00,574 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Membreppaf]; using defaults.
+[] - 2012-10-17 23:12:00,586 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Itemlieudestockage]; using defaults.
+[] - 2012-10-17 23:12:00,596 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Contact]; using defaults.
+[] - 2012-10-17 23:12:00,606 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Rolemembre]; using defaults.
+[] - 2012-10-17 23:12:00,612 -  - HHH020003: Could not find a specific ehcache configuration for cache named [com.eldoraludo.ppafadministration.domain.Utilisateur.roles]; using defaults.
+[] - 2012-10-17 23:12:00,693 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+[] - 2012-10-17 23:12:00,696 -  - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+[] - 2012-10-17 23:12:04,177 -  - Initializing filter 'fixResourcesExpirationFilter'
+[] - 2012-10-17 23:12:04,177 -  - Filter 'fixResourcesExpirationFilter' configured successfully
+[] - 2012-10-17 23:12:08,910 - anonymousUser - flow only duration:   950 ms - /PPAFAdministration/app/home
+[] - 2012-10-17 23:12:15,174 - anonymousUser - flow only duration:    81 ms - /PPAFAdministration/app/login
+[] - 2012-10-17 23:12:16,847 -  - Security verification for user 'admin'
+[] - 2012-10-17 23:12:17,053 - admin - flow only duration:   182 ms - /PPAFAdministration/app/utilisateur
+[] - 2012-10-17 23:12:17,906 - admin - 
+    /* select
+        count(*) 
+    from
+        Utilisateur as generatedAlias0 */ select
+            count(*) as col_0_0_ 
+        from
+            UTILISATEUR utilisateu0_ limit ?
+[] - 2012-10-17 23:12:17,970 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Utilisateur as generatedAlias0 */ select
+            utilisateu0_.ID as ID2_,
+            utilisateu0_.codePostal as codePostal2_,
+            utilisateu0_.email as email2_,
+            utilisateu0_.enabled as enabled2_,
+            utilisateu0_.infoSuppl as infoSuppl2_,
+            utilisateu0_.membrePPAF_id as membrePPAF6_2_,
+            utilisateu0_."PASSWORD" as PASSWORD7_2_,
+            utilisateu0_.RUE as RUE2_,
+            utilisateu0_.login as login2_,
+            utilisateu0_.VERSION as VERSION2_,
+            utilisateu0_.VILLE as VILLE2_ 
+        from
+            UTILISATEUR utilisateu0_ limit ?
+[] - 2012-10-17 23:12:18,030 - admin - flow only duration:   975 ms - /PPAFAdministration/app/utilisateur
+	Active flow: utilisateur (/PPAFAdministration/app/utilisateur?execution=e1s1)
+	Current State: utilisateurSelect
+	Current Transition: N/A
+[] - 2012-10-17 23:12:21,142 - admin - flow only duration:   224 ms - /PPAFAdministration/app/utilisateur
+	eventSignaled: sendNew
+	transitionExecuting: on=sendNew to=edit
+[] - 2012-10-17 23:12:21,521 - admin - flow only duration:   373 ms - /PPAFAdministration/app/utilisateur
+	Active flow: utilisateur/edit (/PPAFAdministration/app/utilisateur?execution=e1s2)
+	Current State: utilisateurEdit
+	Current Transition: N/A
+[] - 2012-10-17 23:16:33,482 - admin - 
+    /* select
+        generatedAlias0 
+    from
+        Membreppaf as generatedAlias0 
+    where
+        (
+            lower(generatedAlias0.numerotelephone2) like :param0 
+        ) 
+        or (
+            lower(generatedAlias0.rue) like :param1 
+        ) 
+        or (
+            lower(generatedAlias0.prenom) like :param2 
+        ) 
+        or (
+            lower(generatedAlias0.codepostal) like :param3 
+        ) 
+        or (
+            lower(generatedAlias0.email) like :param4 
+        ) 
+        or (
+            lower(generatedAlias0.nom) like :param5 
+        ) 
+        or (
+            lower(generatedAlias0.note) like :param6 
+        ) 
+        or (
+            lower(generatedAlias0.ville) like :param7 
+        ) 
+        or (
+            lower(generatedAlias0.infosuppl) like :param8 
+        ) 
+        or (
+            lower(generatedAlias0.numerotelephone1) like :param9 
+        ) */ select
+            membreppaf0_.ID as ID6_,
+            membreppaf0_.ACTIF as ACTIF6_,
+            membreppaf0_.CODEPOSTAL as CODEPOSTAL6_,
+            membreppaf0_.EMAIL as EMAIL6_,
+            membreppaf0_.INFOSUPPL as INFOSUPPL6_,
+            membreppaf0_.NOM as NOM6_,
+            membreppaf0_.NOTE as NOTE6_,
+            membreppaf0_.NUMEROTELEPHONE1 as NUMEROTE8_6_,
+            membreppaf0_.NUMEROTELEPHONE2 as NUMEROTE9_6_,
+            membreppaf0_.PRENOM as PRENOM6_,
+            membreppaf0_.roleMembre_id as roleMembre11_6_,
+            membreppaf0_.RUE as RUE6_,
+            membreppaf0_.VERSION as VERSION6_,
+            membreppaf0_.VILLE as VILLE6_ 
+        from
+            MEMBREPPAF membreppaf0_ 
+        where
+            lower(membreppaf0_.NUMEROTELEPHONE2) like ? 
+            or lower(membreppaf0_.RUE) like ? 
+            or lower(membreppaf0_.PRENOM) like ? 
+            or lower(membreppaf0_.CODEPOSTAL) like ? 
+            or lower(membreppaf0_.EMAIL) like ? 
+            or lower(membreppaf0_.NOM) like ? 
+            or lower(membreppaf0_.NOTE) like ? 
+            or lower(membreppaf0_.VILLE) like ? 
+            or lower(membreppaf0_.INFOSUPPL) like ? 
+            or lower(membreppaf0_.NUMEROTELEPHONE1) like ? limit ?
+[] - 2012-10-17 23:16:33,541 - admin - flow only duration:   195 ms - /PPAFAdministration/app/utilisateur
+	Active flow: utilisateur/edit (/PPAFAdministration/app/utilisateur?execution=e1s2)
+	Current State: utilisateurEdit
+	Current Transition: N/A
