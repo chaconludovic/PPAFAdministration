@@ -120,6 +120,13 @@
         <entityConfig
             label="Membre PPAF"
             tableName="membrePPAF" >
+
+            <columnConfigs>
+
+                <columnConfig
+                    associationDirection="UNIDIRECTIONAL"
+                    columnName="roleMembre_id" />
+            </columnConfigs>
         </entityConfig>
 
         <entityConfig
@@ -130,7 +137,6 @@
             <columnConfigs>
 
                 <columnConfig
-                    associationDirection="BIDIRECTIONAL"
                     columnName="role_id"
                     inverse="true" />
             </columnConfigs>
@@ -198,11 +204,11 @@
                     searchResult="true" />
 
                 <columnConfig
-                    associationDirection="BIDIRECTIONAL"
+                    associationDirection="UNIDIRECTIONAL"
                     columnName="contact_id" />
 
                 <columnConfig
-                    associationDirection="BIDIRECTIONAL"
+                    associationDirection="UNIDIRECTIONAL"
                     columnName="membrePPAF_id" />
             </columnConfigs>
         </entityConfig>
@@ -244,11 +250,11 @@
             <columnConfigs>
 
                 <columnConfig
-                    associationDirection="BIDIRECTIONAL"
+                    associationDirection="UNIDIRECTIONAL"
                     columnName="membrePPAF_id" />
 
                 <columnConfig
-                    associationDirection="BIDIRECTIONAL"
+                    associationDirection="UNIDIRECTIONAL"
                     columnName="lieuDeDepot_id" />
             </columnConfigs>
         </entityConfig>
@@ -290,12 +296,12 @@
                     label="quantité en sortie" />
 
                 <columnConfig
-                    associationDirection="BIDIRECTIONAL"
+                    associationDirection="UNIDIRECTIONAL"
                     columnName="lieuDeStockage_id"
                     label="Lier à un lieu de stockage" />
 
                 <columnConfig
-                    associationDirection="BIDIRECTIONAL"
+                    associationDirection="UNIDIRECTIONAL"
                     columnName="item_id" />
             </columnConfigs>
         </entityConfig>
@@ -331,19 +337,19 @@
                     label="information sur le réglement" />
 
                 <columnConfig
-                    associationDirection="BIDIRECTIONAL"
+                    associationDirection="UNIDIRECTIONAL"
                     columnName="item_id" />
 
                 <columnConfig
-                    associationDirection="BIDIRECTIONAL"
+                    associationDirection="UNIDIRECTIONAL"
                     columnName="contact_id" />
 
                 <columnConfig
-                    associationDirection="BIDIRECTIONAL"
+                    associationDirection="UNIDIRECTIONAL"
                     columnName="lieuDeDepot_id" />
 
                 <columnConfig
-                    associationDirection="BIDIRECTIONAL"
+                    associationDirection="UNIDIRECTIONAL"
                     columnName="membrePPAF_id" />
             </columnConfigs>
         </entityConfig>
@@ -363,7 +369,7 @@
                     label="information sur le réglement" />
 
                 <columnConfig
-                    associationDirection="BIDIRECTIONAL"
+                    associationDirection="UNIDIRECTIONAL"
                     columnName="membrePPAF_id" />
             </columnConfigs>
         </entityConfig>
