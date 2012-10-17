@@ -26,6 +26,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.apache.log4j.Logger;
@@ -53,6 +54,7 @@ public class Utilisateur implements Identifiable<Integer>, Serializable {
     private String codepostal;
     private String infosuppl;
     private Boolean enabled; // not null
+    private Integer version;
 
     // Technical attributes for query by example
     private Integer membreppafId;
@@ -209,6 +211,18 @@ public class Utilisateur implements Identifiable<Integer>, Serializable {
         this.enabled = enabled;
     }
 
+    // -- [version] ------------------------
+
+    @Column(name = "VERSION", precision = 10)
+    @Version
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
     // --------------------------------------------------------------------
     // Many to One support
     // --------------------------------------------------------------------
@@ -337,6 +351,7 @@ public class Utilisateur implements Identifiable<Integer>, Serializable {
                 .add("infosuppl", getInfosuppl()) //
                 .add("membreppafId", getMembreppafId()) //
                 .add("enabled", getEnabled()) //
+                .add("version", getVersion()) //
                 .toString();
     }
 }

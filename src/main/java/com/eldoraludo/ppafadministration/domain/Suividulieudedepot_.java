@@ -20,6 +20,7 @@ public abstract class Suividulieudedepot_ {
     public static volatile SingularAttribute<Suividulieudedepot, Integer> id;
     public static volatile SingularAttribute<Suividulieudedepot, Date> date;
     public static volatile SingularAttribute<Suividulieudedepot, String> note;
+    public static volatile SingularAttribute<Suividulieudedepot, Integer> version;
 
     // Technical attributes for query by example
     public static volatile SingularAttribute<Suividulieudedepot, Integer> membreppafId;

@@ -23,7 +23,9 @@
 				<app:inputDate id="date" value="#{frais.date}" label="${msg.frais_date}" required="true" />
 				<app:inputTextArea id="modedereglement" value="#{frais.modedereglement}" label="${msg.frais_modedereglement}" />
 				<app:inputTextArea id="informationreglement" value="#{frais.informationreglement}" label="${msg.frais_informationreglement}" />
-				<app:membreppafAutoComplete id="membreppaf" value="#{frais.membreppaf}" readonly="true" required="true" label="${msg.frais_membreppaf}">
+				<app:membreppafAutoComplete id="membreppaf" value="#{frais.membreppaf}" required="true" label="${msg.frais_membreppaf}">
+					<app:iconSearch action="selectMembreppaf" title="${msg.frais_membreppaf} " />
+					<app:iconEdit action="editMembreppaf" title="${msg.frais_membreppaf}" />
 					<app:iconView action="viewMembreppaf" title="${msg.frais_membreppaf}" />
 				</app:membreppafAutoComplete>
 			</h:panelGrid>

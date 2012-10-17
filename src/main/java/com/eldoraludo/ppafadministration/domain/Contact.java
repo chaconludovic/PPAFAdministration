@@ -7,11 +7,8 @@
  */
 package com.eldoraludo.ppafadministration.domain;
 
-import static javax.persistence.CascadeType.ALL;
 import static org.hibernate.annotations.CacheConcurrencyStrategy.NONSTRICT_READ_WRITE;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,17 +16,15 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.apache.log4j.Logger;
 import org.hibernate.annotations.Cache;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
-import com.eldoraludo.ppafadministration.domain.Suivicontact;
-import com.eldoraludo.ppafadministration.domain.Vente;
 import com.google.common.base.Objects;
 
 @Entity
@@ -52,10 +47,7 @@ public class Contact implements Identifiable<Integer>, Serializable {
     private String ville;
     private String codepostal;
     private String infosuppl;
-
-    // One to many
-    private List<Suivicontact> suivicontacts = new ArrayList<Suivicontact>();
-    private List<Vente> ventes = new ArrayList<Vente>();
+    private Integer version;
 
     // ---------------------------
     // Constructors
@@ -230,132 +222,16 @@ public class Contact implements Identifiable<Integer>, Serializable {
         this.infosuppl = infosuppl;
     }
 
-    // --------------------------------------------------------------------
-    // One to Many support
-    // --------------------------------------------------------------------
+    // -- [version] ------------------------
 
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // one to many: contact ==> suivicontacts
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Cache(usage = NONSTRICT_READ_WRITE)
-    @OneToMany(mappedBy = "contact", orphanRemoval = true, cascade = ALL)
-    public List<Suivicontact> getSuivicontacts() {
-        return suivicontacts;
+    @Column(name = "VERSION", precision = 10)
+    @Version
+    public Integer getVersion() {
+        return version;
     }
 
-    /**
-     * Set the {@link Suivicontact} list.
-     * It is recommended to use the helper method {@link #addSuivicontact(Suivicontact)} / {@link #removeSuivicontact(Suivicontact)}
-     * if you want to preserve referential integrity at the object level.
-     *
-     * @param suivicontacts the list to set
-     */
-    public void setSuivicontacts(List<Suivicontact> suivicontacts) {
-        this.suivicontacts = suivicontacts;
-    }
-
-    /**
-     * Helper method to add the passed {@link Suivicontact} to the suivicontacts list
-     * and set this contact on the passed suivicontact to preserve referential
-     * integrity at the object level.
-     *
-     * @param suivicontact the to add
-     * @return true if the suivicontact could be added to the suivicontacts list, false otherwise
-     */
-    public boolean addSuivicontact(Suivicontact suivicontact) {
-        if (getSuivicontacts().add(suivicontact)) {
-            suivicontact.setContact((Contact) this);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Helper method to determine if the passed {@link Suivicontact} is already present in the suivicontacts list.
-     *
-     * @param suivicontact the instance to look up.
-     * @return true if the suivicontacts list contains the passed suivicontact, false otherwise.
-     */
-    public boolean containsSuivicontact(Suivicontact suivicontact) {
-        return getSuivicontacts() != null && getSuivicontacts().contains(suivicontact);
-    }
-
-    /**
-     * Helper method to remove the passed {@link Suivicontact} from the suivicontacts list and unset
-     * this contact from the passed suivicontact to preserve referential integrity at the object level.
-     *
-     * @param suivicontact the instance to remove
-     * @return true if the suivicontact could be removed from the suivicontacts list, false otherwise
-     */
-    public boolean removeSuivicontact(Suivicontact suivicontact) {
-        if (getSuivicontacts().remove(suivicontact)) {
-            suivicontact.setContact(null);
-            return true;
-        }
-        return false;
-    }
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // one to many: contact ==> ventes
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Cache(usage = NONSTRICT_READ_WRITE)
-    @OneToMany(mappedBy = "contact", orphanRemoval = true, cascade = ALL)
-    public List<Vente> getVentes() {
-        return ventes;
-    }
-
-    /**
-     * Set the {@link Vente} list.
-     * It is recommended to use the helper method {@link #addVente(Vente)} / {@link #removeVente(Vente)}
-     * if you want to preserve referential integrity at the object level.
-     *
-     * @param ventes the list to set
-     */
-    public void setVentes(List<Vente> ventes) {
-        this.ventes = ventes;
-    }
-
-    /**
-     * Helper method to add the passed {@link Vente} to the ventes list
-     * and set this contact on the passed vente to preserve referential
-     * integrity at the object level.
-     *
-     * @param vente the to add
-     * @return true if the vente could be added to the ventes list, false otherwise
-     */
-    public boolean addVente(Vente vente) {
-        if (getVentes().add(vente)) {
-            vente.setContact((Contact) this);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Helper method to determine if the passed {@link Vente} is already present in the ventes list.
-     *
-     * @param vente the instance to look up.
-     * @return true if the ventes list contains the passed vente, false otherwise.
-     */
-    public boolean containsVente(Vente vente) {
-        return getVentes() != null && getVentes().contains(vente);
-    }
-
-    /**
-     * Helper method to remove the passed {@link Vente} from the ventes list and unset
-     * this contact from the passed vente to preserve referential integrity at the object level.
-     *
-     * @param vente the instance to remove
-     * @return true if the vente could be removed from the ventes list, false otherwise
-     */
-    public boolean removeVente(Vente vente) {
-        if (getVentes().remove(vente)) {
-            vente.setContact(null);
-            return true;
-        }
-        return false;
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 
     /**
@@ -406,6 +282,7 @@ public class Contact implements Identifiable<Integer>, Serializable {
                 .add("ville", getVille()) //
                 .add("codepostal", getCodepostal()) //
                 .add("infosuppl", getInfosuppl()) //
+                .add("version", getVersion()) //
                 .toString();
     }
 }

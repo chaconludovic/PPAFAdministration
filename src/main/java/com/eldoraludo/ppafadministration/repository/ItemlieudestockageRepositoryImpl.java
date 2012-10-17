@@ -13,7 +13,6 @@ import org.apache.log4j.Logger;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.eldoraludo.ppafadministration.dao.support.GenericDao;
 import com.eldoraludo.ppafadministration.repository.support.RepositoryImpl;
@@ -29,6 +28,7 @@ import com.eldoraludo.ppafadministration.dao.ItemlieudestockageDao;
 @Singleton
 public class ItemlieudestockageRepositoryImpl extends RepositoryImpl<Itemlieudestockage, Integer> implements ItemlieudestockageRepository {
 
+    @SuppressWarnings("unused")
     private static final Logger log = Logger.getLogger(ItemlieudestockageRepositoryImpl.class);
 
     protected ItemlieudestockageDao itemlieudestockageDao;
@@ -64,30 +64,4 @@ public class ItemlieudestockageRepositoryImpl extends RepositoryImpl<Itemlieudes
         return result;
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional
-    public void delete(Itemlieudestockage itemlieudestockage) {
-        if (itemlieudestockage == null) {
-            if (log.isDebugEnabled()) {
-                log.debug("Skipping deletion for null model!");
-            }
-
-            return;
-        }
-
-        // remove the reference from the associated lieudestockage
-        if (itemlieudestockage.getLieudestockage() != null) {
-            itemlieudestockage.getLieudestockage().removeItemlieudestockage(itemlieudestockage);
-        }
-
-        // remove the reference from the associated item
-        if (itemlieudestockage.getItem() != null) {
-            itemlieudestockage.getItem().removeItemlieudestockage(itemlieudestockage);
-        }
-
-        super.delete(itemlieudestockage);
-    }
 }

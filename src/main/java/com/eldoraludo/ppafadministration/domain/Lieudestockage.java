@@ -7,13 +7,10 @@
  */
 package com.eldoraludo.ppafadministration.domain;
 
-import static javax.persistence.CascadeType.ALL;
 import static javax.persistence.CascadeType.PERSIST;
 import static javax.persistence.FetchType.LAZY;
 import static org.hibernate.annotations.CacheConcurrencyStrategy.NONSTRICT_READ_WRITE;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,15 +20,14 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.apache.log4j.Logger;
 import org.hibernate.annotations.Cache;
 import org.hibernate.validator.constraints.NotEmpty;
-import com.eldoraludo.ppafadministration.domain.Itemlieudestockage;
 import com.eldoraludo.ppafadministration.domain.Membreppaf;
 import com.google.common.base.Objects;
 
@@ -50,15 +46,13 @@ public class Lieudestockage implements Identifiable<Integer>, Serializable {
     private String codepostal;
     private String infosuppl;
     private String note;
+    private Integer version;
 
     // Technical attributes for query by example
     private Integer membreppafresponsableId; // not null
 
     // Many to one
     private Membreppaf membreppafresponsable; // not null (membreppafresponsableId)
-
-    // One to many
-    private List<Itemlieudestockage> itemlieudestockages = new ArrayList<Itemlieudestockage>();
 
     // ---------------------------
     // Constructors
@@ -181,6 +175,18 @@ public class Lieudestockage implements Identifiable<Integer>, Serializable {
         this.note = note;
     }
 
+    // -- [version] ------------------------
+
+    @Column(name = "VERSION", precision = 10)
+    @Version
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
     // --------------------------------------------------------------------
     // Many to One support
     // --------------------------------------------------------------------
@@ -211,72 +217,6 @@ public class Lieudestockage implements Identifiable<Integer>, Serializable {
         } else {
             setMembreppafresponsableId(null);
         }
-    }
-
-    // --------------------------------------------------------------------
-    // One to Many support
-    // --------------------------------------------------------------------
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // one to many: lieudestockage ==> itemlieudestockages
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Cache(usage = NONSTRICT_READ_WRITE)
-    @OneToMany(mappedBy = "lieudestockage", orphanRemoval = true, cascade = ALL)
-    public List<Itemlieudestockage> getItemlieudestockages() {
-        return itemlieudestockages;
-    }
-
-    /**
-     * Set the {@link Itemlieudestockage} list.
-     * It is recommended to use the helper method {@link #addItemlieudestockage(Itemlieudestockage)} / {@link #removeItemlieudestockage(Itemlieudestockage)}
-     * if you want to preserve referential integrity at the object level.
-     *
-     * @param itemlieudestockages the list to set
-     */
-    public void setItemlieudestockages(List<Itemlieudestockage> itemlieudestockages) {
-        this.itemlieudestockages = itemlieudestockages;
-    }
-
-    /**
-     * Helper method to add the passed {@link Itemlieudestockage} to the itemlieudestockages list
-     * and set this lieudestockage on the passed itemlieudestockage to preserve referential
-     * integrity at the object level.
-     *
-     * @param itemlieudestockage the to add
-     * @return true if the itemlieudestockage could be added to the itemlieudestockages list, false otherwise
-     */
-    public boolean addItemlieudestockage(Itemlieudestockage itemlieudestockage) {
-        if (getItemlieudestockages().add(itemlieudestockage)) {
-            itemlieudestockage.setLieudestockage((Lieudestockage) this);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Helper method to determine if the passed {@link Itemlieudestockage} is already present in the itemlieudestockages list.
-     *
-     * @param itemlieudestockage the instance to look up.
-     * @return true if the itemlieudestockages list contains the passed itemlieudestockage, false otherwise.
-     */
-    public boolean containsItemlieudestockage(Itemlieudestockage itemlieudestockage) {
-        return getItemlieudestockages() != null && getItemlieudestockages().contains(itemlieudestockage);
-    }
-
-    /**
-     * Helper method to remove the passed {@link Itemlieudestockage} from the itemlieudestockages list and unset
-     * this lieudestockage from the passed itemlieudestockage to preserve referential integrity at the object level.
-     *
-     * @param itemlieudestockage the instance to remove
-     * @return true if the itemlieudestockage could be removed from the itemlieudestockages list, false otherwise
-     */
-    public boolean removeItemlieudestockage(Itemlieudestockage itemlieudestockage) {
-        if (getItemlieudestockages().remove(itemlieudestockage)) {
-            itemlieudestockage.setLieudestockage(null);
-            return true;
-        }
-        return false;
     }
 
     /**
@@ -323,6 +263,7 @@ public class Lieudestockage implements Identifiable<Integer>, Serializable {
                 .add("codepostal", getCodepostal()) //
                 .add("infosuppl", getInfosuppl()) //
                 .add("note", getNote()) //
+                .add("version", getVersion()) //
                 .toString();
     }
 }

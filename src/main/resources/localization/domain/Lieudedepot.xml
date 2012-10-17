@@ -22,8 +22,5 @@
 	<entry key="lieudedepot_codepostal">code postal</entry>
 	<entry key="lieudedepot_infosuppl">information supplÃ©mentaire</entry>
 	<entry key="lieudedepot_type">Type</entry>
-
-    <!-- one-to-many -->
-    <entry key="lieudedepot_suividulieudedepots">Suividulieudedepots</entry>
-    <entry key="lieudedepot_ventes">Ventes</entry>
+	<entry key="lieudedepot_version">Version</entry>
 </properties>

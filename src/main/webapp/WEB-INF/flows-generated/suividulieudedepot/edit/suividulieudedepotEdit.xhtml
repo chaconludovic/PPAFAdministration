@@ -21,10 +21,14 @@
 			<h:panelGrid columns="2" styleClass="aria-role-presentation">
 				<app:inputDate id="date" value="#{suividulieudedepot.date}" label="${msg.suividulieudedepot_date}" required="true" />
 				<app:inputTextArea id="note" value="#{suividulieudedepot.note}" label="${msg.suividulieudedepot_note}" />
-				<app:membreppafAutoComplete id="membreppaf" value="#{suividulieudedepot.membreppaf}" readonly="true" required="true" label="${msg.suividulieudedepot_membreppaf}">
+				<app:membreppafAutoComplete id="membreppaf" value="#{suividulieudedepot.membreppaf}" required="true" label="${msg.suividulieudedepot_membreppaf}">
+					<app:iconSearch action="selectMembreppaf" title="${msg.suividulieudedepot_membreppaf} " />
+					<app:iconEdit action="editMembreppaf" title="${msg.suividulieudedepot_membreppaf}" />
 					<app:iconView action="viewMembreppaf" title="${msg.suividulieudedepot_membreppaf}" />
 				</app:membreppafAutoComplete>
-				<app:lieudedepotAutoComplete id="lieudedepot" value="#{suividulieudedepot.lieudedepot}" readonly="true" required="true" label="${msg.suividulieudedepot_lieudedepot}">
+				<app:lieudedepotAutoComplete id="lieudedepot" value="#{suividulieudedepot.lieudedepot}" required="true" label="${msg.suividulieudedepot_lieudedepot}">
+					<app:iconSearch action="selectLieudedepot" title="${msg.suividulieudedepot_lieudedepot} " />
+					<app:iconEdit action="editLieudedepot" title="${msg.suividulieudedepot_lieudedepot}" />
 					<app:iconView action="viewLieudedepot" title="${msg.suividulieudedepot_lieudedepot}" />
 				</app:lieudedepotAutoComplete>
 			</h:panelGrid>

@@ -18,12 +18,18 @@
 				<p:menuButton value="#{msg.menu_active_flows} (#{flowsMenuHandler.menuModelCount})" model="#{flowsMenuHandler.menuModel}" rendered="#{flowsMenuHandler.menuModelCount ne 0 and userContext.isLoggedIn()}" />
 				<p:menuButton value="Domain">
 					<p:menuitem value="${msg.contact}" url="/app/contact" />
+					<p:menuitem value="${msg.frais}" url="/app/frais" />
 					<p:menuitem value="${msg.item}" url="/app/item" />
+					<p:menuitem value="${msg.itemlieudestockage}" url="/app/itemlieudestockage" />
 					<p:menuitem value="${msg.lieudedepot}" url="/app/lieudedepot" />
 					<p:menuitem value="${msg.lieudestockage}" url="/app/lieudestockage" />
 					<p:menuitem value="${msg.membreppaf}" url="/app/membreppaf" />
 					<p:menuitem value="${msg.role}" url="/app/role" />
 					<p:menuitem value="${msg.rolemembre}" url="/app/rolemembre" />
+					<p:menuitem value="${msg.suivicontact}" url="/app/suivicontact" />
+					<p:menuitem value="${msg.suividulieudedepot}" url="/app/suividulieudedepot" />
+					<p:menuitem value="${msg.utilisateur}" url="/app/utilisateur" />
+					<p:menuitem value="${msg.vente}" url="/app/vente" />
 				</p:menuButton>
 				<p:menuButton value="Navigate">
 					<p:menuitem value="Home" url="/app/home" icon="ui-icon ui-icon-home" />

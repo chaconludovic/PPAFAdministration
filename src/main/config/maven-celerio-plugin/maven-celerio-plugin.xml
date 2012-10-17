@@ -85,7 +85,7 @@
                     searchResult="true" />
 
                 <columnConfig
-                    associationDirection="BIDIRECTIONAL"
+                    associationDirection="UNIDIRECTIONAL"
                     columnName="membrePPAF_id" />
             </columnConfigs>
         </entityConfig>

@@ -14,13 +14,10 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import com.eldoraludo.ppafadministration.util.*;
-import static javax.persistence.CascadeType.ALL;
 import static javax.persistence.CascadeType.PERSIST;
 import static javax.persistence.FetchType.LAZY;
 import static org.hibernate.annotations.CacheConcurrencyStrategy.NONSTRICT_READ_WRITE;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -30,21 +27,16 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.apache.log4j.Logger;
 import org.hibernate.annotations.Cache;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
-import com.eldoraludo.ppafadministration.domain.Frais;
 import com.eldoraludo.ppafadministration.domain.Rolemembre;
-import com.eldoraludo.ppafadministration.domain.Suivicontact;
-import com.eldoraludo.ppafadministration.domain.Suividulieudedepot;
-import com.eldoraludo.ppafadministration.domain.Utilisateur;
-import com.eldoraludo.ppafadministration.domain.Vente;
 
 /**
  * Basic tests for Membreppaf
@@ -97,130 +89,6 @@ public class MembreppafTest {
         assertNull(many.getRolemembreId());
     }
 
-    //-------------------------------------------------------------
-    // One to Many: SimpleOneToMany MEMBREPPAF.ID ==> UTILISATEUR.membrePPAF_id
-    //-------------------------------------------------------------
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // utilisateur.utilisateur <-- membreppaf.membreppafs
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Test
-    public void oneToMany_addUtilisateur() {
-        Membreppaf one = new Membreppaf();
-        Utilisateur many = new Utilisateur();
-
-        // init
-        one.addUtilisateur(many);
-
-        // make sure it is propagated
-        assertTrue(one.containsUtilisateur(many));
-        assertTrue(one.equals(many.getMembreppaf()));
-
-        // now set it to null
-        one.removeUtilisateur(many);
-
-        // make sure null is propagated
-        assertFalse(one.containsUtilisateur(many));
-        assertNull(many.getMembreppaf());
-    }
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // suivicontact.suivicontact <-- membreppaf.membreppafs
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Test
-    public void oneToMany_addSuivicontact() {
-        Membreppaf one = new Membreppaf();
-        Suivicontact many = new Suivicontact();
-
-        // init
-        one.addSuivicontact(many);
-
-        // make sure it is propagated
-        assertTrue(one.containsSuivicontact(many));
-        assertTrue(one.equals(many.getMembreppaf()));
-
-        // now set it to null
-        one.removeSuivicontact(many);
-
-        // make sure null is propagated
-        assertFalse(one.containsSuivicontact(many));
-        assertNull(many.getMembreppaf());
-    }
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // suividulieudedepot.suividulieudedepot <-- membreppaf.membreppafs
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Test
-    public void oneToMany_addSuividulieudedepot() {
-        Membreppaf one = new Membreppaf();
-        Suividulieudedepot many = new Suividulieudedepot();
-
-        // init
-        one.addSuividulieudedepot(many);
-
-        // make sure it is propagated
-        assertTrue(one.containsSuividulieudedepot(many));
-        assertTrue(one.equals(many.getMembreppaf()));
-
-        // now set it to null
-        one.removeSuividulieudedepot(many);
-
-        // make sure null is propagated
-        assertFalse(one.containsSuividulieudedepot(many));
-        assertNull(many.getMembreppaf());
-    }
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // vente.vente <-- membreppaf.membreppafs
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Test
-    public void oneToMany_addVente() {
-        Membreppaf one = new Membreppaf();
-        Vente many = new Vente();
-
-        // init
-        one.addVente(many);
-
-        // make sure it is propagated
-        assertTrue(one.containsVente(many));
-        assertTrue(one.equals(many.getMembreppaf()));
-
-        // now set it to null
-        one.removeVente(many);
-
-        // make sure null is propagated
-        assertFalse(one.containsVente(many));
-        assertNull(many.getMembreppaf());
-    }
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // frais.frais <-- membreppaf.membreppafs
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Test
-    public void oneToMany_addFrais() {
-        Membreppaf one = new Membreppaf();
-        Frais many = new Frais();
-
-        // init
-        one.addFrais(many);
-
-        // make sure it is propagated
-        assertTrue(one.containsFrais(many));
-        assertTrue(one.equals(many.getMembreppaf()));
-
-        // now set it to null
-        one.removeFrais(many);
-
-        // make sure null is propagated
-        assertFalse(one.containsFrais(many));
-        assertNull(many.getMembreppaf());
-    }
-
     @Test
     public void toStringNotNull() {
         Membreppaf model = new Membreppaf();
@@ -268,6 +136,9 @@ public class MembreppafTest {
 
         model1.setInfosuppl("a");
         model2.setInfosuppl("a");
+
+        model1.setVersion(1);
+        model2.setVersion(1);
         assertTrue(model1.isIdSet());
         assertTrue(model2.isIdSet());
         assertTrue(model1.hashCode() == model2.hashCode());

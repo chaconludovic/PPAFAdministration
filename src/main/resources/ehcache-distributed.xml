@@ -100,30 +100,18 @@
 
 		# database related
 		com.eldoraludo.ppafadministration.domain.Contact
-		com.eldoraludo.ppafadministration.domain.Suivicontact.suivicontacts
-		com.eldoraludo.ppafadministration.domain.Vente.ventes
 
 		com.eldoraludo.ppafadministration.domain.Frais
 
 		com.eldoraludo.ppafadministration.domain.Item
-		com.eldoraludo.ppafadministration.domain.Itemlieudestockage.itemlieudestockages
-		com.eldoraludo.ppafadministration.domain.Vente.ventes
 
 		com.eldoraludo.ppafadministration.domain.Itemlieudestockage
 
 		com.eldoraludo.ppafadministration.domain.Lieudedepot
-		com.eldoraludo.ppafadministration.domain.Suividulieudedepot.suividulieudedepots
-		com.eldoraludo.ppafadministration.domain.Vente.ventes
 
 		com.eldoraludo.ppafadministration.domain.Lieudestockage
-		com.eldoraludo.ppafadministration.domain.Itemlieudestockage.itemlieudestockages
 
 		com.eldoraludo.ppafadministration.domain.Membreppaf
-		com.eldoraludo.ppafadministration.domain.Utilisateur.utilisateurs
-		com.eldoraludo.ppafadministration.domain.Suivicontact.suivicontacts
-		com.eldoraludo.ppafadministration.domain.Suividulieudedepot.suividulieudedepots
-		com.eldoraludo.ppafadministration.domain.Vente.ventes
-		com.eldoraludo.ppafadministration.domain.Frais.fraiss
 
 		com.eldoraludo.ppafadministration.domain.Role
 

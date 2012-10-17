@@ -21,12 +21,10 @@
 	<entry key="lieudestockage_codepostal">code postal</entry>
 	<entry key="lieudestockage_infosuppl">information supplÃ©mentaire</entry>
 	<entry key="lieudestockage_note">Note</entry>
+	<entry key="lieudestockage_version">Version</entry>
 
 	<!-- x-to-one -->
 	<entry key="lieudestockage_membreppafresponsable">Membreppafresponsable</entry>
-
-    <!-- one-to-many -->
-    <entry key="lieudestockage_itemlieudestockages">Itemlieudestockages</entry>
 
 	
 </properties>

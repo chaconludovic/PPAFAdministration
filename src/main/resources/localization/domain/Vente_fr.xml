@@ -27,6 +27,7 @@
 	<entry key="vente_contactId">Contact Id</entry>
 	<entry key="vente_lieudedepotId">Lieudedepot Id</entry>
 	<entry key="vente_membreppafId">Membreppaf Id</entry>
+	<entry key="vente_version">Version</entry>
 
 	<!-- x-to-one -->
 	<entry key="vente_item">Item</entry>

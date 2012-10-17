@@ -16,4 +16,5 @@ public abstract class Role_ {
     // Raw attributes
     public static volatile SingularAttribute<Role, Integer> id;
     public static volatile SingularAttribute<Role, String> roleName;
+    public static volatile SingularAttribute<Role, Integer> version;
 }

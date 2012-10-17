@@ -27,7 +27,9 @@
 				<app:inputTextArea id="codepostal" value="#{utilisateur.codepostal}" label="${msg.utilisateur_codepostal}" />
 				<app:inputTextArea id="infosuppl" value="#{utilisateur.infosuppl}" label="${msg.utilisateur_infosuppl}" />
 				<app:inputBoolean id="enabled" value="#{utilisateur.enabled}" label="${msg.utilisateur_enabled}" required="true" />
-				<app:membreppafAutoComplete id="membreppaf" value="#{utilisateur.membreppaf}" readonly="true" required="false" label="${msg.utilisateur_membreppaf}">
+				<app:membreppafAutoComplete id="membreppaf" value="#{utilisateur.membreppaf}" required="false" label="${msg.utilisateur_membreppaf}">
+					<app:iconSearch action="selectMembreppaf" title="${msg.utilisateur_membreppaf} " />
+					<app:iconEdit action="editMembreppaf" title="${msg.utilisateur_membreppaf}" />
 					<app:iconView action="viewMembreppaf" title="${msg.utilisateur_membreppaf}" />
 				</app:membreppafAutoComplete>
 			</h:panelGrid>

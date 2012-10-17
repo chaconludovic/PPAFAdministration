@@ -20,6 +20,7 @@
 	<entry key="itemlieudestockage_itemId">Item Id</entry>
 	<entry key="itemlieudestockage_lieudestockageId">Lier Ã  un lieu de stockage</entry>
 	<entry key="itemlieudestockage_note">Note</entry>
+	<entry key="itemlieudestockage_version">Version</entry>
 
 	<!-- x-to-one -->
 	<entry key="itemlieudestockage_lieudestockage">Lieudestockage</entry>

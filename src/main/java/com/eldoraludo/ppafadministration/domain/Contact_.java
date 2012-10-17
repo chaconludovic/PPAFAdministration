@@ -7,11 +7,8 @@
  */
 package com.eldoraludo.ppafadministration.domain;
 
-import javax.persistence.metamodel.ListAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
-import com.eldoraludo.ppafadministration.domain.Suivicontact;
-import com.eldoraludo.ppafadministration.domain.Vente;
 
 @StaticMetamodel(Contact.class)
 public abstract class Contact_ {
@@ -29,8 +26,5 @@ public abstract class Contact_ {
     public static volatile SingularAttribute<Contact, String> ville;
     public static volatile SingularAttribute<Contact, String> codepostal;
     public static volatile SingularAttribute<Contact, String> infosuppl;
-
-    // One to many
-    public static volatile ListAttribute<Contact, Suivicontact> suivicontacts;
-    public static volatile ListAttribute<Contact, Vente> ventes;
+    public static volatile SingularAttribute<Contact, Integer> version;
 }

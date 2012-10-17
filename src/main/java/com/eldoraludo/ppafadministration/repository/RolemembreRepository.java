@@ -21,4 +21,20 @@ import com.eldoraludo.ppafadministration.repository.support.Repository;
  * of named queries.
  */
 public interface RolemembreRepository extends Repository<Rolemembre, Integer> {
+
+    /**
+     * Return the persistent instance of {@link Rolemembre} with the given unique property value role,
+     * or null if there is no such persistent instance.
+     *
+     * @param role the unique value
+     * @return the corresponding {@link Rolemembre} persistent instance or null
+     */
+    Rolemembre getByRole(String role);
+
+    /**
+     * Delete a {@link Rolemembre} using the unique column role
+     *
+     * @param role the unique value
+     */
+    void deleteByRole(String role);
 }

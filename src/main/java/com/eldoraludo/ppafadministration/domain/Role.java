@@ -15,6 +15,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 import javax.validation.constraints.Size;
 import org.apache.log4j.Logger;
 import org.hibernate.annotations.Cache;
@@ -31,6 +32,7 @@ public class Role implements Identifiable<Integer>, Serializable {
     // Raw attributes
     private Integer id; // pk
     private String roleName; // unique (not null)
+    private Integer version;
 
     // ---------------------------
     // Constructors
@@ -78,6 +80,18 @@ public class Role implements Identifiable<Integer>, Serializable {
         this.roleName = roleName;
     }
 
+    // -- [version] ------------------------
+
+    @Column(name = "VERSION", precision = 10)
+    @Version
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
     /**
      * Set the default values.
      */
@@ -116,6 +130,7 @@ public class Role implements Identifiable<Integer>, Serializable {
         return Objects.toStringHelper(this) //
                 .add("id", getId()) //
                 .add("roleName", getRoleName()) //
+                .add("version", getVersion()) //
                 .toString();
     }
 }

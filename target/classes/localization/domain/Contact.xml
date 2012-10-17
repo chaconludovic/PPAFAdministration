@@ -25,8 +25,5 @@
 	<entry key="contact_ville">Ville</entry>
 	<entry key="contact_codepostal">code postal</entry>
 	<entry key="contact_infosuppl">information supplÃ©mentaire</entry>
-
-    <!-- one-to-many -->
-    <entry key="contact_suivicontacts">Suivicontacts</entry>
-    <entry key="contact_ventes">Ventes</entry>
+	<entry key="contact_version">Version</entry>
 </properties>

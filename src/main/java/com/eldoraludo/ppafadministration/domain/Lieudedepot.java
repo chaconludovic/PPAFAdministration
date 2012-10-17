@@ -7,11 +7,8 @@
  */
 package com.eldoraludo.ppafadministration.domain;
 
-import static javax.persistence.CascadeType.ALL;
 import static org.hibernate.annotations.CacheConcurrencyStrategy.NONSTRICT_READ_WRITE;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,15 +16,13 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 import javax.validation.constraints.Size;
 import org.apache.log4j.Logger;
 import org.hibernate.annotations.Cache;
 import org.hibernate.validator.constraints.NotEmpty;
-import com.eldoraludo.ppafadministration.domain.Suividulieudedepot;
-import com.eldoraludo.ppafadministration.domain.Vente;
 import com.google.common.base.Objects;
 
 @Entity
@@ -47,10 +42,7 @@ public class Lieudedepot implements Identifiable<Integer>, Serializable {
     private String codepostal;
     private String infosuppl;
     private String type;
-
-    // One to many
-    private List<Suividulieudedepot> suividulieudedepots = new ArrayList<Suividulieudedepot>();
-    private List<Vente> ventes = new ArrayList<Vente>();
+    private Integer version;
 
     // ---------------------------
     // Constructors
@@ -184,132 +176,16 @@ public class Lieudedepot implements Identifiable<Integer>, Serializable {
         this.type = type;
     }
 
-    // --------------------------------------------------------------------
-    // One to Many support
-    // --------------------------------------------------------------------
+    // -- [version] ------------------------
 
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // one to many: lieudedepot ==> suividulieudedepots
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Cache(usage = NONSTRICT_READ_WRITE)
-    @OneToMany(mappedBy = "lieudedepot", orphanRemoval = true, cascade = ALL)
-    public List<Suividulieudedepot> getSuividulieudedepots() {
-        return suividulieudedepots;
+    @Column(name = "VERSION", precision = 10)
+    @Version
+    public Integer getVersion() {
+        return version;
     }
 
-    /**
-     * Set the {@link Suividulieudedepot} list.
-     * It is recommended to use the helper method {@link #addSuividulieudedepot(Suividulieudedepot)} / {@link #removeSuividulieudedepot(Suividulieudedepot)}
-     * if you want to preserve referential integrity at the object level.
-     *
-     * @param suividulieudedepots the list to set
-     */
-    public void setSuividulieudedepots(List<Suividulieudedepot> suividulieudedepots) {
-        this.suividulieudedepots = suividulieudedepots;
-    }
-
-    /**
-     * Helper method to add the passed {@link Suividulieudedepot} to the suividulieudedepots list
-     * and set this lieudedepot on the passed suividulieudedepot to preserve referential
-     * integrity at the object level.
-     *
-     * @param suividulieudedepot the to add
-     * @return true if the suividulieudedepot could be added to the suividulieudedepots list, false otherwise
-     */
-    public boolean addSuividulieudedepot(Suividulieudedepot suividulieudedepot) {
-        if (getSuividulieudedepots().add(suividulieudedepot)) {
-            suividulieudedepot.setLieudedepot((Lieudedepot) this);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Helper method to determine if the passed {@link Suividulieudedepot} is already present in the suividulieudedepots list.
-     *
-     * @param suividulieudedepot the instance to look up.
-     * @return true if the suividulieudedepots list contains the passed suividulieudedepot, false otherwise.
-     */
-    public boolean containsSuividulieudedepot(Suividulieudedepot suividulieudedepot) {
-        return getSuividulieudedepots() != null && getSuividulieudedepots().contains(suividulieudedepot);
-    }
-
-    /**
-     * Helper method to remove the passed {@link Suividulieudedepot} from the suividulieudedepots list and unset
-     * this lieudedepot from the passed suividulieudedepot to preserve referential integrity at the object level.
-     *
-     * @param suividulieudedepot the instance to remove
-     * @return true if the suividulieudedepot could be removed from the suividulieudedepots list, false otherwise
-     */
-    public boolean removeSuividulieudedepot(Suividulieudedepot suividulieudedepot) {
-        if (getSuividulieudedepots().remove(suividulieudedepot)) {
-            suividulieudedepot.setLieudedepot(null);
-            return true;
-        }
-        return false;
-    }
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // one to many: lieudedepot ==> ventes
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Cache(usage = NONSTRICT_READ_WRITE)
-    @OneToMany(mappedBy = "lieudedepot", orphanRemoval = true, cascade = ALL)
-    public List<Vente> getVentes() {
-        return ventes;
-    }
-
-    /**
-     * Set the {@link Vente} list.
-     * It is recommended to use the helper method {@link #addVente(Vente)} / {@link #removeVente(Vente)}
-     * if you want to preserve referential integrity at the object level.
-     *
-     * @param ventes the list to set
-     */
-    public void setVentes(List<Vente> ventes) {
-        this.ventes = ventes;
-    }
-
-    /**
-     * Helper method to add the passed {@link Vente} to the ventes list
-     * and set this lieudedepot on the passed vente to preserve referential
-     * integrity at the object level.
-     *
-     * @param vente the to add
-     * @return true if the vente could be added to the ventes list, false otherwise
-     */
-    public boolean addVente(Vente vente) {
-        if (getVentes().add(vente)) {
-            vente.setLieudedepot((Lieudedepot) this);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Helper method to determine if the passed {@link Vente} is already present in the ventes list.
-     *
-     * @param vente the instance to look up.
-     * @return true if the ventes list contains the passed vente, false otherwise.
-     */
-    public boolean containsVente(Vente vente) {
-        return getVentes() != null && getVentes().contains(vente);
-    }
-
-    /**
-     * Helper method to remove the passed {@link Vente} from the ventes list and unset
-     * this lieudedepot from the passed vente to preserve referential integrity at the object level.
-     *
-     * @param vente the instance to remove
-     * @return true if the vente could be removed from the ventes list, false otherwise
-     */
-    public boolean removeVente(Vente vente) {
-        if (getVentes().remove(vente)) {
-            vente.setLieudedepot(null);
-            return true;
-        }
-        return false;
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 
     /**
@@ -357,6 +233,7 @@ public class Lieudedepot implements Identifiable<Integer>, Serializable {
                 .add("codepostal", getCodepostal()) //
                 .add("infosuppl", getInfosuppl()) //
                 .add("type", getType()) //
+                .add("version", getVersion()) //
                 .toString();
     }
 }

@@ -15,6 +15,7 @@
 	<!-- Attributes -->
 	<entry key="role_id">Id</entry>
 	<entry key="role_roleName">Nom du rÃ´le</entry>
+	<entry key="role_version">Version</entry>
 
 	<!-- Uniques -->
 	<entry key="role_roleName_already_exists">Nom du rÃ´le already exists</entry>

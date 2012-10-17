@@ -23,10 +23,14 @@
 				<app:input id="quantiteentre" value="#{itemlieudestockage.quantiteentre}" label="${msg.itemlieudestockage_quantiteentre}" required="true" />
 				<app:input id="quantitesortie" value="#{itemlieudestockage.quantitesortie}" label="${msg.itemlieudestockage_quantitesortie}" required="true" />
 				<app:inputTextArea id="note" value="#{itemlieudestockage.note}" label="${msg.itemlieudestockage_note}" />
-				<app:lieudestockageAutoComplete id="lieudestockage" value="#{itemlieudestockage.lieudestockage}" readonly="true" required="true" label="${msg.itemlieudestockage_lieudestockage}">
+				<app:lieudestockageAutoComplete id="lieudestockage" value="#{itemlieudestockage.lieudestockage}" required="true" label="${msg.itemlieudestockage_lieudestockage}">
+					<app:iconSearch action="selectLieudestockage" title="${msg.itemlieudestockage_lieudestockage} " />
+					<app:iconEdit action="editLieudestockage" title="${msg.itemlieudestockage_lieudestockage}" />
 					<app:iconView action="viewLieudestockage" title="${msg.itemlieudestockage_lieudestockage}" />
 				</app:lieudestockageAutoComplete>
-				<app:itemAutoComplete id="item" value="#{itemlieudestockage.item}" readonly="true" required="true" label="${msg.itemlieudestockage_item}">
+				<app:itemAutoComplete id="item" value="#{itemlieudestockage.item}" required="true" label="${msg.itemlieudestockage_item}">
+					<app:iconSearch action="selectItem" title="${msg.itemlieudestockage_item} " />
+					<app:iconEdit action="editItem" title="${msg.itemlieudestockage_item}" />
 					<app:iconView action="viewItem" title="${msg.itemlieudestockage_item}" />
 				</app:itemAutoComplete>
 			</h:panelGrid>

@@ -14,11 +14,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import com.eldoraludo.ppafadministration.util.*;
-import static javax.persistence.CascadeType.ALL;
 import static org.hibernate.annotations.CacheConcurrencyStrategy.NONSTRICT_READ_WRITE;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,15 +23,13 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 import javax.validation.constraints.Size;
 import org.apache.log4j.Logger;
 import org.hibernate.annotations.Cache;
 import org.hibernate.validator.constraints.NotEmpty;
-import com.eldoraludo.ppafadministration.domain.Itemlieudestockage;
-import com.eldoraludo.ppafadministration.domain.Vente;
 
 /**
  * Basic tests for Item
@@ -58,58 +53,6 @@ public class ItemTest {
     }
 
     // test columns methods
-
-    //-------------------------------------------------------------
-    // One to Many: SimpleOneToMany ITEM.ID ==> ITEMLIEUDESTOCKAGE.item_id
-    //-------------------------------------------------------------
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // itemlieudestockage.itemlieudestockage <-- item.items
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Test
-    public void oneToMany_addItemlieudestockage() {
-        Item one = new Item();
-        Itemlieudestockage many = new Itemlieudestockage();
-
-        // init
-        one.addItemlieudestockage(many);
-
-        // make sure it is propagated
-        assertTrue(one.containsItemlieudestockage(many));
-        assertTrue(one.equals(many.getItem()));
-
-        // now set it to null
-        one.removeItemlieudestockage(many);
-
-        // make sure null is propagated
-        assertFalse(one.containsItemlieudestockage(many));
-        assertNull(many.getItem());
-    }
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // vente.vente <-- item.items
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Test
-    public void oneToMany_addVente() {
-        Item one = new Item();
-        Vente many = new Vente();
-
-        // init
-        one.addVente(many);
-
-        // make sure it is propagated
-        assertTrue(one.containsVente(many));
-        assertTrue(one.equals(many.getItem()));
-
-        // now set it to null
-        one.removeVente(many);
-
-        // make sure null is propagated
-        assertFalse(one.containsVente(many));
-        assertNull(many.getItem());
-    }
 
     @Test
     public void toStringNotNull() {

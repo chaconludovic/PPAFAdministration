@@ -23,6 +23,7 @@
 	<entry key="utilisateur_infosuppl">information supplÃ©mentaire</entry>
 	<entry key="utilisateur_membreppafId">Membreppaf Id</entry>
 	<entry key="utilisateur_enabled">actif</entry>
+	<entry key="utilisateur_version">Version</entry>
 
 	<!-- x-to-one -->
 	<entry key="utilisateur_membreppaf">Membreppaf</entry>

@@ -7,12 +7,15 @@
  */
 package com.eldoraludo.ppafadministration.repository;
 
+import static org.apache.commons.lang.StringUtils.isNotEmpty;
+
 import javax.inject.Inject;
 
 import org.apache.log4j.Logger;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.eldoraludo.ppafadministration.dao.support.GenericDao;
 import com.eldoraludo.ppafadministration.repository.support.RepositoryImpl;
@@ -64,4 +67,47 @@ public class RolemembreRepositoryImpl extends RepositoryImpl<Rolemembre, Integer
         return result;
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @Transactional(readOnly = true)
+    public Rolemembre get(Rolemembre model) {
+        if (model == null) {
+            return null;
+        }
+
+        if (model.isIdSet()) {
+            return super.get(model);
+        }
+
+        if (!isNotEmpty(model.getRole())) {
+            Rolemembre result = getByRole(model.getRole());
+            if (result != null) {
+                return result;
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @Transactional(readOnly = true)
+    public Rolemembre getByRole(String _role) {
+        Rolemembre rolemembre = new Rolemembre();
+        rolemembre.setRole(_role);
+        return findUniqueOrNone(rolemembre);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @Transactional
+    public void deleteByRole(String role) {
+        delete(getByRole(role));
+    }
 }

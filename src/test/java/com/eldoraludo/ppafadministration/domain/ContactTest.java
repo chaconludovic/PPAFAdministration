@@ -14,11 +14,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import com.eldoraludo.ppafadministration.util.*;
-import static javax.persistence.CascadeType.ALL;
 import static org.hibernate.annotations.CacheConcurrencyStrategy.NONSTRICT_READ_WRITE;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,17 +23,15 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.apache.log4j.Logger;
 import org.hibernate.annotations.Cache;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
-import com.eldoraludo.ppafadministration.domain.Suivicontact;
-import com.eldoraludo.ppafadministration.domain.Vente;
 
 /**
  * Basic tests for Contact
@@ -60,58 +55,6 @@ public class ContactTest {
     }
 
     // test columns methods
-
-    //-------------------------------------------------------------
-    // One to Many: SimpleOneToMany CONTACT.ID ==> SUIVICONTACT.contact_id
-    //-------------------------------------------------------------
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // suivicontact.suivicontact <-- contact.contacts
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Test
-    public void oneToMany_addSuivicontact() {
-        Contact one = new Contact();
-        Suivicontact many = new Suivicontact();
-
-        // init
-        one.addSuivicontact(many);
-
-        // make sure it is propagated
-        assertTrue(one.containsSuivicontact(many));
-        assertTrue(one.equals(many.getContact()));
-
-        // now set it to null
-        one.removeSuivicontact(many);
-
-        // make sure null is propagated
-        assertFalse(one.containsSuivicontact(many));
-        assertNull(many.getContact());
-    }
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // vente.vente <-- contact.contacts
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Test
-    public void oneToMany_addVente() {
-        Contact one = new Contact();
-        Vente many = new Vente();
-
-        // init
-        one.addVente(many);
-
-        // make sure it is propagated
-        assertTrue(one.containsVente(many));
-        assertTrue(one.equals(many.getContact()));
-
-        // now set it to null
-        one.removeVente(many);
-
-        // make sure null is propagated
-        assertFalse(one.containsVente(many));
-        assertNull(many.getContact());
-    }
 
     @Test
     public void toStringNotNull() {

@@ -22,6 +22,7 @@ public abstract class Itemlieudestockage_ {
     public static volatile SingularAttribute<Itemlieudestockage, Integer> quantiteentre;
     public static volatile SingularAttribute<Itemlieudestockage, Integer> quantitesortie;
     public static volatile SingularAttribute<Itemlieudestockage, String> note;
+    public static volatile SingularAttribute<Itemlieudestockage, Integer> version;
 
     // Technical attributes for query by example
     public static volatile SingularAttribute<Itemlieudestockage, Integer> itemId;

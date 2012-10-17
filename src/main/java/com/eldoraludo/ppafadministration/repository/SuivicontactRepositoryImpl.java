@@ -13,7 +13,6 @@ import org.apache.log4j.Logger;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.eldoraludo.ppafadministration.dao.support.GenericDao;
 import com.eldoraludo.ppafadministration.repository.support.RepositoryImpl;
@@ -29,6 +28,7 @@ import com.eldoraludo.ppafadministration.dao.SuivicontactDao;
 @Singleton
 public class SuivicontactRepositoryImpl extends RepositoryImpl<Suivicontact, Integer> implements SuivicontactRepository {
 
+    @SuppressWarnings("unused")
     private static final Logger log = Logger.getLogger(SuivicontactRepositoryImpl.class);
 
     protected SuivicontactDao suivicontactDao;
@@ -64,30 +64,4 @@ public class SuivicontactRepositoryImpl extends RepositoryImpl<Suivicontact, Int
         return result;
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional
-    public void delete(Suivicontact suivicontact) {
-        if (suivicontact == null) {
-            if (log.isDebugEnabled()) {
-                log.debug("Skipping deletion for null model!");
-            }
-
-            return;
-        }
-
-        // remove the reference from the associated membreppaf
-        if (suivicontact.getMembreppaf() != null) {
-            suivicontact.getMembreppaf().removeSuivicontact(suivicontact);
-        }
-
-        // remove the reference from the associated contact
-        if (suivicontact.getContact() != null) {
-            suivicontact.getContact().removeSuivicontact(suivicontact);
-        }
-
-        super.delete(suivicontact);
-    }
 }

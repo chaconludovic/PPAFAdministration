@@ -13,8 +13,6 @@
 	<!-- note: this flow inherits from the abstract/edit flow -->
 
 	<persistence-context />
-	<!-- Flow vars -->
-	<var name="tabBean" class="com.eldoraludo.ppafadministration.web.util.TabBean"/>
 
 	<!-- Flow input parameters -->
 	<!-- lieudestockage: the entity to edit. If null, then we create it here -->
@@ -64,10 +62,6 @@
 
 	<!-- COMMON-EDIT -->
 	<view-state id="lieudestockageEditCommon">
-		<on-entry>
-			<!-- Prefetch one to many lists and convert them to dataModel -->
-			<evaluate expression="lieudestockage.itemlieudestockages" result="flowScope.itemlieudestockages" result-type="dataModel" />
-		</on-entry>
 
 		<!-- membreppafresponsable transitions (x-to-one) -->
 		<transition on="selectMembreppafresponsable" to="selectMembreppafresponsable" />
@@ -76,19 +70,6 @@
 		</transition>
 		<transition on="viewMembreppafresponsable" to="editMembreppafresponsable">
 			<set name="requestScope.paramReadonly" value="true" type="boolean" />
-		</transition>
-
-		<!-- itemlieudestockages transitions (one-to-many) -->
-		<transition on="addItemlieudestockage" to="addItemlieudestockage" />
-		<transition on="editItemlieudestockage" to="editItemlieudestockage">
-			<set name="requestScope.paramReadonly" value="false" type="boolean" />
-		</transition>
-		<transition on="viewItemlieudestockage" to="editItemlieudestockage">
-			<set name="requestScope.paramReadonly" value="true" type="boolean" />
-		</transition>
-		<transition on="removeItemlieudestockage">
-			<evaluate expression="lieudestockage.removeItemlieudestockage(flowScope.itemlieudestockages.selectedRow)" />
-			<evaluate expression="messageUtil.info('status_removed_ok',resourceBundle.lieudestockage_itemlieudestockages)" />
 		</transition>
 	</view-state>
 
@@ -107,26 +88,6 @@
 		<input name="membreppaf" value="lieudestockage.membreppafresponsable" />
 		<transition on="endEdit" to="startChoice">
 			<evaluate expression="messageUtil.info('status_edited_ok',resourceBundle.lieudestockage_membreppafresponsable)" />
-		</transition>
-		<transition on="cancelEdit" to="startChoice" />
-	</subflow-state>
-
-
-	<!-- SUBFLOW itemlieudestockages (one-to-many) -->
-	<subflow-state id="addItemlieudestockage" subflow="itemlieudestockage/edit">
-		<input name="sub" value="true" />
-		<transition on="endEdit" to="startChoice">
-			<evaluate expression="lieudestockage.addItemlieudestockage(currentEvent.attributes.itemlieudestockage)" />
-			<evaluate expression="messageUtil.info('status_added_new_ok',resourceBundle.lieudestockage_itemlieudestockages)" />
-		</transition>
-		<transition on="cancelEdit" to="startChoice" />
-	</subflow-state>
-	<subflow-state id="editItemlieudestockage" subflow="itemlieudestockage/edit">
-		<input name="sub" value="true" />
-		<input name="readonly" value="requestScope.paramReadonly" />
-		<input name="itemlieudestockage" value="flowScope.itemlieudestockages.selectedRow" />
-		<transition on="endEdit" to="startChoice">
-			<evaluate expression="messageUtil.info('status_edited_ok',resourceBundle.lieudestockage_itemlieudestockages)" />
 		</transition>
 		<transition on="cancelEdit" to="startChoice" />
 	</subflow-state>

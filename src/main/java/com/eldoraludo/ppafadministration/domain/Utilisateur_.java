@@ -26,6 +26,7 @@ public abstract class Utilisateur_ {
     public static volatile SingularAttribute<Utilisateur, String> codepostal;
     public static volatile SingularAttribute<Utilisateur, String> infosuppl;
     public static volatile SingularAttribute<Utilisateur, Boolean> enabled;
+    public static volatile SingularAttribute<Utilisateur, Integer> version;
 
     // Technical attributes for query by example
     public static volatile SingularAttribute<Utilisateur, Integer> membreppafId;

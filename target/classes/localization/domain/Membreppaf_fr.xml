@@ -26,16 +26,10 @@
 	<entry key="membreppaf_codepostal">Codepostal</entry>
 	<entry key="membreppaf_infosuppl">Infosuppl</entry>
 	<entry key="membreppaf_rolemembreId">Rolemembre Id</entry>
+	<entry key="membreppaf_version">Version</entry>
 
 	<!-- x-to-one -->
 	<entry key="membreppaf_rolemembre">Rolemembre</entry>
-
-    <!-- one-to-many -->
-    <entry key="membreppaf_utilisateurs">Utilisateurs</entry>
-    <entry key="membreppaf_suivicontacts">Suivicontacts</entry>
-    <entry key="membreppaf_suividulieudedepots">Suividulieudedepots</entry>
-    <entry key="membreppaf_ventes">Ventes</entry>
-    <entry key="membreppaf_fraiss">Fraiss</entry>
 
 	
 </properties>

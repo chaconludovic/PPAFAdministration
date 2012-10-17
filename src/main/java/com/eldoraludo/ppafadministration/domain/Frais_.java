@@ -21,6 +21,7 @@ public abstract class Frais_ {
     public static volatile SingularAttribute<Frais, Date> date;
     public static volatile SingularAttribute<Frais, String> modedereglement;
     public static volatile SingularAttribute<Frais, String> informationreglement;
+    public static volatile SingularAttribute<Frais, Integer> version;
 
     // Technical attributes for query by example
     public static volatile SingularAttribute<Frais, Integer> membreppafId;

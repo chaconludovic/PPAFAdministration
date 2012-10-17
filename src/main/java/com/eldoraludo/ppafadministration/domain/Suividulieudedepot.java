@@ -25,6 +25,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.apache.log4j.Logger;
@@ -45,6 +46,7 @@ public class Suividulieudedepot implements Identifiable<Integer>, Serializable {
     private Integer id; // pk
     private Date date; // not null
     private String note;
+    private Integer version;
 
     // Technical attributes for query by example
     private Integer membreppafId; // not null
@@ -136,6 +138,18 @@ public class Suividulieudedepot implements Identifiable<Integer>, Serializable {
         this.lieudedepotId = lieudedepotId;
     }
 
+    // -- [version] ------------------------
+
+    @Column(name = "VERSION", precision = 10)
+    @Version
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
     // --------------------------------------------------------------------
     // Many to One support
     // --------------------------------------------------------------------
@@ -144,6 +158,7 @@ public class Suividulieudedepot implements Identifiable<Integer>, Serializable {
     // many-to-one: Suividulieudedepot.membreppafId ==> Membreppaf.id
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    @NotNull
     @Cache(usage = NONSTRICT_READ_WRITE)
     @JoinColumn(name = "membrePPAF_id", nullable = false)
     @ManyToOne(cascade = PERSIST, fetch = LAZY)
@@ -171,6 +186,7 @@ public class Suividulieudedepot implements Identifiable<Integer>, Serializable {
     // many-to-one: Suividulieudedepot.lieudedepotId ==> Lieudedepot.id
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    @NotNull
     @Cache(usage = NONSTRICT_READ_WRITE)
     @JoinColumn(name = "lieuDeDepot_id", nullable = false)
     @ManyToOne(cascade = PERSIST, fetch = LAZY)
@@ -227,6 +243,7 @@ public class Suividulieudedepot implements Identifiable<Integer>, Serializable {
                 .add("note", getNote()) //
                 .add("membreppafId", getMembreppafId()) //
                 .add("lieudedepotId", getLieudedepotId()) //
+                .add("version", getVersion()) //
                 .toString();
     }
 }

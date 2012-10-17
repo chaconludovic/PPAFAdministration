@@ -10,11 +10,15 @@
 <properties>
 	<comment>Domain resources for Rolemembre for the french locale</comment>
 
-	<entry key="rolemembre">Associer un membre PPAF Ã  un membre</entry>
+	<entry key="rolemembre">Role membre PPAF</entry>
 
 	<!-- Attributes -->
 	<entry key="rolemembre_id">Id</entry>
 	<entry key="rolemembre_role">Role</entry>
+	<entry key="rolemembre_version">Version</entry>
 
+
+	<!-- Uniques -->
+	<entry key="rolemembre_role_already_exists">Role existe déjà</entry>
 	
 </properties>

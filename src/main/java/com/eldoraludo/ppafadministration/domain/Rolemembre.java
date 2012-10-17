@@ -15,6 +15,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 import javax.validation.constraints.Size;
 import org.apache.log4j.Logger;
 import org.hibernate.annotations.Cache;
@@ -30,7 +31,8 @@ public class Rolemembre implements Identifiable<Integer>, Serializable {
 
     // Raw attributes
     private Integer id; // pk
-    private String role; // not null
+    private String role; // unique (not null)
+    private Integer version;
 
     // ---------------------------
     // Constructors
@@ -69,13 +71,25 @@ public class Rolemembre implements Identifiable<Integer>, Serializable {
 
     @Size(max = 255)
     @NotEmpty
-    @Column(name = "role", nullable = false)
+    @Column(name = "`role`", nullable = false, unique = true)
     public String getRole() {
         return role;
     }
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    // -- [version] ------------------------
+
+    @Column(name = "VERSION", precision = 10)
+    @Version
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 
     /**
@@ -116,6 +130,7 @@ public class Rolemembre implements Identifiable<Integer>, Serializable {
         return Objects.toStringHelper(this) //
                 .add("id", getId()) //
                 .add("role", getRole()) //
+                .add("version", getVersion()) //
                 .toString();
     }
 }

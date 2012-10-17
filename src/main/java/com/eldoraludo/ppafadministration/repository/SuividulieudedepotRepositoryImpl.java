@@ -13,7 +13,6 @@ import org.apache.log4j.Logger;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.eldoraludo.ppafadministration.dao.support.GenericDao;
 import com.eldoraludo.ppafadministration.repository.support.RepositoryImpl;
@@ -29,6 +28,7 @@ import com.eldoraludo.ppafadministration.dao.SuividulieudedepotDao;
 @Singleton
 public class SuividulieudedepotRepositoryImpl extends RepositoryImpl<Suividulieudedepot, Integer> implements SuividulieudedepotRepository {
 
+    @SuppressWarnings("unused")
     private static final Logger log = Logger.getLogger(SuividulieudedepotRepositoryImpl.class);
 
     protected SuividulieudedepotDao suividulieudedepotDao;
@@ -64,30 +64,4 @@ public class SuividulieudedepotRepositoryImpl extends RepositoryImpl<Suividulieu
         return result;
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional
-    public void delete(Suividulieudedepot suividulieudedepot) {
-        if (suividulieudedepot == null) {
-            if (log.isDebugEnabled()) {
-                log.debug("Skipping deletion for null model!");
-            }
-
-            return;
-        }
-
-        // remove the reference from the associated membreppaf
-        if (suividulieudedepot.getMembreppaf() != null) {
-            suividulieudedepot.getMembreppaf().removeSuividulieudedepot(suividulieudedepot);
-        }
-
-        // remove the reference from the associated lieudedepot
-        if (suividulieudedepot.getLieudedepot() != null) {
-            suividulieudedepot.getLieudedepot().removeSuividulieudedepot(suividulieudedepot);
-        }
-
-        super.delete(suividulieudedepot);
-    }
 }

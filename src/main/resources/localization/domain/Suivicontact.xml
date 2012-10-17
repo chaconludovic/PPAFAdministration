@@ -19,6 +19,7 @@
 	<entry key="suivicontact_note">Note</entry>
 	<entry key="suivicontact_contactId">Contact Id</entry>
 	<entry key="suivicontact_membreppafId">Membreppaf Id</entry>
+	<entry key="suivicontact_version">Version</entry>
 
 	<!-- x-to-one -->
 	<entry key="suivicontact_membreppaf">Membreppaf</entry>

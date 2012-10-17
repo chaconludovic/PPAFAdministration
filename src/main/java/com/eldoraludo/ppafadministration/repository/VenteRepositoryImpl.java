@@ -13,7 +13,6 @@ import org.apache.log4j.Logger;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.eldoraludo.ppafadministration.dao.support.GenericDao;
 import com.eldoraludo.ppafadministration.repository.support.RepositoryImpl;
@@ -29,6 +28,7 @@ import com.eldoraludo.ppafadministration.dao.VenteDao;
 @Singleton
 public class VenteRepositoryImpl extends RepositoryImpl<Vente, Integer> implements VenteRepository {
 
+    @SuppressWarnings("unused")
     private static final Logger log = Logger.getLogger(VenteRepositoryImpl.class);
 
     protected VenteDao venteDao;
@@ -64,40 +64,4 @@ public class VenteRepositoryImpl extends RepositoryImpl<Vente, Integer> implemen
         return result;
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @Transactional
-    public void delete(Vente vente) {
-        if (vente == null) {
-            if (log.isDebugEnabled()) {
-                log.debug("Skipping deletion for null model!");
-            }
-
-            return;
-        }
-
-        // remove the reference from the associated item
-        if (vente.getItem() != null) {
-            vente.getItem().removeVente(vente);
-        }
-
-        // remove the reference from the associated membreppaf
-        if (vente.getMembreppaf() != null) {
-            vente.getMembreppaf().removeVente(vente);
-        }
-
-        // remove the reference from the associated lieudedepot
-        if (vente.getLieudedepot() != null) {
-            vente.getLieudedepot().removeVente(vente);
-        }
-
-        // remove the reference from the associated contact
-        if (vente.getContact() != null) {
-            vente.getContact().removeVente(vente);
-        }
-
-        super.delete(vente);
-    }
 }

@@ -28,16 +28,24 @@
 				<app:inputTextArea id="modedereglement" value="#{vente.modedereglement}" label="${msg.vente_modedereglement}" />
 				<app:inputTextArea id="informationreglement" value="#{vente.informationreglement}" label="${msg.vente_informationreglement}" />
 				<app:inputTextArea id="note" value="#{vente.note}" label="${msg.vente_note}" />
-				<app:itemAutoComplete id="item" value="#{vente.item}" readonly="true" required="true" label="${msg.vente_item}">
+				<app:itemAutoComplete id="item" value="#{vente.item}" required="true" label="${msg.vente_item}">
+					<app:iconSearch action="selectItem" title="${msg.vente_item} " />
+					<app:iconEdit action="editItem" title="${msg.vente_item}" />
 					<app:iconView action="viewItem" title="${msg.vente_item}" />
 				</app:itemAutoComplete>
-				<app:membreppafAutoComplete id="membreppaf" value="#{vente.membreppaf}" readonly="true" required="true" label="${msg.vente_membreppaf}">
+				<app:membreppafAutoComplete id="membreppaf" value="#{vente.membreppaf}" required="true" label="${msg.vente_membreppaf}">
+					<app:iconSearch action="selectMembreppaf" title="${msg.vente_membreppaf} " />
+					<app:iconEdit action="editMembreppaf" title="${msg.vente_membreppaf}" />
 					<app:iconView action="viewMembreppaf" title="${msg.vente_membreppaf}" />
 				</app:membreppafAutoComplete>
-				<app:lieudedepotAutoComplete id="lieudedepot" value="#{vente.lieudedepot}" readonly="true" required="false" label="${msg.vente_lieudedepot}">
+				<app:lieudedepotAutoComplete id="lieudedepot" value="#{vente.lieudedepot}" required="false" label="${msg.vente_lieudedepot}">
+					<app:iconSearch action="selectLieudedepot" title="${msg.vente_lieudedepot} " />
+					<app:iconEdit action="editLieudedepot" title="${msg.vente_lieudedepot}" />
 					<app:iconView action="viewLieudedepot" title="${msg.vente_lieudedepot}" />
 				</app:lieudedepotAutoComplete>
-				<app:contactAutoComplete id="contact" value="#{vente.contact}" readonly="true" required="false" label="${msg.vente_contact}">
+				<app:contactAutoComplete id="contact" value="#{vente.contact}" required="false" label="${msg.vente_contact}">
+					<app:iconSearch action="selectContact" title="${msg.vente_contact} " />
+					<app:iconEdit action="editContact" title="${msg.vente_contact}" />
 					<app:iconView action="viewContact" title="${msg.vente_contact}" />
 				</app:contactAutoComplete>
 			</h:panelGrid>

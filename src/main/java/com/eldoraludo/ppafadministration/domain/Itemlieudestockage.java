@@ -25,6 +25,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.apache.log4j.Logger;
@@ -47,6 +48,7 @@ public class Itemlieudestockage implements Identifiable<Integer>, Serializable {
     private Integer quantiteentre; // not null
     private Integer quantitesortie; // not null
     private String note;
+    private Integer version;
 
     // Technical attributes for query by example
     private Integer itemId; // not null
@@ -162,6 +164,18 @@ public class Itemlieudestockage implements Identifiable<Integer>, Serializable {
         this.note = note;
     }
 
+    // -- [version] ------------------------
+
+    @Column(name = "VERSION", precision = 10)
+    @Version
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
     // --------------------------------------------------------------------
     // Many to One support
     // --------------------------------------------------------------------
@@ -170,6 +184,7 @@ public class Itemlieudestockage implements Identifiable<Integer>, Serializable {
     // many-to-one: Itemlieudestockage.lieudestockageId ==> Lieudestockage.id
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    @NotNull
     @Cache(usage = NONSTRICT_READ_WRITE)
     @JoinColumn(name = "lieuDeStockage_id", nullable = false)
     @ManyToOne(cascade = PERSIST, fetch = LAZY)
@@ -197,6 +212,7 @@ public class Itemlieudestockage implements Identifiable<Integer>, Serializable {
     // many-to-one: Itemlieudestockage.itemId ==> Item.id
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    @NotNull
     @Cache(usage = NONSTRICT_READ_WRITE)
     @JoinColumn(name = "item_id", nullable = false)
     @ManyToOne(cascade = PERSIST, fetch = LAZY)
@@ -255,6 +271,7 @@ public class Itemlieudestockage implements Identifiable<Integer>, Serializable {
                 .add("itemId", getItemId()) //
                 .add("lieudestockageId", getLieudestockageId()) //
                 .add("note", getNote()) //
+                .add("version", getVersion()) //
                 .toString();
     }
 }

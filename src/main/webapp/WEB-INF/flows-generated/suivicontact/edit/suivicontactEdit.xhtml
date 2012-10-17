@@ -22,10 +22,14 @@
 				<app:inputDate id="date" value="#{suivicontact.date}" label="${msg.suivicontact_date}" required="true" />
 				<app:inputDate id="dateprochainappel" value="#{suivicontact.dateprochainappel}" label="${msg.suivicontact_dateprochainappel}" />
 				<app:inputTextArea id="note" value="#{suivicontact.note}" label="${msg.suivicontact_note}" />
-				<app:membreppafAutoComplete id="membreppaf" value="#{suivicontact.membreppaf}" readonly="true" required="true" label="${msg.suivicontact_membreppaf}">
+				<app:membreppafAutoComplete id="membreppaf" value="#{suivicontact.membreppaf}" required="true" label="${msg.suivicontact_membreppaf}">
+					<app:iconSearch action="selectMembreppaf" title="${msg.suivicontact_membreppaf} " />
+					<app:iconEdit action="editMembreppaf" title="${msg.suivicontact_membreppaf}" />
 					<app:iconView action="viewMembreppaf" title="${msg.suivicontact_membreppaf}" />
 				</app:membreppafAutoComplete>
-				<app:contactAutoComplete id="contact" value="#{suivicontact.contact}" readonly="true" required="true" label="${msg.suivicontact_contact}">
+				<app:contactAutoComplete id="contact" value="#{suivicontact.contact}" required="true" label="${msg.suivicontact_contact}">
+					<app:iconSearch action="selectContact" title="${msg.suivicontact_contact} " />
+					<app:iconEdit action="editContact" title="${msg.suivicontact_contact}" />
 					<app:iconView action="viewContact" title="${msg.suivicontact_contact}" />
 				</app:contactAutoComplete>
 			</h:panelGrid>

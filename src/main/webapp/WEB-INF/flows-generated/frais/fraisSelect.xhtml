@@ -42,6 +42,9 @@
 			<p:column id="frais_informationreglement" headerText="${msg.frais_informationreglement}" sortBy="#{item.informationreglement}">
 				<h:outputText value="#{item.informationreglement}" />
 			</p:column>
+			<p:column id="frais_membreppaf" headerText="${msg.frais_membreppaf}">
+				<h:outputText value="#{membreppafConverter.print(item.membreppaf)}" />
+			</p:column>
 			<p:column id="open" headerText="${msg.actions}" styleClass="actions-column" resizable="false">
 				<app:iconSelect action="select" process="@this" rendered="#{sub}" title="${fraisConverter.print(item)}">
 					<f:setPropertyActionListener value="#{item}" target="#{fraisLazyDataModel.selectedRow}" />

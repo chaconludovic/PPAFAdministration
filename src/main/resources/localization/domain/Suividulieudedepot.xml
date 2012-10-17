@@ -18,6 +18,7 @@
 	<entry key="suividulieudedepot_note">Note</entry>
 	<entry key="suividulieudedepot_membreppafId">Membreppaf Id</entry>
 	<entry key="suividulieudedepot_lieudedepotId">Lieudedepot Id</entry>
+	<entry key="suividulieudedepot_version">Version</entry>
 
 	<!-- x-to-one -->
 	<entry key="suividulieudedepot_membreppaf">Membreppaf</entry>

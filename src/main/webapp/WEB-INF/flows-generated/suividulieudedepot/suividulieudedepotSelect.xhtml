@@ -35,6 +35,12 @@
 			<p:column id="suividulieudedepot_note" headerText="${msg.suividulieudedepot_note}" sortBy="#{item.note}">
 				<h:outputText value="#{item.note}" />
 			</p:column>
+			<p:column id="suividulieudedepot_membreppaf" headerText="${msg.suividulieudedepot_membreppaf}">
+				<h:outputText value="#{membreppafConverter.print(item.membreppaf)}" />
+			</p:column>
+			<p:column id="suividulieudedepot_lieudedepot" headerText="${msg.suividulieudedepot_lieudedepot}">
+				<h:outputText value="#{lieudedepotConverter.print(item.lieudedepot)}" />
+			</p:column>
 			<p:column id="open" headerText="${msg.actions}" styleClass="actions-column" resizable="false">
 				<app:iconSelect action="select" process="@this" rendered="#{sub}" title="${suividulieudedepotConverter.print(item)}">
 					<f:setPropertyActionListener value="#{item}" target="#{suividulieudedepotLazyDataModel.selectedRow}" />

@@ -7,13 +7,10 @@
  */
 package com.eldoraludo.ppafadministration.domain;
 
-import static javax.persistence.CascadeType.ALL;
 import static javax.persistence.CascadeType.PERSIST;
 import static javax.persistence.FetchType.LAZY;
 import static org.hibernate.annotations.CacheConcurrencyStrategy.NONSTRICT_READ_WRITE;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,22 +20,17 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.apache.log4j.Logger;
 import org.hibernate.annotations.Cache;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
-import com.eldoraludo.ppafadministration.domain.Frais;
 import com.eldoraludo.ppafadministration.domain.PersistableHashBuilder;
 import com.eldoraludo.ppafadministration.domain.Rolemembre;
-import com.eldoraludo.ppafadministration.domain.Suivicontact;
-import com.eldoraludo.ppafadministration.domain.Suividulieudedepot;
-import com.eldoraludo.ppafadministration.domain.Utilisateur;
-import com.eldoraludo.ppafadministration.domain.Vente;
 import com.google.common.base.Objects;
 
 @Entity
@@ -61,19 +53,13 @@ public class Membreppaf implements Identifiable<Integer>, Serializable {
     private String ville;
     private String codepostal;
     private String infosuppl;
+    private Integer version;
 
     // Technical attributes for query by example
     private Integer rolemembreId; // not null
 
     // Many to one
     private Rolemembre rolemembre; // not null (rolemembreId)
-
-    // One to many
-    private List<Utilisateur> utilisateurs = new ArrayList<Utilisateur>();
-    private List<Suivicontact> suivicontacts = new ArrayList<Suivicontact>();
-    private List<Suividulieudedepot> suividulieudedepots = new ArrayList<Suividulieudedepot>();
-    private List<Vente> ventes = new ArrayList<Vente>();
-    private List<Frais> fraiss = new ArrayList<Frais>();
 
     // ---------------------------
     // Constructors
@@ -249,13 +235,25 @@ public class Membreppaf implements Identifiable<Integer>, Serializable {
 
     // -- [rolemembreId] ------------------------
 
-    @Column(name = "ROLEMEMBRE_ID", nullable = false, precision = 10, insertable = false, updatable = false)
+    @Column(name = "roleMembre_id", nullable = false, precision = 10, insertable = false, updatable = false)
     public Integer getRolemembreId() {
         return rolemembreId;
     }
 
     private void setRolemembreId(Integer rolemembreId) {
         this.rolemembreId = rolemembreId;
+    }
+
+    // -- [version] ------------------------
+
+    @Column(name = "VERSION", precision = 10)
+    @Version
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 
     // --------------------------------------------------------------------
@@ -268,7 +266,7 @@ public class Membreppaf implements Identifiable<Integer>, Serializable {
 
     @NotNull
     @Cache(usage = NONSTRICT_READ_WRITE)
-    @JoinColumn(name = "ROLEMEMBRE_ID", nullable = false)
+    @JoinColumn(name = "roleMembre_id", nullable = false)
     @ManyToOne(cascade = PERSIST, fetch = LAZY)
     public Rolemembre getRolemembre() {
         return rolemembre;
@@ -288,320 +286,6 @@ public class Membreppaf implements Identifiable<Integer>, Serializable {
         } else {
             setRolemembreId(null);
         }
-    }
-
-    // --------------------------------------------------------------------
-    // One to Many support
-    // --------------------------------------------------------------------
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // one to many: membreppaf ==> utilisateurs
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Cache(usage = NONSTRICT_READ_WRITE)
-    @OneToMany(mappedBy = "membreppaf", orphanRemoval = true, cascade = ALL)
-    public List<Utilisateur> getUtilisateurs() {
-        return utilisateurs;
-    }
-
-    /**
-     * Set the {@link Utilisateur} list.
-     * It is recommended to use the helper method {@link #addUtilisateur(Utilisateur)} / {@link #removeUtilisateur(Utilisateur)}
-     * if you want to preserve referential integrity at the object level.
-     *
-     * @param utilisateurs the list to set
-     */
-    public void setUtilisateurs(List<Utilisateur> utilisateurs) {
-        this.utilisateurs = utilisateurs;
-    }
-
-    /**
-     * Helper method to add the passed {@link Utilisateur} to the utilisateurs list
-     * and set this membreppaf on the passed utilisateur to preserve referential
-     * integrity at the object level.
-     *
-     * @param utilisateur the to add
-     * @return true if the utilisateur could be added to the utilisateurs list, false otherwise
-     */
-    public boolean addUtilisateur(Utilisateur utilisateur) {
-        if (getUtilisateurs().add(utilisateur)) {
-            utilisateur.setMembreppaf((Membreppaf) this);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Helper method to determine if the passed {@link Utilisateur} is already present in the utilisateurs list.
-     *
-     * @param utilisateur the instance to look up.
-     * @return true if the utilisateurs list contains the passed utilisateur, false otherwise.
-     */
-    public boolean containsUtilisateur(Utilisateur utilisateur) {
-        return getUtilisateurs() != null && getUtilisateurs().contains(utilisateur);
-    }
-
-    /**
-     * Helper method to remove the passed {@link Utilisateur} from the utilisateurs list and unset
-     * this membreppaf from the passed utilisateur to preserve referential integrity at the object level.
-     *
-     * @param utilisateur the instance to remove
-     * @return true if the utilisateur could be removed from the utilisateurs list, false otherwise
-     */
-    public boolean removeUtilisateur(Utilisateur utilisateur) {
-        if (getUtilisateurs().remove(utilisateur)) {
-            utilisateur.setMembreppaf(null);
-            return true;
-        }
-        return false;
-    }
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // one to many: membreppaf ==> suivicontacts
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Cache(usage = NONSTRICT_READ_WRITE)
-    @OneToMany(mappedBy = "membreppaf", orphanRemoval = true, cascade = ALL)
-    public List<Suivicontact> getSuivicontacts() {
-        return suivicontacts;
-    }
-
-    /**
-     * Set the {@link Suivicontact} list.
-     * It is recommended to use the helper method {@link #addSuivicontact(Suivicontact)} / {@link #removeSuivicontact(Suivicontact)}
-     * if you want to preserve referential integrity at the object level.
-     *
-     * @param suivicontacts the list to set
-     */
-    public void setSuivicontacts(List<Suivicontact> suivicontacts) {
-        this.suivicontacts = suivicontacts;
-    }
-
-    /**
-     * Helper method to add the passed {@link Suivicontact} to the suivicontacts list
-     * and set this membreppaf on the passed suivicontact to preserve referential
-     * integrity at the object level.
-     *
-     * @param suivicontact the to add
-     * @return true if the suivicontact could be added to the suivicontacts list, false otherwise
-     */
-    public boolean addSuivicontact(Suivicontact suivicontact) {
-        if (getSuivicontacts().add(suivicontact)) {
-            suivicontact.setMembreppaf((Membreppaf) this);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Helper method to determine if the passed {@link Suivicontact} is already present in the suivicontacts list.
-     *
-     * @param suivicontact the instance to look up.
-     * @return true if the suivicontacts list contains the passed suivicontact, false otherwise.
-     */
-    public boolean containsSuivicontact(Suivicontact suivicontact) {
-        return getSuivicontacts() != null && getSuivicontacts().contains(suivicontact);
-    }
-
-    /**
-     * Helper method to remove the passed {@link Suivicontact} from the suivicontacts list and unset
-     * this membreppaf from the passed suivicontact to preserve referential integrity at the object level.
-     *
-     * @param suivicontact the instance to remove
-     * @return true if the suivicontact could be removed from the suivicontacts list, false otherwise
-     */
-    public boolean removeSuivicontact(Suivicontact suivicontact) {
-        if (getSuivicontacts().remove(suivicontact)) {
-            suivicontact.setMembreppaf(null);
-            return true;
-        }
-        return false;
-    }
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // one to many: membreppaf ==> suividulieudedepots
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Cache(usage = NONSTRICT_READ_WRITE)
-    @OneToMany(mappedBy = "membreppaf", orphanRemoval = true, cascade = ALL)
-    public List<Suividulieudedepot> getSuividulieudedepots() {
-        return suividulieudedepots;
-    }
-
-    /**
-     * Set the {@link Suividulieudedepot} list.
-     * It is recommended to use the helper method {@link #addSuividulieudedepot(Suividulieudedepot)} / {@link #removeSuividulieudedepot(Suividulieudedepot)}
-     * if you want to preserve referential integrity at the object level.
-     *
-     * @param suividulieudedepots the list to set
-     */
-    public void setSuividulieudedepots(List<Suividulieudedepot> suividulieudedepots) {
-        this.suividulieudedepots = suividulieudedepots;
-    }
-
-    /**
-     * Helper method to add the passed {@link Suividulieudedepot} to the suividulieudedepots list
-     * and set this membreppaf on the passed suividulieudedepot to preserve referential
-     * integrity at the object level.
-     *
-     * @param suividulieudedepot the to add
-     * @return true if the suividulieudedepot could be added to the suividulieudedepots list, false otherwise
-     */
-    public boolean addSuividulieudedepot(Suividulieudedepot suividulieudedepot) {
-        if (getSuividulieudedepots().add(suividulieudedepot)) {
-            suividulieudedepot.setMembreppaf((Membreppaf) this);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Helper method to determine if the passed {@link Suividulieudedepot} is already present in the suividulieudedepots list.
-     *
-     * @param suividulieudedepot the instance to look up.
-     * @return true if the suividulieudedepots list contains the passed suividulieudedepot, false otherwise.
-     */
-    public boolean containsSuividulieudedepot(Suividulieudedepot suividulieudedepot) {
-        return getSuividulieudedepots() != null && getSuividulieudedepots().contains(suividulieudedepot);
-    }
-
-    /**
-     * Helper method to remove the passed {@link Suividulieudedepot} from the suividulieudedepots list and unset
-     * this membreppaf from the passed suividulieudedepot to preserve referential integrity at the object level.
-     *
-     * @param suividulieudedepot the instance to remove
-     * @return true if the suividulieudedepot could be removed from the suividulieudedepots list, false otherwise
-     */
-    public boolean removeSuividulieudedepot(Suividulieudedepot suividulieudedepot) {
-        if (getSuividulieudedepots().remove(suividulieudedepot)) {
-            suividulieudedepot.setMembreppaf(null);
-            return true;
-        }
-        return false;
-    }
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // one to many: membreppaf ==> ventes
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Cache(usage = NONSTRICT_READ_WRITE)
-    @OneToMany(mappedBy = "membreppaf", orphanRemoval = true, cascade = ALL)
-    public List<Vente> getVentes() {
-        return ventes;
-    }
-
-    /**
-     * Set the {@link Vente} list.
-     * It is recommended to use the helper method {@link #addVente(Vente)} / {@link #removeVente(Vente)}
-     * if you want to preserve referential integrity at the object level.
-     *
-     * @param ventes the list to set
-     */
-    public void setVentes(List<Vente> ventes) {
-        this.ventes = ventes;
-    }
-
-    /**
-     * Helper method to add the passed {@link Vente} to the ventes list
-     * and set this membreppaf on the passed vente to preserve referential
-     * integrity at the object level.
-     *
-     * @param vente the to add
-     * @return true if the vente could be added to the ventes list, false otherwise
-     */
-    public boolean addVente(Vente vente) {
-        if (getVentes().add(vente)) {
-            vente.setMembreppaf((Membreppaf) this);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Helper method to determine if the passed {@link Vente} is already present in the ventes list.
-     *
-     * @param vente the instance to look up.
-     * @return true if the ventes list contains the passed vente, false otherwise.
-     */
-    public boolean containsVente(Vente vente) {
-        return getVentes() != null && getVentes().contains(vente);
-    }
-
-    /**
-     * Helper method to remove the passed {@link Vente} from the ventes list and unset
-     * this membreppaf from the passed vente to preserve referential integrity at the object level.
-     *
-     * @param vente the instance to remove
-     * @return true if the vente could be removed from the ventes list, false otherwise
-     */
-    public boolean removeVente(Vente vente) {
-        if (getVentes().remove(vente)) {
-            vente.setMembreppaf(null);
-            return true;
-        }
-        return false;
-    }
-
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // one to many: membreppaf ==> fraiss
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    @Cache(usage = NONSTRICT_READ_WRITE)
-    @OneToMany(mappedBy = "membreppaf", orphanRemoval = true, cascade = ALL)
-    public List<Frais> getFraiss() {
-        return fraiss;
-    }
-
-    /**
-     * Set the {@link Frais} list.
-     * It is recommended to use the helper method {@link #addFrais(Frais)} / {@link #removeFrais(Frais)}
-     * if you want to preserve referential integrity at the object level.
-     *
-     * @param fraiss the list to set
-     */
-    public void setFraiss(List<Frais> fraiss) {
-        this.fraiss = fraiss;
-    }
-
-    /**
-     * Helper method to add the passed {@link Frais} to the fraiss list
-     * and set this membreppaf on the passed frais to preserve referential
-     * integrity at the object level.
-     *
-     * @param frais the to add
-     * @return true if the frais could be added to the fraiss list, false otherwise
-     */
-    public boolean addFrais(Frais frais) {
-        if (getFraiss().add(frais)) {
-            frais.setMembreppaf((Membreppaf) this);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Helper method to determine if the passed {@link Frais} is already present in the fraiss list.
-     *
-     * @param frais the instance to look up.
-     * @return true if the fraiss list contains the passed frais, false otherwise.
-     */
-    public boolean containsFrais(Frais frais) {
-        return getFraiss() != null && getFraiss().contains(frais);
-    }
-
-    /**
-     * Helper method to remove the passed {@link Frais} from the fraiss list and unset
-     * this membreppaf from the passed frais to preserve referential integrity at the object level.
-     *
-     * @param frais the instance to remove
-     * @return true if the frais could be removed from the fraiss list, false otherwise
-     */
-    public boolean removeFrais(Frais frais) {
-        if (getFraiss().remove(frais)) {
-            frais.setMembreppaf(null);
-            return true;
-        }
-        return false;
     }
 
     /**
@@ -645,6 +329,7 @@ public class Membreppaf implements Identifiable<Integer>, Serializable {
                 .add("codepostal", getCodepostal()) //
                 .add("infosuppl", getInfosuppl()) //
                 .add("rolemembreId", getRolemembreId()) //
+                .add("version", getVersion()) //
                 .toString();
     }
 }

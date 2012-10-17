@@ -32,6 +32,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.apache.log4j.Logger;
@@ -134,6 +135,9 @@ public class SuividulieudedepotTest {
 
         model1.setNote("a");
         model2.setNote("a");
+
+        model1.setVersion(1);
+        model2.setVersion(1);
         assertTrue(model1.isIdSet());
         assertTrue(model2.isIdSet());
         assertTrue(model1.hashCode() == model2.hashCode());

@@ -22,6 +22,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.persistence.Version;
 import javax.validation.constraints.Size;
 import org.apache.log4j.Logger;
 import org.hibernate.annotations.Cache;
@@ -60,7 +61,7 @@ public class RolemembreTest {
     public void equalsUsingBusinessKey() {
         Rolemembre model1 = new Rolemembre();
         Rolemembre model2 = new Rolemembre();
-        String role = "a";
+        String role = ValueGenerator.getUniqueString(255);
         model1.setRole(role);
         model2.setRole(role);
         assertTrue(model1.equals(model2));

@@ -21,6 +21,7 @@ public abstract class Suivicontact_ {
     public static volatile SingularAttribute<Suivicontact, Date> date;
     public static volatile SingularAttribute<Suivicontact, Date> dateprochainappel;
     public static volatile SingularAttribute<Suivicontact, String> note;
+    public static volatile SingularAttribute<Suivicontact, Integer> version;
 
     // Technical attributes for query by example
     public static volatile SingularAttribute<Suivicontact, Integer> contactId;

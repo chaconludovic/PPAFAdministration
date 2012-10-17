@@ -19,6 +19,7 @@
 	<entry key="frais_modedereglement">mode de rÃ©glement</entry>
 	<entry key="frais_informationreglement">information sur le rÃ©glement</entry>
 	<entry key="frais_membreppafId">Membreppaf Id</entry>
+	<entry key="frais_version">Version</entry>
 
 	<!-- x-to-one -->
 	<entry key="frais_membreppaf">Membreppaf</entry>

@@ -7,11 +7,8 @@
  */
 package com.eldoraludo.ppafadministration.domain;
 
-import javax.persistence.metamodel.ListAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
-import com.eldoraludo.ppafadministration.domain.Suividulieudedepot;
-import com.eldoraludo.ppafadministration.domain.Vente;
 
 @StaticMetamodel(Lieudedepot.class)
 public abstract class Lieudedepot_ {
@@ -26,8 +23,5 @@ public abstract class Lieudedepot_ {
     public static volatile SingularAttribute<Lieudedepot, String> codepostal;
     public static volatile SingularAttribute<Lieudedepot, String> infosuppl;
     public static volatile SingularAttribute<Lieudedepot, String> type;
-
-    // One to many
-    public static volatile ListAttribute<Lieudedepot, Suividulieudedepot> suividulieudedepots;
-    public static volatile ListAttribute<Lieudedepot, Vente> ventes;
+    public static volatile SingularAttribute<Lieudedepot, Integer> version;
 }

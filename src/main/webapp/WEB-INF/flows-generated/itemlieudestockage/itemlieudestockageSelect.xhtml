@@ -40,6 +40,12 @@
 			<p:column id="itemlieudestockage_quantitesortie" headerText="${msg.itemlieudestockage_quantitesortie}" sortBy="#{item.quantitesortie}">
 				<h:outputText value="#{item.quantitesortie}" />
 			</p:column>
+			<p:column id="itemlieudestockage_item" headerText="${msg.itemlieudestockage_item}">
+				<h:outputText value="#{itemConverter.print(item.item)}" />
+			</p:column>
+			<p:column id="itemlieudestockage_lieudestockage" headerText="${msg.itemlieudestockage_lieudestockage}">
+				<h:outputText value="#{lieudestockageConverter.print(item.lieudestockage)}" />
+			</p:column>
 			<p:column id="itemlieudestockage_note" headerText="${msg.itemlieudestockage_note}" sortBy="#{item.note}">
 				<h:outputText value="#{item.note}" />
 			</p:column>

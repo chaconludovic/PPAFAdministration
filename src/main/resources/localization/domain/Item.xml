@@ -17,8 +17,5 @@
 	<entry key="item_nom">Nom</entry>
 	<entry key="item_reference">Reference</entry>
 	<entry key="item_note">Note</entry>
-
-    <!-- one-to-many -->
-    <entry key="item_itemlieudestockages">Itemlieudestockages</entry>
-    <entry key="item_ventes">Ventes</entry>
+	<entry key="item_version">Version</entry>
 </properties>

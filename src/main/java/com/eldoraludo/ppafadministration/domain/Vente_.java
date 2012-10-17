@@ -29,6 +29,7 @@ public abstract class Vente_ {
     public static volatile SingularAttribute<Vente, String> modedereglement;
     public static volatile SingularAttribute<Vente, String> informationreglement;
     public static volatile SingularAttribute<Vente, String> note;
+    public static volatile SingularAttribute<Vente, Integer> version;
 
     // Technical attributes for query by example
     public static volatile SingularAttribute<Vente, Integer> itemId;
