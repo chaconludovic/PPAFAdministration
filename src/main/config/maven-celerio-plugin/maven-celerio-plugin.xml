@@ -5,8 +5,6 @@
  ! Want to use Celerio within your company? email us at info@jaxio.com
  ! Follow us on twitter: @springfuse
  ! Template pack-jsf2-primefaces:bootstrap/generic/maven-celerio-plugin.boot.vm.xml
-
-
 -->
 <celerio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="http://www.jaxio.com/schema/celerio"
@@ -61,10 +59,9 @@
             <columnConfigs>
 
                 <columnConfig
-                    businessKey="true"
                     columnName="login"
                     fieldName="username"
-                    min="4"/>
+                    min="4" />
 
                 <columnConfig
                     columnName="codePostal"
@@ -72,10 +69,9 @@
 
                 <columnConfig
                     columnName="infoSuppl"
-                    label="information supplémentaire"/>
+                    label="information supplémentaire" />
 
-                <columnConfig
-                    columnName="email" />
+                <columnConfig columnName="email" />
 
                 <columnConfig
                     columnName="enabled"
@@ -195,7 +191,7 @@
 
                 <columnConfig
                     columnName="dateProchainAppel"
-                    label="date de prochain appel"/>
+                    label="date de prochain appel" />
 
                 <columnConfig
                     associationDirection="UNIDIRECTIONAL"
@@ -263,11 +259,11 @@
 
                 <columnConfig
                     columnName="codePostal"
-                    label="code postal"/>
+                    label="code postal" />
 
                 <columnConfig
                     columnName="infoSuppl"
-                    label="information supplémentaire"/>
+                    label="information supplémentaire" />
             </columnConfigs>
         </entityConfig>
 

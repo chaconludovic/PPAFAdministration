@@ -34,6 +34,7 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 import com.eldoraludo.ppafadministration.domain.Membreppaf;
+import com.eldoraludo.ppafadministration.domain.PersistableHashBuilder;
 import com.eldoraludo.ppafadministration.domain.Role;
 import com.google.common.base.Objects;
 
@@ -319,19 +320,11 @@ public class Utilisateur implements Identifiable<Integer>, Serializable {
         return this == other || (other instanceof Utilisateur && hashCode() == other.hashCode());
     }
 
-    private volatile int previousHashCode = 0;
+    private PersistableHashBuilder persistableHashBuilder = new PersistableHashBuilder();
 
     @Override
     public int hashCode() {
-        int hashCode = Objects.hashCode(getUsername());
-        if (previousHashCode != 0 && previousHashCode != hashCode) {
-            log.warn("DEVELOPER: hashCode has changed!." //
-                    + "If you encounter this message you should take the time to carefuly review equals/hashCode for: " //
-                    + getClass().getCanonicalName());
-        }
-
-        previousHashCode = hashCode;
-        return hashCode;
+        return persistableHashBuilder.hash(log, this);
     }
 
     /**

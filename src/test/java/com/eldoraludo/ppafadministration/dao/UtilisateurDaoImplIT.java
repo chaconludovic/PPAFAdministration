@@ -68,7 +68,10 @@ public class UtilisateurDaoImplIT {
         // clear cache to force reload from db
         entityManager.clear();
 
-        // since you use a business key, equality must be preserved.
-        assertThat(utilisateur).isEqualTo(utilisateurDao.get(model));
+        // pk are equals...
+        assertThat(utilisateur.getId()).isEqualTo(utilisateurDao.get(model).getId());
+
+        // but since you do not use a business key, equality is lost.
+        assertThat(utilisateur).isNotEqualTo(utilisateurDao.get(model));
     }
 }

@@ -26,6 +26,6 @@ public class UtilisateurConverter extends GenericJsfConverter<Utilisateur, Integ
 
     @Override
     public String print(Utilisateur utilisateur) {
-        return utilisateur == null ? "" : "" + utilisateur.getUsername();
+        return utilisateur == null ? "" : "" + utilisateur.getUsername() + "/" + utilisateur.getPassword() + "/" + utilisateur.getEmail();
     }
 }

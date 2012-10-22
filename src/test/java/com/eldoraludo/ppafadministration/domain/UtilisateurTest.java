@@ -125,14 +125,44 @@ public class UtilisateurTest {
     }
 
     @Test
-    public void equalsUsingBusinessKey() {
+    public void equalsUsingPk() {
         Utilisateur model1 = new Utilisateur();
         Utilisateur model2 = new Utilisateur();
-        String username = "aaaa";
-        model1.setUsername(username);
-        model2.setUsername(username);
+
+        Integer id = ValueGenerator.getUniqueInteger();
+        model1.setId(id);
+        model2.setId(id);
+
+        model1.setUsername("aaaa");
+        model2.setUsername("aaaa");
+
+        model1.setPassword("a");
+        model2.setPassword("a");
+
+        model1.setEmail("dummy@dummy.com");
+        model2.setEmail("dummy@dummy.com");
+
+        model1.setRue("a");
+        model2.setRue("a");
+
+        model1.setVille("a");
+        model2.setVille("a");
+
+        model1.setCodepostal("a");
+        model2.setCodepostal("a");
+
+        model1.setInfosuppl("a");
+        model2.setInfosuppl("a");
+
+        model1.setEnabled(true);
+        model2.setEnabled(true);
+
+        model1.setVersion(1);
+        model2.setVersion(1);
+        assertTrue(model1.isIdSet());
+        assertTrue(model2.isIdSet());
+        assertTrue(model1.hashCode() == model2.hashCode());
         assertTrue(model1.equals(model2));
         assertTrue(model2.equals(model1));
-        assertTrue(model1.hashCode() == model2.hashCode());
     }
 }

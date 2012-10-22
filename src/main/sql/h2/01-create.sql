@@ -56,7 +56,6 @@ CREATE TABLE utilisateur (
  CREATE TABLE utilisateur_role (
     utilisateur_id INTEGER(10) not null,
     role_id INTEGER(10) not null,
-   	version int default 0,
     constraint utilisateur_role_fk_1 foreign key (utilisateur_id) references utilisateur,
     constraint utilisateur_role_fk_2 foreign key (role_id) references role,
     primary key (utilisateur_id, role_id)
