@@ -36,11 +36,23 @@
 		</ui:define>
 
 		<ui:define name="result">
-			<p:column id="contact_codepostal" headerText="${msg.contact_codepostal}" sortBy="#{item.codepostal}">
-				<h:outputText value="#{item.codepostal}" />
+			<p:column id="contact_nom" headerText="${msg.contact_nom}" sortBy="#{item.nom}">
+				<h:outputText value="#{item.nom}" />
 			</p:column>
-			<p:column id="contact_infosuppl" headerText="${msg.contact_infosuppl}" sortBy="#{item.infosuppl}">
-				<h:outputText value="#{item.infosuppl}" />
+			<p:column id="contact_prenom" headerText="${msg.contact_prenom}" sortBy="#{item.prenom}">
+				<h:outputText value="#{item.prenom}" />
+			</p:column>
+			<p:column id="contact_numerotelephone1" headerText="${msg.contact_numerotelephone1}" sortBy="#{item.numerotelephone1}">
+				<h:outputText value="#{item.numerotelephone1}" />
+			</p:column>
+			<p:column id="contact_numerotelephone2" headerText="${msg.contact_numerotelephone2}" sortBy="#{item.numerotelephone2}">
+				<h:outputText value="#{item.numerotelephone2}" />
+			</p:column>
+			<p:column id="contact_email" headerText="${msg.contact_email}" sortBy="#{item.email}">
+				<h:outputText value="#{item.email}" />
+			</p:column>
+			<p:column id="contact_actif" headerText="${msg.contact_actif}" sortBy="#{item.actif}">
+				<appcc:outputBoolean value="#{item.actif}" />
 			</p:column>
 			<p:column id="open" headerText="${msg.actions}" styleClass="actions-column" resizable="false">
 				<app:iconSelect action="select" process="@this" rendered="#{sub}" title="${contactConverter.print(item)}">

@@ -5,6 +5,8 @@
  ! Want to use Celerio within your company? email us at info@jaxio.com
  ! Follow us on twitter: @springfuse
  ! Template pack-jsf2-primefaces:bootstrap/generic/maven-celerio-plugin.boot.vm.xml
+
+
 -->
 <celerio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="http://www.jaxio.com/schema/celerio"
@@ -62,32 +64,26 @@
                     businessKey="true"
                     columnName="login"
                     fieldName="username"
-                    min="4"
-                    searchResult="true" />
+                    min="4"/>
 
                 <columnConfig
                     columnName="codePostal"
-                    label="code postal"
-                    searchResult="true" />
+                    label="code postal" />
 
                 <columnConfig
                     columnName="infoSuppl"
-                    label="information supplémentaire"
-                    searchResult="true" />
+                    label="information supplémentaire"/>
 
                 <columnConfig
-                    columnName="email"
-                    searchResult="true" />
+                    columnName="email" />
 
                 <columnConfig
                     columnName="enabled"
-                    label="actif"
-                    searchResult="true" />
+                    label="actif" />
 
                 <columnConfig
                     associationDirection="UNIDIRECTIONAL"
                     columnName="membrePPAF_id" />
-                
             </columnConfigs>
         </entityConfig>
 
@@ -113,7 +109,7 @@
 
                 <columnConfig
                     businessKey="true"
-                    columnName="role"
+                    columnName="role_ppaf"
                     messageKey="true" />
             </columnConfigs>
         </entityConfig>
@@ -183,13 +179,11 @@
 
                 <columnConfig
                     columnName="codePostal"
-                    label="code postal"
-                    searchResult="true" />
+                    label="code postal" />
 
                 <columnConfig
                     columnName="infoSuppl"
-                    label="information supplémentaire"
-                    searchResult="true" />
+                    label="information supplémentaire" />
             </columnConfigs>
         </entityConfig>
 
@@ -201,8 +195,7 @@
 
                 <columnConfig
                     columnName="dateProchainAppel"
-                    label="date de prochain appel"
-                    searchResult="true" />
+                    label="date de prochain appel"/>
 
                 <columnConfig
                     associationDirection="UNIDIRECTIONAL"
@@ -234,13 +227,11 @@
 
                 <columnConfig
                     columnName="codePostal"
-                    label="code postal"
-                    searchResult="true" />
+                    label="code postal" />
 
                 <columnConfig
                     columnName="infoSuppl"
-                    label="information supplémentaire"
-                    searchResult="true" />
+                    label="information supplémentaire" />
             </columnConfigs>
         </entityConfig>
 
@@ -272,13 +263,11 @@
 
                 <columnConfig
                     columnName="codePostal"
-                    label="code postal"
-                    searchResult="true" />
+                    label="code postal"/>
 
                 <columnConfig
                     columnName="infoSuppl"
-                    label="information supplémentaire"
-                    searchResult="true" />
+                    label="information supplémentaire"/>
             </columnConfigs>
         </entityConfig>
 

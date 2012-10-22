@@ -38,17 +38,20 @@
 			<p:column id="utilisateur_username" headerText="${msg.utilisateur_username}" sortBy="#{item.username}">
 				<h:outputText value="#{item.username}" />
 			</p:column>
+			<p:column id="utilisateur_password" headerText="${msg.utilisateur_password}" sortBy="#{item.password}">
+				<h:outputText value="#{item.password}" />
+			</p:column>
 			<p:column id="utilisateur_email" headerText="${msg.utilisateur_email}" sortBy="#{item.email}">
 				<h:outputText value="#{item.email}" />
 			</p:column>
+			<p:column id="utilisateur_rue" headerText="${msg.utilisateur_rue}" sortBy="#{item.rue}">
+				<h:outputText value="#{item.rue}" />
+			</p:column>
+			<p:column id="utilisateur_ville" headerText="${msg.utilisateur_ville}" sortBy="#{item.ville}">
+				<h:outputText value="#{item.ville}" />
+			</p:column>
 			<p:column id="utilisateur_codepostal" headerText="${msg.utilisateur_codepostal}" sortBy="#{item.codepostal}">
 				<h:outputText value="#{item.codepostal}" />
-			</p:column>
-			<p:column id="utilisateur_infosuppl" headerText="${msg.utilisateur_infosuppl}" sortBy="#{item.infosuppl}">
-				<h:outputText value="#{item.infosuppl}" />
-			</p:column>
-			<p:column id="utilisateur_enabled" headerText="${msg.utilisateur_enabled}" sortBy="#{item.enabled}">
-				<appcc:outputBoolean value="#{item.enabled}" />
 			</p:column>
 			<p:column id="open" headerText="${msg.actions}" styleClass="actions-column" resizable="false">
 				<app:iconSelect action="select" process="@this" rendered="#{sub}" title="${utilisateurConverter.print(item)}">

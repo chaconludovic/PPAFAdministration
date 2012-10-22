@@ -20,14 +20,14 @@
 		<ui:define name="filters">
 			<f:validateBean disabled="true">
 				<h:panelGrid columns="4">
-					<app:input id="role" value="#{rolemembreSearchForm.rolemembre.role}" label="${msg.rolemembre_role}"/>
+					<app:input id="rolePpaf" value="#{rolemembreSearchForm.rolemembre.rolePpaf}" label="${msg.rolemembre_rolePpaf}"/>
 				</h:panelGrid>
 			</f:validateBean>
 		</ui:define>
 
 		<ui:define name="result">
-			<p:column id="rolemembre_role" headerText="${msg.rolemembre_role}" sortBy="#{item.role}">
-				<h:outputText value="#{item.role}" />
+			<p:column id="rolemembre_rolePpaf" headerText="${msg.rolemembre_rolePpaf}" sortBy="#{item.rolePpaf}">
+				<h:outputText value="#{item.rolePpaf}" />
 			</p:column>
 			<p:column id="open" headerText="${msg.actions}" styleClass="actions-column" resizable="false">
 				<app:iconSelect action="select" process="@this" rendered="#{sub}" title="${rolemembreConverter.print(item)}">

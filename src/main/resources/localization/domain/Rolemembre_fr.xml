@@ -14,11 +14,11 @@
 
 	<!-- Attributes -->
 	<entry key="rolemembre_id">Id</entry>
-	<entry key="rolemembre_role">Role</entry>
+	<entry key="rolemembre_rolePpaf">Role Ppaf</entry>
 	<entry key="rolemembre_version">Version</entry>
 
 
 	<!-- Uniques -->
-	<entry key="rolemembre_role_already_exists">Role existe déjà</entry>
+	<entry key="rolemembre_rolePpaf_already_exists">Role Ppaf existe déjà</entry>
 	
 </properties>

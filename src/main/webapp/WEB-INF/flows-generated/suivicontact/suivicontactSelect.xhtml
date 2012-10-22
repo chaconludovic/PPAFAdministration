@@ -30,8 +30,20 @@
 		</ui:define>
 
 		<ui:define name="result">
+			<p:column id="suivicontact_date" headerText="${msg.suivicontact_date}" sortBy="#{item.date}">
+				<h:outputText value="#{item.date}" />
+			</p:column>
 			<p:column id="suivicontact_dateprochainappel" headerText="${msg.suivicontact_dateprochainappel}" sortBy="#{item.dateprochainappel}">
 				<h:outputText value="#{item.dateprochainappel}" />
+			</p:column>
+			<p:column id="suivicontact_note" headerText="${msg.suivicontact_note}" sortBy="#{item.note}">
+				<h:outputText value="#{item.note}" />
+			</p:column>
+			<p:column id="suivicontact_contact" headerText="${msg.suivicontact_contact}">
+				<h:outputText value="#{contactConverter.print(item.contact)}" />
+			</p:column>
+			<p:column id="suivicontact_membreppaf" headerText="${msg.suivicontact_membreppaf}">
+				<h:outputText value="#{membreppafConverter.print(item.membreppaf)}" />
 			</p:column>
 			<p:column id="open" headerText="${msg.actions}" styleClass="actions-column" resizable="false">
 				<app:iconSelect action="select" process="@this" rendered="#{sub}" title="${suivicontactConverter.print(item)}">

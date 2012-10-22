@@ -26,6 +26,6 @@ public class RolemembreConverter extends GenericJsfConverter<Rolemembre, Integer
 
     @Override
     public String print(Rolemembre rolemembre) {
-        return rolemembre == null ? "" : "" + rolemembre.getRole();
+        return rolemembre == null ? "" : "" + rolemembre.getRolePpaf();
     }
 }

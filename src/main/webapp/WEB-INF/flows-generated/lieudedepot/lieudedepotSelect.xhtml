@@ -33,11 +33,23 @@
 		</ui:define>
 
 		<ui:define name="result">
+			<p:column id="lieudedepot_nom" headerText="${msg.lieudedepot_nom}" sortBy="#{item.nom}">
+				<h:outputText value="#{item.nom}" />
+			</p:column>
+			<p:column id="lieudedepot_numerotelephone1" headerText="${msg.lieudedepot_numerotelephone1}" sortBy="#{item.numerotelephone1}">
+				<h:outputText value="#{item.numerotelephone1}" />
+			</p:column>
+			<p:column id="lieudedepot_numerotelephone2" headerText="${msg.lieudedepot_numerotelephone2}" sortBy="#{item.numerotelephone2}">
+				<h:outputText value="#{item.numerotelephone2}" />
+			</p:column>
+			<p:column id="lieudedepot_rue" headerText="${msg.lieudedepot_rue}" sortBy="#{item.rue}">
+				<h:outputText value="#{item.rue}" />
+			</p:column>
+			<p:column id="lieudedepot_ville" headerText="${msg.lieudedepot_ville}" sortBy="#{item.ville}">
+				<h:outputText value="#{item.ville}" />
+			</p:column>
 			<p:column id="lieudedepot_codepostal" headerText="${msg.lieudedepot_codepostal}" sortBy="#{item.codepostal}">
 				<h:outputText value="#{item.codepostal}" />
-			</p:column>
-			<p:column id="lieudedepot_infosuppl" headerText="${msg.lieudedepot_infosuppl}" sortBy="#{item.infosuppl}">
-				<h:outputText value="#{item.infosuppl}" />
 			</p:column>
 			<p:column id="open" headerText="${msg.actions}" styleClass="actions-column" resizable="false">
 				<app:iconSelect action="select" process="@this" rendered="#{sub}" title="${lieudedepotConverter.print(item)}">

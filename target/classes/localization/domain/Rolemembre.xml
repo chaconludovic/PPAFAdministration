@@ -14,9 +14,9 @@
 
 	<!-- Attributes -->
 	<entry key="rolemembre_id">Id</entry>
-	<entry key="rolemembre_role">Role</entry>
+	<entry key="rolemembre_rolePpaf">Role Ppaf</entry>
 	<entry key="rolemembre_version">Version</entry>
 
 	<!-- Uniques -->
-	<entry key="rolemembre_role_already_exists">Role already exists</entry>
+	<entry key="rolemembre_rolePpaf_already_exists">Role Ppaf already exists</entry>
 </properties>

@@ -81,8 +81,8 @@ public class RolemembreRepositoryImpl extends RepositoryImpl<Rolemembre, Integer
             return super.get(model);
         }
 
-        if (!isNotEmpty(model.getRole())) {
-            Rolemembre result = getByRole(model.getRole());
+        if (!isNotEmpty(model.getRolePpaf())) {
+            Rolemembre result = getByRolePpaf(model.getRolePpaf());
             if (result != null) {
                 return result;
             }
@@ -96,9 +96,9 @@ public class RolemembreRepositoryImpl extends RepositoryImpl<Rolemembre, Integer
      */
     @Override
     @Transactional(readOnly = true)
-    public Rolemembre getByRole(String _role) {
+    public Rolemembre getByRolePpaf(String _rolePpaf) {
         Rolemembre rolemembre = new Rolemembre();
-        rolemembre.setRole(_role);
+        rolemembre.setRolePpaf(_rolePpaf);
         return findUniqueOrNone(rolemembre);
     }
 
@@ -107,7 +107,7 @@ public class RolemembreRepositoryImpl extends RepositoryImpl<Rolemembre, Integer
      */
     @Override
     @Transactional
-    public void deleteByRole(String role) {
-        delete(getByRole(role));
+    public void deleteByRolePpaf(String rolePpaf) {
+        delete(getByRolePpaf(rolePpaf));
     }
 }

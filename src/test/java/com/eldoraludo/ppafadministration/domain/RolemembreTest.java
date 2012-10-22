@@ -61,9 +61,9 @@ public class RolemembreTest {
     public void equalsUsingBusinessKey() {
         Rolemembre model1 = new Rolemembre();
         Rolemembre model2 = new Rolemembre();
-        String role = ValueGenerator.getUniqueString(255);
-        model1.setRole(role);
-        model2.setRole(role);
+        String rolePpaf = ValueGenerator.getUniqueString(255);
+        model1.setRolePpaf(rolePpaf);
+        model2.setRolePpaf(rolePpaf);
         assertTrue(model1.equals(model2));
         assertTrue(model2.equals(model1));
         assertTrue(model1.hashCode() == model2.hashCode());

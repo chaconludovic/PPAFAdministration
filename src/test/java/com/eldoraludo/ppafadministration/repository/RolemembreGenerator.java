@@ -28,7 +28,7 @@ public class RolemembreGenerator {
         Rolemembre rolemembre = new Rolemembre();
 
         // simple attributes follows
-        rolemembre.setRole(ValueGenerator.getUniqueString(255));
+        rolemembre.setRolePpaf(ValueGenerator.getUniqueString(255));
         return rolemembre;
     }
 

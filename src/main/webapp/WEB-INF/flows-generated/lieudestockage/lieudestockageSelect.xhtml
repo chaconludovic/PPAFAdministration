@@ -32,6 +32,18 @@
 		</ui:define>
 
 		<ui:define name="result">
+			<p:column id="lieudestockage_nom" headerText="${msg.lieudestockage_nom}" sortBy="#{item.nom}">
+				<h:outputText value="#{item.nom}" />
+			</p:column>
+			<p:column id="lieudestockage_membreppafresponsable" headerText="${msg.lieudestockage_membreppafresponsable}">
+				<h:outputText value="#{membreppafConverter.print(item.membreppafresponsable)}" />
+			</p:column>
+			<p:column id="lieudestockage_rue" headerText="${msg.lieudestockage_rue}" sortBy="#{item.rue}">
+				<h:outputText value="#{item.rue}" />
+			</p:column>
+			<p:column id="lieudestockage_ville" headerText="${msg.lieudestockage_ville}" sortBy="#{item.ville}">
+				<h:outputText value="#{item.ville}" />
+			</p:column>
 			<p:column id="lieudestockage_codepostal" headerText="${msg.lieudestockage_codepostal}" sortBy="#{item.codepostal}">
 				<h:outputText value="#{item.codepostal}" />
 			</p:column>

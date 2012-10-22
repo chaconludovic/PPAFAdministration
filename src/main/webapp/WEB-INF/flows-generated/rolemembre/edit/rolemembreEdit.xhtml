@@ -19,8 +19,8 @@
 	<f:validateBean disabled="true">
 		<p:fieldset legend="${msg.rolemembre}">
 			<h:panelGrid columns="2" styleClass="aria-role-presentation">
-				<app:inputTextArea id="role" value="#{rolemembre.role}" label="${msg.rolemembre_role}" required="true">
-					<f:validateBean binding="#{jpaUniqueValidator}" entity="${rolemembre}" property="role" />
+				<app:inputTextArea id="rolePpaf" value="#{rolemembre.rolePpaf}" label="${msg.rolemembre_rolePpaf}" required="true">
+					<f:validateBean binding="#{jpaUniqueValidator}" entity="${rolemembre}" property="rolePpaf" />
 				</app:inputTextArea>
 			</h:panelGrid>
 		</p:fieldset>

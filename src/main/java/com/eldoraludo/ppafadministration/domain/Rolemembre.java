@@ -31,7 +31,7 @@ public class Rolemembre implements Identifiable<Integer>, Serializable {
 
     // Raw attributes
     private Integer id; // pk
-    private String role; // unique (not null)
+    private String rolePpaf; // unique (not null)
     private Integer version;
 
     // ---------------------------
@@ -67,17 +67,17 @@ public class Rolemembre implements Identifiable<Integer>, Serializable {
         return id != null;
     }
 
-    // -- [role] ------------------------
+    // -- [rolePpaf] ------------------------
 
     @Size(max = 255)
     @NotEmpty
-    @Column(name = "`role`", nullable = false, unique = true)
-    public String getRole() {
-        return role;
+    @Column(name = "role_ppaf", nullable = false, unique = true)
+    public String getRolePpaf() {
+        return rolePpaf;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRolePpaf(String rolePpaf) {
+        this.rolePpaf = rolePpaf;
     }
 
     // -- [version] ------------------------
@@ -110,7 +110,7 @@ public class Rolemembre implements Identifiable<Integer>, Serializable {
 
     @Override
     public int hashCode() {
-        int hashCode = Objects.hashCode(getRole());
+        int hashCode = Objects.hashCode(getRolePpaf());
         if (previousHashCode != 0 && previousHashCode != hashCode) {
             log.warn("DEVELOPER: hashCode has changed!." //
                     + "If you encounter this message you should take the time to carefuly review equals/hashCode for: " //
@@ -129,7 +129,7 @@ public class Rolemembre implements Identifiable<Integer>, Serializable {
     public String toString() {
         return Objects.toStringHelper(this) //
                 .add("id", getId()) //
-                .add("role", getRole()) //
+                .add("rolePpaf", getRolePpaf()) //
                 .add("version", getVersion()) //
                 .toString();
     }

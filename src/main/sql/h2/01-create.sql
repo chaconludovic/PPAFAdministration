@@ -10,10 +10,10 @@ CREATE TABLE role (
 
 CREATE TABLE roleMembre (
 	id INTEGER(10) NOT NULL AUTO_INCREMENT,
-	role varchar(255) NOT NULL,
+	role_ppaf varchar(255) NOT NULL,
 	version int default 0,
 	PRIMARY KEY (id),
-	constraint rolemembre_unique_1 unique (role)
+	constraint rolemembre_unique_1 unique (role_ppaf)
 );
 
 CREATE TABLE membrePPAF (
@@ -193,8 +193,8 @@ CREATE TABLE frais (
 
 INSERT INTO ROLE(ID, ROLE_NAME) VALUES (1, 'ROLE_ADMIN');
 INSERT INTO ROLE(ID, ROLE_NAME) VALUES (2, 'ROLE_USER');
-INSERT INTO ROLEMEMBRE(ID, ROLE) VALUES (1, 'Administrateur');
-INSERT INTO ROLEMEMBRE(ID, ROLE) VALUES (2, 'Gestionnaire');
+INSERT INTO ROLEMEMBRE(ID, ROLE_PPAF) VALUES (1, 'Administrateur');
+INSERT INTO ROLEMEMBRE(ID, ROLE_PPAF) VALUES (2, 'Gestionnaire');
 INSERT INTO MEMBREPPAF(ID, NOM, PRENOM, NUMEROTELEPHONE1, NUMEROTELEPHONE2, EMAIL, ACTIF, NOTE, RUE, VILLE, CODEPOSTAL, INFOSUPPL, ROLEMEMBRE_ID) VALUES (1, 'Chacon', 'Adrien', '06 77 134 134', '', '', FALSE, '', '7 rue mary cassatt', 'le mesnil théribus', '', '', 1);
 INSERT INTO UTILISATEUR(ID, LOGIN, PASSWORD, EMAIL, RUE, VILLE, CODEPOSTAL, INFOSUPPL, MEMBREPPAF_ID, ENABLED) VALUES (1, 'admin', 'admin', 'admin@example.com', null, null, null, null, null, TRUE);
 INSERT INTO UTILISATEUR_ROLE(UTILISATEUR_ID, ROLE_ID) VALUES (1, 1);
